@@ -75,32 +75,23 @@
                 {{-- secondary navbar --}}
                 <div class="lg:hidden flex items-center">
                     <button id="mobile-menu-button" class="outline-none">
-                        <svg
-                            class="w-6 h-6 text-white"
-                            x-show="!showMenu"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                        <svg id="menu-logo" class="w-6 h-6" viewBox="0 0 20.00 20.00" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="0.8"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#ffffff" fill-rule="evenodd" d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"></path> </g></svg>
+                        <svg id="cross-logo" style="display: none" class="w-6 h-6" fill="#ffffff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M18.8,16l5.5-5.5c0.8-0.8,0.8-2,0-2.8l0,0C24,7.3,23.5,7,23,7c-0.5,0-1,0.2-1.4,0.6L16,13.2l-5.5-5.5 c-0.8-0.8-2.1-0.8-2.8,0C7.3,8,7,8.5,7,9.1s0.2,1,0.6,1.4l5.5,5.5l-5.5,5.5C7.3,21.9,7,22.4,7,23c0,0.5,0.2,1,0.6,1.4 C8,24.8,8.5,25,9,25c0.5,0,1-0.2,1.4-0.6l5.5-5.5l5.5,5.5c0.8,0.8,2.1,0.8,2.8,0c0.8-0.8,0.8-2.1,0-2.8L18.8,16z"></path> </g></svg>
                     </button>
                 </div>
                 <div id="mobile-menu" class="hidden absolute left-0 right-0 mx-auto my-3 items-center justify-center w-[94%] top-20 bg-gray-100 rounded border border-gray-200 p-3">
                     <ul class="">
                         <li >
-                            <a href="index.html" class="flex justify-center py-4 mb-1 rounded text-sm text-white bg-primary font-semibold">Home</a>
+                            <a href="index.html" class="flex justify-center py-4 mb-1 rounded-xl text-sm text-white bg-primary font-semibold">Home</a>
                         </li>
                         <li>
-                            <a href="#services" class="flex justify-center py-4 mb-1 rounded text-sm hover:bg-gray-200 transition duration-100">Services</a>
+                            <a href="#services" class="flex justify-center py-4 mb-1 rounded-xl text-sm hover:bg-gray-200 transition duration-100">Services</a>
                         </li>
                         <li>
-                            <a href="#about" class="flex justify-center py-4 mb-1 rounded text-sm hover:bg-gray-200 transition duration-100">About</a>
+                            <a href="#about" class="flex justify-center py-4 mb-1 rounded-xl text-sm hover:bg-gray-200 transition duration-100">About</a>
                         </li>
                         <li>
-                            <a href="#contact" class="flex justify-center py-4 mb-1 rounded text-sm hover:bg-gray-200 transition duration-100">Contact Us</a>
+                            <a href="#contact" class="flex justify-center py-4 mb-1 rounded-xl text-sm hover:bg-gray-200 transition duration-100">Contact Us</a>
                         </li>
                         <li>
                             <a href="{{ route('login') }}" class="flex justify-center py-4 mb-1 rounded-xl text-sm text-primary font-semibold border-2 border-primary hover:bg-white transition duration-100">Log in</a>
@@ -113,12 +104,26 @@
                 <script>
                     const button = document.querySelector('#mobile-menu-button');
                     const menu = document.querySelector('#mobile-menu');
+
+                    const menu_logo = document.getElementById("menu-logo");
+                    const cross_logo = document.getElementById("cross-logo");
+                    let menu_switch = false;
         
                     button.addEventListener("click", () => {
-                    menu.classList.toggle("hidden");
+                        menu.classList.toggle("hidden");
+                        if(!menu_switch){
+                            menu_logo.style.display = "none";
+                            cross_logo.style.display = "block";
+                            menu_switch = true;
+                        }else{
+                            menu_logo.style.display = "block";
+                            cross_logo.style.display = "none";
+                            menu_switch = false;
+                        }
                     });
+
                 </script>
             </nav>
-        </header>
+        </header>          
     </body>
 </html>
