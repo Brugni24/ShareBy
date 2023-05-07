@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <style>
+        .first-page{
+            background-color: blue;
+        }
+        .second-page{
+            background-color: white;
+        }
+
+    </style>
+</head>
+    <title>ShareBY</title>
+    </head>
+    <body>
+    
+    <header class="bg-[#0E5ECC]">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+            <div>
+                <img class="w-40 pt-3 cursor-pointer" src="ShareBY  1.svg" alt="">
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-[#0E5ECC] md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-white text-gray-400" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white  text-gray-400" href="prodotti.html">Prodotti</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white  text-gray-400" href="algoritmo.html">Algoritmo</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white  text-gray-400"href="Contatti.html">Contatti</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="bg-[#0E5ECC] text-white px-5 py-2 rounded hover:bg-[#87acec] border-inherit">Sign in</button>
+                <button class="bg-[#0E5ECC] text-white px-5 py-2 rounded hover:bg-[#87acec] border-white">Become a member</button>  
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+    
+    <div class="bg-blue">
+        <h1 class="text-white font-sans font-bold absolute text-7xl text-left mx-[45px] my-[150px] ">
+            “Entra nel mondo<br>
+             della FINANZA<br>
+              con ShareBY"
+
+        </h1>
+        <img class="scale-90 absolute ml-[630px] mt-[90px] " src="undraw_data_trends_re_2cdy .svg" alt="">
+        <img class="absolute mt-[20px] mx-[1236px]" src="Group.png" alt="">
+        <img class="absolute my-[450px] mx-[540px]" src="Group.png" alt="">
+
+
+        <p class=" font-sans absolute mx-[70px] my-[450px] text-left text-white text-base">
+            Shareby, si propone come una piattaforma che consente<br>
+            sfruttando l’unione tra l’informatizzazione e il mondo finanziario ,<br>
+            di ottenere delle analisi sui report finanziari e molto altro...<br>
+        </p>
+   
+        <button class="absolute my-[650px] mx-[250px] text-white font-sans text-lg rounded bg-gray-600 px-20 py-3">Scopri di più</button>
+    </div>
+    </div>
+        </div>
+            <div class="second-page">  <!--Seconda pagina-->
+                <div> 
+                    <p class="absolute mx-[644px] my-[750px] text-blue-500  text-2xl font-sans">
+                        il nostro algortimo
+                    </p>
+                </div>
+                <div>
+                    <p class=" absolute text-gray-400 mx-[1000px] my-[850px] align-right   ">“Il nostro algortimo fornisce una dettagliata
+                         analisi dei bilanci aziendali,che semplifica e<br>
+                          riduce il tempo richiesto per valutare una
+                           investimento.(da modificare)”</p>
+                    </div>
+             <img class="absolute mx-[751px] my-[1100px] " src="Frame 3.svg" alt="">
+              
+            <div>
+             <p class="absolute mx-[10px] my-[800px]  text-black text-7xl font-sans extrabold 800 bg-inherit">Facile,<br> Veloce<br>
+                Intuitivo.<br></p> 
+            </div>
+             <img class="absolute mx-0 my-[800px]" src="Group 1000002359.svg" alt="">
+             <div>
+                <button class="absolute my-[1500px] mx-[250px] text-white font-sans text-lg rounded bg-blue-600 px-20 py-3">Scopri di più</button>
+            </div>
+            <div class="third-page"> <!--terza pagina-->
+                <div>
+                    <p class="absolute mx-[644px] my-[1650px] text-2xl text-blue-600">
+                        I nostri servizi
+                    </p>
+                    <p class="absolute mx-[560px] my-[1750px] text-7xl text-black"> <!--non so perchè non me lo estende-->
+                        Che servizi offriamo?
+                    </p>
+                </div>
+                <img class=" absolute my-[2000px] font-serif" src="Rectangle 61.png"> <!--queste vanno rese cliccalibili tramite php -->
+                <img class="absolute my-[1900px]" src="Schede servizi.svg">
+            </div>
+            <div class="four-page">
+                <div>
+                    <p class="absolute mx-[644px] my-[2650px] text-2xl text-blue-600">
+                        About us 
+                    </p>
+                    <p class="absolute mx-[530px] my-[2750px] text-7xl text-black"> <!--non so perchè non me lo estende-->
+                        Chi siamo?
+                    </p>
+                </div>
+                <img class="absolute w-max my-[3000px]" src="Rectangle 51.svg" alt="">
+                <p class="absolute mx-[800px] my-[3201px] text-3xl text-white"><!--rendilo largo -->
+                    “Siamo una Startup giovane,<br>
+                     che colma un grande vuoto di <br>
+                      mercato:l’automatizzazione<br>
+                       della FINANZA.”
+                </p>
+                <img class="" src="Group 119.svg" alt="">
+            </div>
+        </body>
+    </div>
+
+
+
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+</body>
+
+</html>
+
+        </body>
+    </body>
