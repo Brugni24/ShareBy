@@ -11,13 +11,23 @@ module.exports = {
     ],
 
     theme: {
+        screens: {
+            xs: '510px',
+            xmd: '900px',
+            ...defaultTheme.screens,
+        },
+
         fontFamily: {
             sans: ['Figtree', ...defaultTheme.fontFamily.sans],
         },
+
         extend: {
             colors: {
                 primary: '#0E5ECC',
-            }
+            },
+            fontFamily: {
+                main: ['Poppins'],
+            },
         },
     },
 

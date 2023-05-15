@@ -31,16 +31,19 @@
                 background-size: 100% 2px;
                 background-position: 0 100%
             }
+            .first-background{
+                background: radial-gradient(50% 50% at 50% 50%, rgba(14, 94, 204, 0.8) 0%, rgba(14, 94, 204, 0.9) 48.96%, #0E5ECC 100%);
+            }
         </style>
 
     </head>
-    <body>
-        <header class="bg-primary w-full"> 
+    <body class="bg-primary antialiased font-main">
+        <header class="w-full"> 
             <nav class="py-5 w-[94%] mx-auto flex items-center justify-between px-3 md:px-0">
                 <a href="/" class="flex justify-start">
                     <img class="h-10" src="/img/ShareBy_Logo_Bianco.svg" alt="ShareBy Logo">
                 </a>
-                <div class="">
+                <div class="font-regular">
                     <ul class="hidden lg:flex gap-20">
                         <li>
                             <a class="link link-underline link-underline-black hover:text-white text-gray-100" href="#">Home</a>
@@ -57,16 +60,16 @@
                     </ul>
                 </div>
                 @if (Route::has('login'))
-                <div class="hidden lg:flex gap-3">
+                <div class="hidden lg:flex gap-3 font-regular">
                     @auth
                         <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}">
-                            <button type="button" class="border border-white text-white rounded-lg py-1 px-5 hover:text-primary hover:bg-white">Log in</button>
+                            <button type="button" class="text-sm border border-white text-white rounded-lg py-1.5 px-5 hover:text-primary hover:bg-white">Log in</button>
                         </a>
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">
-                                <button type="button" class="border border-white text-white rounded-lg py-1 px-5 hover:text-primary hover:bg-white">Register</button>
+                                <button type="button" class="text-sm border border-white text-white rounded-lg py-1.5 px-5 hover:text-primary hover:bg-white">Register</button>
                             </a>
                         @endif
                     @endauth
@@ -80,24 +83,24 @@
                     </button>
                 </div>
                 <div id="mobile-menu" class="hidden absolute left-0 right-0 mx-auto my-3 items-center justify-center w-[94%] top-20 bg-gray-100 rounded border border-gray-200 p-3">
-                    <ul class="">
+                    <ul class="font-regular text-sm">
                         <li >
-                            <a href="index.html" class="flex justify-center py-4 mb-1 rounded-xl text-sm text-white bg-primary font-semibold">Home</a>
+                            <a href="index.html" class="flex justify-center py-4 mb-1 rounded-xl text-white bg-primary font-bold">Home</a>
                         </li>
                         <li>
-                            <a href="#services" class="flex justify-center py-4 mb-1 rounded-xl text-sm hover:bg-gray-200 transition duration-100">Services</a>
+                            <a href="#services" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">Services</a>
                         </li>
                         <li>
-                            <a href="#about" class="flex justify-center py-4 mb-1 rounded-xl text-sm hover:bg-gray-200 transition duration-100">About</a>
+                            <a href="#about" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">About</a>
                         </li>
                         <li>
-                            <a href="#contact" class="flex justify-center py-4 mb-1 rounded-xl text-sm hover:bg-gray-200 transition duration-100">Contact Us</a>
+                            <a href="#contact" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">Contact Us</a>
                         </li>
                         <li>
-                            <a href="{{ route('login') }}" class="flex justify-center py-4 mb-1 rounded-xl text-sm text-primary font-semibold border-2 border-primary hover:bg-white transition duration-100">Log in</a>
+                            <a href="{{ route('login') }}" class="flex justify-center py-4 mb-1 rounded-xl text-primary font-semibold border-2 border-primary hover:bg-white transition duration-100">Log in</a>
                         </li>
                         <li>
-                            <a href="{{ route('register') }}" class="flex justify-center py-4 mb-1 rounded-xl text-sm text-primary font-semibold border-2 border-primary hover:bg-white transition duration-100">Register</a>
+                            <a href="{{ route('register') }}" class="flex justify-center py-4 mb-1 rounded-xl text-primary font-semibold border-2 border-primary hover:bg-white transition duration-100">Register</a>
                         </li>
                     </ul>
                 </div>
@@ -124,6 +127,32 @@
 
                 </script>
             </nav>
-        </header>          
+        </header>
+        <div class="py-[8vh] max-h-screen px-[5%]">
+            <div class="xmd:flex">
+                <div class="basis-[50%]">
+                    <div class="flex justify-center mb-10 md:mb-14">
+                        <h1 class="text-white text-5xl font-extrabold text-center xs:text-[3.7em] xmd:text-left lg:text-[4.25em] xl:text-[5em]">
+                            “Entra nel mondo della FINANZA con ShareBY"
+                        </h1>
+                    </div>
+                    <div class="flex justify-center flex-col">
+                        <p class="text-white text-sm font-medium text-center leading-7 px-4 xs:text-base xmd:text-left">
+                            Shareby, si propone come una piattaforma che consente
+                            sfruttando l’unione tra l’informatizzazione e il mondo finanziario,
+                            di ottenere delle analisi sui report finanziari e molto altro...
+                        </p>
+                    </div>
+                </div> 
+                <div class="basis-1/2 flex items-center justify-center mt-16 xmd:ml-[5%]">
+                    <img class="w-full" src="/img/data_trends_main_draw.svg" alt="">
+                </div>
+            </div>    
+            <div class="my-[8vh] xmd:flex items-center">
+                <div class="basis-[50%] flex items-center justify-center">
+                    <button class="font-semibold text-white rounded-xl bg-[#3D3B4F] px-12 py-3">Scopri di più</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
