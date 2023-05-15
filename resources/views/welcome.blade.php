@@ -128,8 +128,8 @@
                 </script>
             </nav>
         </header>
-        <div class="py-[8vh] max-h-screen px-[5%]">
-            <div class="xmd:flex">
+        <div class="px-[5%]">
+            <div class="py-[8vh] xmd:flex">
                 <div class="basis-[50%]">
                     <div class="flex justify-center mb-10 md:mb-14">
                         <h1 class="text-white text-5xl font-extrabold text-center xs:text-[3.7em] xmd:text-left lg:text-[4.25em] xl:text-[5em]">
@@ -148,9 +148,35 @@
                     <img class="w-full" src="/img/data_trends_main_draw.svg" alt="">
                 </div>
             </div>    
-            <div class="my-[8vh] xmd:flex items-center">
+            <div class="py-[8vh] xmd:flex items-center">
                 <div class="basis-[50%] flex items-center justify-center">
                     <button class="font-semibold text-white rounded-xl bg-[#3D3B4F] px-12 py-3">Scopri di più</button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white px-[5%] py-[8vh]">
+            <div class="px-[5%]"> 
+                <p class="text-primary text-center text-lg font-medium">
+                    il nostro algoritmo
+                </p>
+            </div>
+            <div class="xmd:gap-10">
+                <div class="w-full py-[8vh]">
+                    <img src="/img/Facile,Veloce,Intuitivo.svg" alt="Facile, Veloce, Intuitivo">
+                </div>
+                <div class="px-[5%]">
+                    <p class="text-gray-400 text-sm">
+                        “Il nostro algortimo fornisce una dettagliata
+                        analisi dei bilanci aziendali, che semplifica e
+                        riduce il tempo richiesto per valutare una
+                        investimento.(da modificare)”
+                    </p>
+                </div>
+                <div class="py-[8vh]">
+                    <img src="/img/numeri_statistiche_algoritmo.svg" alt="Numeri Statistiche Algoritmo">
+                </div>
+                <div class="flex justify-center">
+                    <button class="font-semibold text-white rounded-xl bg-primary px-12 py-3">Scopri di più</button>
                 </div>
             </div>
         </div>
