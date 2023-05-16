@@ -160,20 +160,22 @@
                     il nostro algoritmo
                 </p>
             </div>
-            <div class="xmd:gap-10">
-                <div class="w-full py-[8vh]">
+            <div class="xmd:grid grid-cols-2 gap-10">
+                <div class="py-[8vh]">
                     <img src="/img/Facile,Veloce,Intuitivo.svg" alt="Facile, Veloce, Intuitivo">
                 </div>
-                <div class="px-[5%]">
-                    <p class="text-gray-400 text-sm">
-                        “Il nostro algortimo fornisce una dettagliata
-                        analisi dei bilanci aziendali, che semplifica e
-                        riduce il tempo richiesto per valutare una
-                        investimento.(da modificare)”
-                    </p>
-                </div>
-                <div class="py-[8vh]">
-                    <img src="/img/numeri_statistiche_algoritmo.svg" alt="Numeri Statistiche Algoritmo">
+                <div class="xmd:pt-[8vh]">
+                    <div class="px-[5%]">
+                        <p class="text-gray-400 text-sm">
+                            “Il nostro algortimo fornisce una dettagliata
+                            analisi dei bilanci aziendali, che semplifica e
+                            riduce il tempo richiesto per valutare una
+                            investimento.(da modificare)”
+                        </p>
+                    </div>
+                    <div class="flex justify-center py-[8vh]">
+                        <img class="w-[90%]" src="/img/numeri_statistiche_algoritmo.svg" alt="Numeri Statistiche Algoritmo">
+                    </div>
                 </div>
                 <div class="flex justify-center">
                     <button class="font-semibold text-white rounded-xl bg-primary px-12 py-3">Scopri di più</button>
