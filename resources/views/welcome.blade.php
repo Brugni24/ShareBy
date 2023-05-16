@@ -24,12 +24,12 @@
             }
 
             .link-underline-black {
-                background-image: linear-gradient(transparent, transparent), linear-gradient(white, white)
+                background-image: linear-gradient(transparent, transparent), linear-gradient(white, white);
             }
 
             .link-underline:hover {
                 background-size: 100% 2px;
-                background-position: 0 100%
+                background-position: 0 100%;
             }
             .first-background{
                 background: radial-gradient(50% 50% at 50% 50%, rgba(14, 94, 204, 0.8) 0%, rgba(14, 94, 204, 0.9) 48.96%, #0E5ECC 100%);
@@ -128,7 +128,7 @@
                 </script>
             </nav>
         </header>
-        <div class="px-[5%]">
+        <section class="px-[5%]">
             <div class="py-[8vh] xmd:flex">
                 <div class="basis-[50%]">
                     <div class="flex justify-center mb-10 md:mb-14">
@@ -153,8 +153,8 @@
                     <button class="font-semibold text-white rounded-xl bg-[#3D3B4F] px-12 py-3">Scopri di più</button>
                 </div>
             </div>
-        </div>
-        <div class="bg-white px-[5%] py-[8vh]">
+        </section>
+        <section class="bg-white px-[5%] py-[8vh]">
             <div class="px-[5%]"> 
                 <p class="text-primary text-center text-lg font-medium">
                     il nostro algoritmo
@@ -181,6 +181,80 @@
                     <button class="font-semibold text-white rounded-xl bg-primary px-12 py-3">Scopri di più</button>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="bg-white px-[8%] py-[10vh]">
+            <div class="px-[5%]"> 
+                <p class="text-primary text-center text-lg font-medium">
+                    i nostri servizi
+                </p>
+            </div>
+            <div class="py-[10vh]">
+                <p class="text-center text-4xl font-bold">
+                    Che servizi offriamo:
+                </p>
+            </div>
+            <div class="flex flex-col xmd:flex-row justify-around gap-10">
+                <div class="relative grid h-[30rem] w-full max-w-[28rem] flex-col items-end justify-center bg-clip-border rounded-xl border border-gray-200 shadow-xl p-[4%] bg-white">
+                    <div class="absolute inset-0 m-0 h-full w-full bg-[url('/public/img/white_card.svg')] bg-cover bg-clip-border rounded-xl bg-center">
+                    </div>
+                    <div class="relative h-full">
+                        <div class="flex justify-center pt-[8%]">
+                            <img class="w-[28%]" src="/img/Wallet.svg" alt="">
+                        </div>
+                        <p class="text-center text-gray-500 font-light py-[15%]">
+                            #1
+                        </p>
+                        <h2 class="block text-2xl font-bold text-center">
+                            Algoritmo di Analisi dei report finanziari
+                        </h2>
+                        <p class="block text-sm text-center font-medium text-gray-400 py-[15%]">
+                            Ottieni una comoda e rapida analisi finanziaria tra le 300+ aziende a tua disposozione 
+                        </p>
+                    </div>
+                </div>
+                <div class="relative grid h-[30rem] w-full max-w-[28rem] flex-col items-end justify-center bg-clip-border rounded-xl border border-gray-200 shadow-xl p-[4%] bg-primary">
+                    <div class="absolute inset-0 m-0 h-full w-full bg-[url('/public/img/blue_card.svg')] bg-cover bg-clip-border rounded-xl bg-center">
+                    </div>
+                    <div class="relative h-full">
+                        <div class="flex justify-center pt-[8%]">
+                            <img class="w-[28%]" src="/img/Work.svg" alt="">
+                        </div>
+                        <p class="text-center text-gray-400 font-light py-[15%]">
+                            #2
+                        </p>
+                        <h2 class="block text-2xl font-bold text-white text-center py-[14%]">
+                            ShareBYOU
+                        </h2>
+                        <p class="block text-sm text-center font-medium text-gray-300 py-[15%]">
+                            ShareBYOU, consente agli utenti di condividere contenuti (video-corsi, analisi, post ecc.) sulla piattaforma.
+                        </p>
+                        <p class="text-red-500 text-sm text-center font-bold">
+                            In arrivo!
+                        </p>
+                    </div>
+                </div>
+                <div class="relative grid h-[30rem] w-full max-w-[28rem] flex-col items-end justify-center bg-clip-border rounded-xl border border-gray-200 shadow-xl p-[4%] bg-secondary">
+                    <div class="absolute inset-0 m-0 h-full w-full bg-[url('/public/img/blue_card.svg')] bg-cover bg-clip-border rounded-xl bg-center">
+                    </div>
+                    <div class="relative h-full">
+                        <div class="flex justify-center pt-[8%]">
+                            <img class="w-[28%]" src="/img/Chart.svg" alt="">
+                        </div>
+                        <p class="text-center text-gray-400 font-light py-[15%]">
+                            #3
+                        </p>
+                        <h2 class="block text-2xl font-bold text-white text-center py-[14%]">
+                            AI consultant
+                        </h2>
+                        <p class="block text-sm text-center font-medium text-gray-400 py-[15%]">
+                            Questa sezione consente all’utente di avere un consulente finanziario 24/7, tramite l’utilizzo di ChatGPT.
+                        </p>
+                        <p class="text-red-500 text-sm text-center font-bold">
+                            In arrivo!
+                        </p>
+                    </div>
+                </div>
+            </div>            
+        </section>
     </body>
 </html>

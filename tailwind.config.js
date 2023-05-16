@@ -24,10 +24,14 @@ module.exports = {
         extend: {
             colors: {
                 primary: '#0E5ECC',
+                secondary: '#111849',
             },
             fontFamily: {
                 main: ['Poppins'],
             },
+            backgroundImage: {
+                whiteCard: "url('/img/white_card.svg')",
+              },
         },
     },
 

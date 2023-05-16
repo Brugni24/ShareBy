@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 380 529.87" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient gradientTransform="matrix(1 0 0 1 -110 0)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="-0.195872" x2="366.18" y1="386.738" y2="465.739">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0.1"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(1 0 0 1 -110 0)" gradientUnits="userSpaceOnUse" id="LinearGradient_2" x1="456.942" x2="143.633" y1="583.016" y2="515.531">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0.1"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+</defs>
+<clipPath id="ArtboardFrame">
+<rect height="529.87" width="380" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Senza-Titolo">
+<g opacity="1">
+<clipPath id="ClipPath">
+<path d="M8 0.00244141L372 0.00244141C376.418 0.00244141 380 3.58416 380 8.00244L380 521.872C380 526.291 376.418 529.872 372 529.872L8 529.872C3.58172 529.872 0 526.291 0 521.872L0 8.00244C0 3.58416 3.58172 0.00244141 8 0.00244141Z"/>
+</clipPath>
+<g clip-path="url(#ClipPath)">
+<path d="M18.24 224.362C134.087 224.362 228 318.275 228 434.122L228 671.887L32.243 671.887C-91.3378 671.887-191.52 571.705-191.52 448.125L-191.52 434.122C-191.52 318.275-97.6072 224.362 18.24 224.362Z" fill="url(#LinearGradient)" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M237.12 722.01C138.062 722.01 57.76 641.708 57.76 542.65L57.76 338.928L224.939 338.928C330.724 338.928 416.48 424.684 416.48 530.469L416.48 542.65C416.48 641.708 336.178 722.01 237.12 722.01Z" fill="url(#LinearGradient_2)" fill-rule="nonzero" opacity="1" stroke="none"/>
+</g>
+</g>
+</g>
+</svg>

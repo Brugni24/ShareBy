@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 380.039 529.904" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient gradientTransform="matrix(1 0 0 1 -110 -0.00244141)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="-0.490539" x2="366.778" y1="386.738" y2="466.143">
+<stop offset="0" stop-color="#3029d7" stop-opacity="0.1"/>
+<stop offset="1" stop-color="#312ad9" stop-opacity="0"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(1 0 0 1 -110 -0.00244141)" gradientUnits="userSpaceOnUse" id="LinearGradient_2" x1="457.87" x2="143.798" y1="583.016" y2="515.186">
+<stop offset="0" stop-color="#3029d9" stop-opacity="0.1"/>
+<stop offset="1" stop-color="#3029d9" stop-opacity="0"/>
+</linearGradient>
+</defs>
+<g id="Senza-Titolo">
+<g opacity="1">
+<clipPath id="ClipPath">
+<path d="M8 0L372 0C376.418 0 380 3.58172 380 8L380 521.87C380 526.288 376.418 529.87 372 529.87L8 529.87C3.58172 529.87 0 526.288 0 521.87L0 8C0 3.58172 3.58172 8.04912e-16 8 0Z"/>
+</clipPath>
+<g clip-path="url(#ClipPath)">
+<path d="M18.289 224.36C134.446 224.36 228.61 318.524 228.61 434.681L228.61 671.885L31.731 671.885C-91.8501 671.885-192.032 571.703-192.032 448.123L-192.032 434.681C-192.032 318.524-97.8682 224.36 18.289 224.36Z" fill="url(#LinearGradient)" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M237.754 722.008C138.431 722.008 57.914 641.491 57.914 542.169L57.914 338.926L226.052 338.926C331.838 338.926 417.594 424.682 417.594 530.467L417.594 542.169C417.594 641.491 337.077 722.008 237.754 722.008Z" fill="url(#LinearGradient_2)" fill-rule="nonzero" opacity="1" stroke="none"/>
+</g>
+</g>
+</g>
+</svg>
