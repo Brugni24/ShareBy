@@ -14,16 +14,23 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
+    <body class="font-main bg-white antialiased">
+        <div class="h-[100vh] md:grid grid-cols-2 justify-center items-center pt-6 sm:pt-0">
+            <div class="hidden md:flex flex-col justify-around items-center h-[100vh] bg-primary px-[5%] py-[4rem]">
+                <div class="">
+                    <p class="text-white text-center text-5xl font-extrabold xmd:text-6xl">
+                        "Vola nel mondo della FINANZA con ShareBy"
+                    </p>
+                </div>
+                <img class="w-[90%]" src="/img/rocket_lunch_auth.svg" alt="">
             </div>
-
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
+            <div class="grid-span-1 flex flex-col justify-center items-center">
+                <a class="p-16" href="/">
+                    <img class="h-20" src="/img/logo_shareBy_blue.svg" alt="ShareBy Logo">
+                </a>
+                    <div class="sm:px-6 py-4 overflow-hidden xl:w-[70%]">
+                        {{ $slot }}
+                    </div>
             </div>
         </div>
     </body>

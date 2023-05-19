@@ -41,23 +41,12 @@
         <header class="w-full"> 
             <nav class="py-5 w-[94%] mx-auto flex items-center justify-between px-3 md:px-0">
                 <a href="/" class="flex justify-start">
-                    <img class="h-10" src="/img/ShareBy_Logo_Bianco.svg" alt="ShareBy Logo">
+                    <img class="h-[3.5rem]" src="/img/logo_shareBy_white.svg" alt="ShareBy Logo">
                 </a>
-                <div class="font-regular">
-                    <ul class="hidden lg:flex gap-20">
-                        <li>
-                            <a class="link link-underline link-underline-black hover:text-white text-gray-100" href="#">Home</a>
-                        </li>
-                        <li>
-                            <a class="link link-underline link-underline-black hover:text-white  text-gray-100" href="#">Prodotti</a>
-                        </li>
-                        <li>
-                            <a class="link link-underline link-underline-black hover:text-white  text-gray-100" href="#">Algoritmo</a>
-                        </li>
-                        <li>
-                            <a class="link link-underline link-underline-black hover:text-white  text-gray-100"href="#">Contatti</a>
-                        </li>
-                    </ul>
+                <div class="hidden lg:flex w-[50%] font-regular flex-row justify-evenly items-center">
+                    <a class="link link-underline link-underline-black hover:text-white text-gray-100" href="#">Home</a>
+                    <a class="link link-underline link-underline-black hover:text-white  text-gray-100" href="#">Prodotti</a>
+                    <a class="link link-underline link-underline-black hover:text-white  text-gray-100"href="#">Contatti</a>
                 </div>
                 @if (Route::has('login'))
                 <div class="hidden lg:flex gap-3 font-regular">
