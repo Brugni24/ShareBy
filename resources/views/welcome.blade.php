@@ -150,8 +150,8 @@
                 </p>
             </div>
             <div class="xmd:grid grid-cols-2 gap-10">
-                <div class="py-[8vh]">
-                    <img src="/img/Facile,Veloce,Intuitivo.svg" alt="Facile, Veloce, Intuitivo">
+                <div class="flex justify-center py-[8vh]">
+                    <img class="w-[80vw] sm:w-[70vw] md:w-[60vw] xmd:w-[40vw]" src="/img/Facile,Veloce,Intuitivo.svg" alt="Facile, Veloce, Intuitivo">
                 </div>
                 <div class="xmd:pt-[8vh]">
                     <div class="px-[5%]">
@@ -163,7 +163,7 @@
                         </p>
                     </div>
                     <div class="flex justify-center py-[8vh]">
-                        <img class="w-[90%]" src="/img/numeri_statistiche_algoritmo.svg" alt="Numeri Statistiche Algoritmo">
+                        <img class="w-[80vw] sm:w-[60vw] md:w-[50vw] xmd:w-[35vw]" src="/img/numeri_statistiche_algoritmo.svg" alt="Numeri Statistiche Algoritmo">
                     </div>
                 </div>
                 <div class="flex justify-center">
@@ -171,7 +171,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-white px-[8%] py-[10vh]">
+        <section class="bg-white px-[5vw] py-[10vh]">
             <div class="px-[5%]"> 
                 <p class="text-primary text-center text-lg font-medium">
                     i nostri servizi
@@ -182,63 +182,64 @@
                     Che servizi offriamo:
                 </p>
             </div>
-            <div class="flex flex-col xmd:flex-row justify-around gap-10">
-                <div class="relative grid h-[30rem] w-full max-w-[28rem] flex-col items-end justify-center bg-clip-border rounded-xl border border-gray-200 shadow-xl p-[4%] bg-white">
+            {{-- cards --}}
+            <div class="flex flex-col items-center xmd:flex-row justify-around gap-8 min-h-fit">
+                <div class="relative h-[65vh] flex flex-col justify-center w-full max-w-[22rem] bg-clip-border rounded-xl border border-gray-200 shadow-xl px-[4%] pt-[4%] pb-[8%] bg-white mb-10 xmd:mb-0 xl:h-[70vh]">
                     <div class="absolute inset-0 m-0 h-full w-full bg-[url('/public/img/white_card.svg')] bg-cover bg-clip-border rounded-xl bg-center">
                     </div>
                     <div class="relative h-full">
-                        <div class="flex justify-center pt-[8%]">
+                        <div class="flex justify-center pt-[15%] xmd:pt-4">
                             <img class="w-[28%]" src="/img/Wallet.svg" alt="">
                         </div>
-                        <p class="text-center text-gray-500 font-light py-[15%]">
+                        <p class="text-center text-gray-500 font-light py-8">
                             #1
                         </p>
-                        <h2 class="block text-2xl font-bold text-center">
+                        <h2 class="block text-2xl font-bold text-center py-4">
                             Algoritmo di Analisi dei report finanziari
                         </h2>
-                        <p class="block text-sm text-center font-medium text-gray-400 py-[15%]">
+                        <p class="block text-sm text-center font-medium text-gray-400 py-6">
                             Ottieni una comoda e rapida analisi finanziaria tra le 300+ aziende a tua disposozione 
                         </p>
                     </div>
                 </div>
-                <div class="relative grid h-[30rem] w-full max-w-[28rem] flex-col items-end justify-center bg-clip-border rounded-xl border border-gray-200 shadow-xl p-[4%] bg-primary">
+                <div class="relative h-[65vh] flex flex-col justify-center w-full max-w-[22rem] bg-clip-border rounded-xl border border-gray-200 shadow-xl px-[4%] pt-[4%] pb-[8%] bg-primary mb-10 xmd:mb-0 xl:h-[70vh]">
                     <div class="absolute inset-0 m-0 h-full w-full bg-[url('/public/img/blue_card.svg')] bg-cover bg-clip-border rounded-xl bg-center">
                     </div>
-                    <div class="relative h-full">
-                        <div class="flex justify-center pt-[8%]">
+                    <div class="relative flex flex-col h-full">
+                        <div class="flex justify-center pt-[15%] xmd:pt-4">
                             <img class="w-[28%]" src="/img/Work.svg" alt="">
                         </div>
-                        <p class="text-center text-gray-400 font-light py-[15%]">
+                        <p class="text-center text-gray-400 font-light py-8">
                             #2
                         </p>
-                        <h2 class="block text-2xl font-bold text-white text-center py-[14%]">
+                        <h2 class="block text-2xl font-bold text-white text-center py-4">
                             ShareBYOU
                         </h2>
-                        <p class="block text-sm text-center font-medium text-gray-300 py-[15%]">
+                        <p class="block text-sm text-center font-medium text-gray-300 py-8">
                             ShareBYOU, consente agli utenti di condividere contenuti (video-corsi, analisi, post ecc.) sulla piattaforma.
                         </p>
-                        <p class="text-red-500 text-sm text-center font-bold">
+                        <p class="self-end w-full text-red-500 text-md text-center font-extrabold">
                             In arrivo!
                         </p>
                     </div>
                 </div>
-                <div class="relative grid h-[30rem] w-full max-w-[28rem] flex-col items-end justify-center bg-clip-border rounded-xl border border-gray-200 shadow-xl p-[4%] bg-secondary">
+                <div class="relative h-[65vh] flex flex-col justify-center w-full max-w-[22rem] bg-clip-border rounded-xl border border-gray-200 shadow-xl px-[4%] pt-[4%] pb-[8%] bg-secondary xl:h-[70vh]">
                     <div class="absolute inset-0 m-0 h-full w-full bg-[url('/public/img/blue_card.svg')] bg-cover bg-clip-border rounded-xl bg-center">
                     </div>
-                    <div class="relative h-full">
-                        <div class="flex justify-center pt-[8%]">
+                    <div class="relative flex flex-col h-full">
+                        <div class="flex justify-center pt-[15%] xmd:pt-4">
                             <img class="w-[28%]" src="/img/Chart.svg" alt="">
                         </div>
-                        <p class="text-center text-gray-400 font-light py-[15%]">
+                        <p class="text-center text-gray-400 font-light py-8">
                             #3
                         </p>
-                        <h2 class="block text-2xl font-bold text-white text-center py-[14%]">
+                        <h2 class="block text-2xl font-bold text-white text-center py-4">
                             AI consultant
                         </h2>
-                        <p class="block text-sm text-center font-medium text-gray-400 py-[15%]">
+                        <p class="block text-sm text-center font-medium text-gray-400 py-8">
                             Questa sezione consente all’utente di avere un consulente finanziario 24/7, tramite l’utilizzo di ChatGPT.
                         </p>
-                        <p class="text-red-500 text-sm text-center font-bold">
+                        <p class="self-end w-full text-red-500 text-md text-center font-extrabold">
                             In arrivo!
                         </p>
                     </div>
