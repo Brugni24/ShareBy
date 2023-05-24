@@ -35,7 +35,6 @@
                 background: radial-gradient(50% 50% at 50% 50%, rgba(14, 94, 204, 0.8) 0%, rgba(14, 94, 204, 0.9) 48.96%, #0E5ECC 100%);
             }
         </style>
-
     </head>
     <body class="bg-primary antialiased font-main">
         {{-- navigation bar --}}
@@ -45,8 +44,8 @@
                     <img class="h-[3.5rem]" src="/img/logo_shareBy_white.svg" alt="ShareBy Logo">
                 </a>
                 <div class="hidden lg:flex w-[50%] font-regular flex-row justify-evenly items-center">
-                    <a class="link link-underline link-underline-black hover:text-white text-gray-100" href="/">Home</a>
-                    <a class="link link-underline link-underline-black hover:text-white  text-gray-100" href="#">Prodotti</a>
+                    <a class="link link-underline link-underline-black hover:text-white text-gray-100" href="{{ url('/')}}">Home</a>
+                    <a class="link link-underline link-underline-black hover:text-white  text-gray-100" href="{{ url('/prodotti')}}">Prodotti</a>
                     <a class="link link-underline link-underline-black hover:text-white  text-gray-100"href="#">Contatti</a>
                 </div>
                 @if (Route::has('login'))
@@ -75,16 +74,13 @@
                 <div id="mobile-menu" class="hidden absolute left-0 right-0 mx-auto my-3 items-center justify-center w-[94%] top-20 bg-gray-100 rounded border border-gray-200 p-3">
                     <ul class="font-regular text-sm">
                         <li >
-                            <a href="index.html" class="flex justify-center py-4 mb-1 rounded-xl text-white bg-primary font-bold">Home</a>
+                            <a href="{{ url('/')}}" class="flex justify-center py-4 mb-1 rounded-xl text-white bg-primary font-bold">Home</a>
                         </li>
                         <li>
-                            <a href="#services" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">Services</a>
+                            <a href="{{ url('/prodotti')}}" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">Prodotti</a>
                         </li>
                         <li>
-                            <a href="#about" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">About</a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">Contact Us</a>
+                            <a href="#about" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">Contatti</a>
                         </li>
                         <li>
                             <a href="{{ route('login') }}" class="flex justify-center py-4 mb-1 rounded-xl text-primary font-semibold border-2 border-primary hover:bg-white transition duration-100">Log in</a>
@@ -114,7 +110,6 @@
                             menu_switch = false;
                         }
                     });
-
                 </script>
             </nav>
         </header>
@@ -141,12 +136,12 @@
             </div>    
             <div class="py-[8vh] xmd:flex items-center">
                 <div class="basis-[50%] flex items-center justify-center">
-                    <button class="font-semibold text-white rounded-xl bg-[#3D3B4F] px-12 py-3">Scopri di più</button>
+                    <button class="font-semibold text-white rounded-xl bg-gray-700 px-12 py-3">Scopri di più</button>
                 </div>
             </div>
         </section>
-        {{-- second slide --}}
-        <section class="bg-white px-[5%] py-[8vh]">
+        {{-- Il nostro algoritmo --}}
+        <section class="bg-white px-[5vw] py-[10vh]">
             <div class="px-[5%]"> 
                 <p class="text-primary text-center text-lg font-medium">
                     il nostro algoritmo
@@ -174,7 +169,7 @@
                 </div>
             </div>
         </section>
-        {{-- third slide --}}
+        {{-- I nostri servizi --}}
         <section class="bg-white px-[5vw] py-[10vh]">
             <div class="px-[5%]"> 
                 <p class="text-primary text-center text-lg font-medium">
@@ -182,7 +177,7 @@
                 </p>
             </div>
             <div class="py-[10vh]">
-                <p class="text-center text-4xl font-bold">
+                <p class="text-center text-5xl font-bold">
                     Che servizi offriamo:
                 </p>
             </div>
@@ -248,7 +243,133 @@
                         </p>
                     </div>
                 </div>
-            </div>            
+            </div>    
+        </section>
+        <section class="bg-white py-[10vh]">
+            <div class="px-[5vw]">
+                <div class="px-[5%]"> 
+                    <p class="text-primary text-center text-lg font-medium">
+                        About Us
+                    </p>
+                </div>
+                <div class="py-[10vh]">
+                    <p class="text-center text-5xl font-semibold">
+                        Chi siamo?
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-16 bg-gray-100 px-[5vw] py-20 sm:grid grid-cols-2 justify-items-center xmd:grid-cols-6 lg:py-28">
+                <div class="w-[50vw] sm:w-[30vw] xmd:w-[20vw] col-span-2 lg:w-[15vw]">
+                    <div class="w-full aspect-square bg-white rounded-full border border-gray-500">
+                        <img src="" alt="">
+                    </div>
+                    <p class="text-center text-lg font-regular pt-6">
+                        Nome Cognome<br>
+                        Funder & CEO
+                    </p>
+                </div>
+                <div class="w-[50vw] sm:w-[30vw] xmd:w-[20vw] col-span-2 lg:w-[15vw]">
+                    <div class="w-full aspect-square bg-white rounded-full border border-gray-500">
+                        <img src="" alt="">
+                    </div>
+                    <p class="text-center text-lg font-regular pt-6">
+                        Nome Cognome<br>
+                        Co-Funder & CFO
+                    </p>
+                </div>
+                <div class="w-[50vw] sm:w-[30vw] xmd:w-[20vw] col-span-2 lg:w-[15vw]">
+                    <div class="w-full aspect-square bg-white rounded-full border border-gray-500">
+                        <img src="" alt="">
+                    </div>
+                    <p class="text-center text-lg font-regular pt-6">
+                        Nome Cognome<br>
+                        Co-Funder
+                    </p>
+                </div>
+                <div class="w-[50vw] sm:w-[30vw] xmd:w-[20vw] col-span-3 lg:w-[15vw]">
+                    <div class="w-full aspect-square bg-white rounded-full border border-gray-500">
+                        <img src="" alt="">
+                    </div>
+                    <p class="text-center text-lg font-regular pt-6">
+                        Nome Cognome<br>
+                        Co-Funder
+                    </p>
+                </div>
+                <div class="w-[50vw] sm:w-[30vw] col-span-2 xmd:w-[20vw] xmd:col-span-3 lg:w-[15vw]">
+                    <div class="w-full aspect-square bg-white rounded-full border border-gray-500">
+                        <img src="" alt="">
+                    </div>
+                    <p class="text-center text-lg font-regular pt-6">
+                        Nome Cognome<br>
+                        Co-Funder
+                    </p>
+                </div>
+            </div>
+        </section>
+        {{-- FAQ --}}
+        <section class="bg-white px-[5vw] py-[10vh]">
+            <div class="px-[5%]"> 
+                <p class="text-primary text-center text-lg font-medium">
+                    FAQ
+                </p>
+            </div>
+            <div class="py-[10vh]">
+                <p class="text-center text-5xl font-semibold">
+                    Frequently Asked Questions
+                </p>
+            </div>
+            <div class="flex flex-col gap-8">
+                <ul class="flex flex-col gap-8">
+                    <li class="rounded-lg border border-gray-400 p-7">
+                        <div class="flex">
+                            <span class="self-start">
+                                01. What are properties in Figma?
+                            </span>
+                            <div class="self-end ml-auto">
+                                <button>
+                                    <svg id="svg_plus" width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 7V17M7 12H17M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#0E5ECC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    <svg id="svg_minus" style="display: none" width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C10.22 21 8.47991 20.4722 6.99987 19.4832C5.51983 18.4943 4.36628 17.0887 3.68509 15.4442C3.0039 13.7996 2.82567 11.99 3.17294 10.2442C3.5202 8.49836 4.37737 6.89472 5.63604 5.63604C6.89472 4.37737 8.49836 3.5202 10.2442 3.17294C11.99 2.82567 13.7996 3.0039 15.4442 3.68509C17.0887 4.36628 18.4943 5.51983 19.4832 6.99987C20.4722 8.47991 21 10.22 21 12C21 14.387 20.0518 16.6761 18.364 18.364C16.6761 20.0518 14.387 21 12 21ZM12 4.5C10.5166 4.5 9.0666 4.93987 7.83323 5.76398C6.59986 6.58809 5.63856 7.75943 5.07091 9.12988C4.50325 10.5003 4.35473 12.0083 4.64411 13.4632C4.9335 14.918 5.64781 16.2544 6.6967 17.3033C7.7456 18.3522 9.08197 19.0665 10.5368 19.3559C11.9917 19.6453 13.4997 19.4968 14.8701 18.9291C16.2406 18.3614 17.4119 17.4001 18.236 16.1668C19.0601 14.9334 19.5 13.4834 19.5 12C19.5 10.0109 18.7098 8.10323 17.3033 6.6967C15.8968 5.29018 13.9891 4.5 12 4.5Z" fill="#0E5ECC"></path> <path d="M16 12.75H8C7.80109 12.75 7.61032 12.671 7.46967 12.5303C7.32902 12.3897 7.25 12.1989 7.25 12C7.25 11.8011 7.32902 11.6103 7.46967 11.4697C7.61032 11.329 7.80109 11.25 8 11.25H16C16.1989 11.25 16.3897 11.329 16.5303 11.4697C16.671 11.6103 16.75 11.8011 16.75 12C16.75 12.1989 16.671 12.3897 16.5303 12.5303C16.3897 12.671 16.1989 12.75 16 12.75Z" fill="#0E5ECC"></path> </g></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="duration-500 transition-all">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="rounded-lg border border-gray-400 p-7">
+                        <div class="flex">
+                            <span class="self-start">
+                                02. What are properties in Figma?
+                            </span>
+                            <div class="self-end ml-auto">
+                                <svg width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 7V17M7 12H17M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#0E5ECC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="rounded-lg border border-gray-400 p-7">
+                        <div class="flex">
+                            <span class="self-start">
+                                03. What are properties in Figma?
+                            </span>
+                            <div class="self-end ml-auto">
+                                <svg width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 7V17M7 12H17M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#0E5ECC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="rounded-lg border border-gray-400 p-7">
+                        <div class="flex">
+                            <span class="self-start">
+                                04. What are properties in Figma?
+                            </span>
+                            <div class="self-end ml-auto">
+                                <svg width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 7V17M7 12H17M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#0E5ECC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
         {{-- footer --}}
         <footer class="bg-white dark:bg-gray-900">

@@ -49,4 +49,7 @@
             </x-primary-button>
         </div>
     </form>
+    <div class="py-10">
+        <p class="text-center text-xs text-gray-600">Ti sei già registrato? <a href="/login" class="text-primary underline">Clicca qui</a></p>
+    </div>
 </x-guest-layout>
