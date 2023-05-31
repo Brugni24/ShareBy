@@ -25,6 +25,8 @@ module.exports = {
             colors: {
                 primary: '#0E5ECC',
                 secondary: '#111849',
+                tertiary: '#0DBBFC',
+                title: '#111849',
             },
             fontFamily: {
                 main: ['Poppins'],

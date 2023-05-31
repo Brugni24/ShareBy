@@ -13,9 +13,9 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="bg-primary antialiased font-main">
+    <body class="antialiased font-main">
         {{-- navigation bar --}}
-        <header class="w-full"> 
+        <header class="w-full bg-primary"> 
             <nav class="py-5 w-[94%] mx-auto flex items-center justify-between px-3 md:px-0">
                 <a href="/" class="flex justify-start">
                     <img class="h-[3.5rem]" src="/img/logo_shareBy_white.svg" alt="ShareBy Logo">
@@ -91,8 +91,158 @@
             </nav>
         </header>
         {{-- first slide --}}
-        <section>
-            
+        <section class="px-[5vw]">
+            <div class="flex flex-col items-center justify-center py-24">
+                <h1 class="text-center text-8xl font-bold text-title">I nostri prodotti</h1>
+                <div class="pt-16 w-[50vw]">
+                    <p class="text-center text-lg text-gray-500">
+                        I prodotti che offriamo attualmente sono collegati tra loro da un filo logico comune: 
+                        aiutare le persone a migliorare la propria FINANCIAL AWARNESS
+                    </p>
+                </div>
+                <div class="w-[50vw] py-32">
+                    <img src="/img/products_tour.svg" alt="Products Tour">
+                </div>
+            </div>
+        </section>
+        {{-- Algoritmo di analisi aziendale --}}
+        <section class="px-[5vw]">
+            <div class="flex flex-col items-center justify-center pb-24">
+                <h1 class="text-center text-7xl font-bold text-title">Algoritmo di analisi aziendale</h1>
+                <div class="pt-16 w-[50vw]">
+                    <p class="text-center text-lg text-gray-500">
+                        L’obiettivo dell’analizi aziendale è quello di dare una visione a 360 gradi dell’azienda d’interesse, 
+                        combinando gli indici e i margini più importanti della strategia d’impresa
+                    </p>
+                </div>
+                <div class="flex items-center justify-center w-[80vw] h-fit border rounded-3xl my-28 py-16 shadow-md">
+                    <img class="w-[80%]" src="/img/analysis_charts.png" alt="">
+                </div>
+                <div class="flex items-center justify-center">
+                    <a href="{{ url('/dashboard')}}" class="px-10 py-6 text-lg rounded-[2rem] bg-primary text-white font-semibold">
+                        Effettua la Prova Gratuita
+                    </a>
+                </div>
+                <div class="flex flex-col items-center justify-center py-28">
+                    <h1 class="text-primary text-6xl font-bold uppercase">Come funziona?</h1>
+                    <div class="pt-16 w-[50vw]">
+                        <p class="text-center text-lg text-gray-500">
+                            Il nostro algoritmo si basa su un ottimizzazione economica e statitistica 
+                            per sfruttare al meglio l’innovativa tecnologia sul mercato
+                        </p>
+                        <p class="text-center text-lg text-gray-500 p-10">
+                            Si basa su tre tipi di analisi:
+                        </p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="bg-[#F0F6FF] w-14 aspect-square rounded-xl my-10">
+                                <img src="" alt="">
+                            </div>
+                            <h1 class="text-center text-5xl font-semibold text-title">Analisi di redditività</h1>
+                            <div class="w-[60vw]">
+                                <p class="text-center text-gray-500 text-lg py-8">
+                                    Quest’analisi si avvale di alcuni indici come ROE, ROS e ROI, 
+                                    che vengono opportunamente confrontati con la media nazionale, 
+                                    così da ricavare il trend sulla reddività aziendale rispetto al mercato di riferimento
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="bg-[#F0F6FF] w-14 aspect-square rounded-xl my-10">
+                                <img src="" alt="">
+                            </div>
+                            <h1 class="text-center text-5xl font-semibold text-title">Analisi della struttura patrimoniale</h1>
+                            <div class="w-[60vw]">
+                                <p class="text-center text-gray-500 text-lg py-8">
+                                    La struttura patrimoniale viene analizzata tramite l’uso dell’IGGC e MRI 
+                                    che vengono anch’essi valutati in maniera statica, confrontati con la media nazionale 
+                                    e in maniera dinamica, valutati tramite l’uso della statistica interferenziale
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="bg-[#F0F6FF] w-14 aspect-square rounded-xl my-10">
+                                <img src="" alt="">
+                            </div>
+                            <h1 class="text-center text-5xl font-semibold text-title">Analisi sull'indebitamento pubblico</h1>
+                            <div class="w-[60vw]">
+                                <p class="text-center text-gray-500 text-lg py-8">
+                                    La struttura patrimoniale viene analizzata tramite l’uso del ROD, Leverage e Leva finanziaria, 
+                                    strumenti che vengono valutati sia in maniera statica che in maniera dinamica con 
+                                    l’utilizzo di contatori
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center pt-20">
+                        <a href="{{ url('/dashboard')}}" class="px-10 py-6 text-lg rounded-[2rem] bg-primary text-white font-semibold">
+                            Effettua la Prova Gratuita
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{-- ShareBYOU --}}
+        <section class="px-[5vw]">
+            <div class="flex flex-col items-center justify-center py-24">
+                <h1 class="text-center text-8xl font-bold text-title">ShareBYOU</h1>
+                <div class="grid items-center justify-center grid-cols-2 pt-20">
+                    <div class="flex items-center justify-center">
+                        <p class="text-center text-lg text-gray-500 w-[80%]">
+                            Sharebyou è il nostro servizio B2B che permette ai professionisti di creare e gestire 
+                            la propria community attraverso un programma di fidelizzazione custom che viene stabilito 
+                            dai professionisti.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <img class="h-[40rem]" src="/img/shareBYOU_post.svg" alt="Products Tour">
+                    </div>
+                </div>
+                <div class="bg-primary shadow-md w-[80vw] h-[20rem] my-28 rounded-[3rem]">
+                    <div class="flex flex-row justify-around items-center py-14">
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="bg-white w-16 aspect-square rounded-xl">
+                                <img src="" alt="">
+                            </div>
+                            <h1 class="text-white text-center font-bold text-2xl py-6">Remunerazione</h1>
+                            <div class="px-16">
+                                <p class=" text-center text-white font-regular">
+                                    I "professionisti” potranno guadagnare dalla pubblicazione di contenuti esclusivi.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="bg-white w-16 aspect-square rounded-xl">
+                                <img src="" alt="">
+                            </div>
+                            <h1 class="text-white text-center font-bold text-2xl py-6">Contenuti Esclusivi</h1>
+                            <div class="px-16">
+                                <p class="text-center text-white font-regular">
+                                    I "professionisti" potranno pubblicare analisi finanziarie, consulenze, video-corsi e articoli.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{-- PYLO --}}
+        <section class="px-[5vw]">
+            <div class="flex flex-col items-center justify-center pb-28">
+                <h1 class="text-center text-8xl font-bold text-title">PYLO</h1>
+                <div class="flex flex-row items-center justify-center pt-20">
+                    <div class="flex items-center justify-center">
+                        <p class="text-center text-lg text-gray-500 w-[80%]">
+                            Il sistema di intelligenza artificiale, che ti permette di chiedere 24h/7 ogni tipo di domanda, 
+                            dubbio o curiosità, proprio come se fosse un consulente fisico!
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <img class="" src="/img/ai_bot.svg" alt="Products Tour">
+                    </div>
+                </div>
+            </div>
         </section>
         {{-- footer --}}
         <footer class="bg-white dark:bg-gray-900">
@@ -100,7 +250,7 @@
                 <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="/" class="flex items-center">
-                        <img src="/img/logo_shareBy_white.svg" class="h-16 mr-3" alt="ShareBy Logo" />
+                        <img src="/img/logo_shareBy_white.svg" class="h-16 mr-3" alt="ShareBy Logo"/>
                     </a>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

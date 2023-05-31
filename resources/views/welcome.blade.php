@@ -245,6 +245,7 @@
                 </div>
             </div>    
         </section>
+        {{-- Chi siamo --}}
         <section class="bg-white py-[10vh]">
             <div class="px-[5vw]">
                 <div class="px-[5%]"> 
