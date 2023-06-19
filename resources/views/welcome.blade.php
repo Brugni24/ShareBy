@@ -46,7 +46,7 @@
                 <div class="hidden lg:flex w-[50%] font-regular flex-row justify-evenly items-center">
                     <a class="link link-underline link-underline-black hover:text-white text-gray-100" href="{{ url('/')}}">Home</a>
                     <a class="link link-underline link-underline-black hover:text-white  text-gray-100" href="{{ url('/prodotti')}}">Prodotti</a>
-                    <a class="link link-underline link-underline-black hover:text-white  text-gray-100"href="#">Contatti</a>
+                    <a class="link link-underline link-underline-black hover:text-white  text-gray-100"href="{{ url('/contatti')}}">Contatti</a>
                 </div>
                 @if (Route::has('login'))
                 <div class="hidden lg:flex gap-3 font-regular">
@@ -80,7 +80,7 @@
                             <a href="{{ url('/prodotti')}}" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">Prodotti</a>
                         </li>
                         <li>
-                            <a href="#about" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">Contatti</a>
+                            <a href="{{ url('/contatti')}}" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">Contatti</a>
                         </li>
                         <li>
                             <a href="{{ route('login') }}" class="flex justify-center py-4 mb-1 rounded-xl text-primary font-semibold border-2 border-primary hover:bg-white transition duration-100">Log in</a>
