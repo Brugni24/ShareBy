@@ -22,6 +22,10 @@ Route::get('/prodotti', function () {
     return view('prodotti');
 });
 
+Route::get('/contatti', function () {
+    return view('contatti');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
