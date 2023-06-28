@@ -36,9 +36,9 @@
             }
         </style>
     </head>
-    <body class="bg-primary antialiased font-main">
+    <body class="antialiased font-main">
         {{-- navigation bar --}}
-        <header class="w-full"> 
+        <header class="w-full bg-primary"> 
             <nav class="py-5 w-[94%] mx-auto flex items-center justify-between px-3 md:px-0">
                 <a href="/" class="flex justify-start">
                     <img class="h-[3.5rem]" src="/img/logo_shareBy_white.svg" alt="ShareBy Logo">
@@ -114,7 +114,7 @@
             </nav>
         </header>
         {{-- first slide --}}
-        <section class="px-[5%]">
+        <section class="px-[5%] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/90 from-10% via-primary/95 via-30% to-primary to-40%">
             <div class="pt-10 md:pt-16 xmd:flex">
                 <div class="basis-[50%]">
                     <div class="flex justify-center mb-10 md:mb-14">

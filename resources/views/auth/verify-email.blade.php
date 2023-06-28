@@ -1,21 +1,25 @@
 <x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
+    <div class="mb-4 text-2xl text-center text-title font-semibold">
+        {{ __('Grazie per esserti registrato!') }}
+        <br>
+    </div>
+    <div class="mb-4 text-sm text-center text-gray-600">
+        {{ __('Prima di iniziare, verifica il tuo indirizzo email cliccando sul link che ti abbiamo appena inviato. Se non hai ricevuto nessuna mail, te ne spediremo un\'altra.') }}
     </div>
 
     @if (session('status') == 'verification-link-sent')
         <div class="mb-4 font-medium text-sm text-green-600">
-            {{ __('A new verification link has been sent to the email address you provided during registration.') }}
+            {{ __('Un nuovo link di verificare è stato mandato all\'indirizzo email che ha inserito nelal fase di registrazione.') }}
         </div>
     @endif
 
-    <div class="mt-4 flex items-center justify-between">
+    <div class="mt-16 flex items-center justify-between">
         <form method="POST" action="{{ route('verification.send') }}">
             @csrf
 
             <div>
                 <x-primary-button>
-                    {{ __('Resend Verification Email') }}
+                    {{ __('Rinvia mail di verifica') }}
                 </x-primary-button>
             </div>
         </form>
