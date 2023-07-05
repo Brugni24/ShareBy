@@ -14,18 +14,19 @@ return new class extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->float('roe');
-            $table->float('roi');
-            $table->float('ros');
-            $table->float('rod');
-            $table->float('rotazione_impieghi');
-            $table->float('incidenza_gestione_nn_caratteristica');
-            $table->float('leverage');
-            $table->float('leva_finanziaria');
-            $table->float('ebitda');
-            $table->float('orizzonte_temporale');
-            $table->float('proiezione_vendite');
-            $table->float('proiezione_utili');
+            $table->json('roi');
+            $table->json('roe');
+            $table->json('ros');
+            $table->json('rod');
+            $table->json('rotazione_impieghi');
+            $table->json('incidenza_gestione_nn_caratteristica');
+            $table->json('leverage');
+            $table->json('leva_finanziaria');
+            $table->json('ebitda');
+            $table->float('P/E_ratio');
+            $table->integer('orizzonte_temporale');
+            $table->integer('proiezione_vendite');
+            $table->integer('proiezione_utili');
             $table->timestamps();
         });
     }
