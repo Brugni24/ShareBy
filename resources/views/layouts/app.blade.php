@@ -13,9 +13,11 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        @livewireStyles
     </head>
-    <body class="font-main antialiased">
-        <div class="min-h-screen bg-gray-100">
+    <body class="font-main antialiased bg-gray-100">
+        <div>
             @include('layouts.navigation')
 
             <!-- Page Heading -->

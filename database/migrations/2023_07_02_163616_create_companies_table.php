@@ -29,6 +29,10 @@ return new class extends Migration
             $table->integer('proiezione_utili');
             $table->timestamps();
         });
+
+        DB::statement(
+            'ALTER TABLE companies ADD FULLTEXT fulltext_index(name)'
+        );
     }
 
     /**

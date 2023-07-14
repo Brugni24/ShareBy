@@ -36,9 +36,11 @@
             }
         </style>
     </head>
-    <body class="antialiased font-main">
-        {{-- navigation bar --}}
-        <header class="w-full bg-primary"> 
+    <body class="antialiased font-main bg-primary">
+        {{-- landing page --}}
+        <section style="background-image: url(/img/sfondo4.jpg)" class="bg-cover">
+            {{-- navigation bar --}}
+            <header class="w-full bg-trasparent"> 
             <nav class="py-5 w-[94%] mx-auto flex items-center justify-between px-3 md:px-0">
                 <a href="/" class="flex justify-start">
                     <img class="h-[3.5rem]" src="/img/logo_shareBy_white.svg" alt="ShareBy Logo">
@@ -112,18 +114,18 @@
                     });
                 </script>
             </nav>
-        </header>
-        {{-- first slide --}}
-        <section class="px-[5%] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/90 from-10% via-primary/95 via-30% to-primary to-40%">
+            </header>
+            {{-- first slide --}}
+            <div class="px-[5%] bg-trasparent">
             <div class="pt-10 md:pt-16 xmd:flex">
                 <div class="basis-[50%]">
                     <div class="flex justify-center mb-10 md:mb-14">
-                        <h1 class="text-white text-5xl font-extrabold text-center xs:text-[3.7em] xmd:text-left lg:text-[4.25em] xl:text-[5em]">
-                            “Entra nel mondo della FINANZA con ShareBY"
+                        <h1 class="text-white text-5xl font-extrabold text-center xs:text-[3.7em] lg:text-[4.25em] xl:text-[5em]">
+                            Entra nel mondo della FINANZA con ShareBY
                         </h1>
                     </div>
                     <div class="flex justify-center flex-col">
-                        <p class="text-white text-md font-medium text-center leading-7 px-4 xs:text-base xmd:text-left xl:text-lg">
+                        <p class="text-white text-md font-medium text-center leading-7 px-4 xs:text-base xl:text-lg">
                             Shareby è la piattaforma che sfrutta la stretta connessione tra l’informatizzazione
                             e il mondo finanziario, al fine di ottenere analisi approfondite e dettagliate 
                             in pochi click.
@@ -131,13 +133,14 @@
                     </div>
                 </div> 
                 <div class="basis-1/2 flex items-center justify-center mt-16 xmd:ml-[5%]">
-                    <img class="w-full" src="/img/data_trends_main_draw.svg" alt="">
+                    <img class="w-full" src="/img/undraw_investor_update_re_qnuu.svg" alt="">
                 </div>
             </div>    
             <div class="py-24 xmd:flex items-center xl:py-26">
                 <div class="basis-[50%] flex items-center justify-center">
                     <button class="font-semibold text-white rounded-xl bg-gray-700 px-12 py-3">Scopri di più</button>
                 </div>
+            </div>
             </div>
         </section>
         {{-- Il nostro algoritmo --}}
