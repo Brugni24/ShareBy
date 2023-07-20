@@ -17,6 +17,29 @@
                             <svg width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0E5ECC" stroke-width="1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#0E5ECC" fill-rule="evenodd" d="M9 17a1 1 0 102 0v-6h6a1 1 0 100-2h-6V3a1 1 0 10-2 0v6H3a1 1 0 000 2h6v6z"></path> </g></svg>
                         </div>
                     </div>
+
+                    <div class="w-full">
+                        <canvas id="roiChart"></canvas>
+                    </div>
+                    
+    
+                    <script>
+                        var roi = {{$azienda->roi}};
+                        console.log(roi);
+    
+                        const ctx = document.getElementById('roiChart').getContext('2d');
+    
+                        const roiChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: [2018, 2019, 2020, 2021, 2022],
+                                datasets: [{
+                                    label: 'roi',
+                                    data: roi,
+                                }]
+                            }
+                        });
+                    </script>
                 @else
                     <div>
                         <h1 class="font-bold text-2xl text-center">NESSUNA AZIENDA CERCATA...</h1>
@@ -26,29 +49,6 @@
                         </div>
                     </div>
                 @endif
-                <!-- <div>
-                    <div>
-                        {{-- <canvas id="myChart" style="width:100%;max-width:700px"></canvas> --}}
-                        
-                        {{-- <script>
-                            var companiesData = {!! json_encode({{$azienda->roi}}) !!};
-                            
-                            for (var i = 0; i < companiesData.length; i++) {
-                                var roiValues = JSON.parse(companiesData[i]);
-                                for (var year in roiValues) {
-                                    console.log(year + ': ' + roiValues[year]);
-                                }
-                            }
-                        </script> --}}
-                    </div>                
-
-                </div> -->
-                {{-- <script>
-                    function a(){
-                        var roi = {{$azienda->roi}};
-                        alert(roi);
-                    }
-                </script> --}}
             </div>
         </div>
     </section>

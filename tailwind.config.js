@@ -12,9 +12,12 @@ module.exports = {
 
     theme: {
         screens: {
-            xs: '510px',
-            xmd: '900px',
-            ...defaultTheme.screens,
+            iphone: '390px',
+            sm: '720px',
+            md: '900px',
+            lg: '1024px',
+            xl: '1280px',
+            xxl: '1440px',
         },
 
         fontFamily: {

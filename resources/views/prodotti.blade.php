@@ -54,10 +54,10 @@
                             <a href="{{ url('/')}}" class="flex justify-center py-4 mb-1 rounded-xl text-white bg-primary font-bold">Home</a>
                         </li>
                         <li>
-                            <a href="{{ url('/prodotti')}}" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">Services</a>
+                            <a href="{{ url('/prodotti')}}" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">Prodotti</a>
                         </li>
                         <li>
-                            <a href="{{ url('/contatti')}}" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">About</a>
+                            <a href="{{ url('/contatti')}}" class="flex justify-center py-4 mb-1 rounded-xl hover:bg-gray-200 transition duration-100">Chi Siamo</a>
                         </li>
                         <li>
                             <a href="{{ route('login') }}" class="flex justify-center py-4 mb-1 rounded-xl text-primary font-semibold border-2 border-primary hover:bg-white transition duration-100">Log in</a>
