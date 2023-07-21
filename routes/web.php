@@ -23,8 +23,8 @@ Route::get('/prodotti', function () {
     return view('prodotti');
 });
 
-Route::get('/contatti', function () {
-    return view('contatti');
+Route::get('/chiSiamo', function () {
+    return view('chiSiamo');
 });
 
 
