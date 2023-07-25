@@ -36,8 +36,10 @@ module.exports = {
             },
             backgroundImage: {
                 whiteCard: "url('/img/white_card.svg')",
-                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-              },
+            },
+            animation: {
+                'freccia': 'bounce 1.5s ease-in-out infinite',
+            },
         },
     },
 

@@ -3,3 +3,72 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/* underline animation */
+.link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-size: 0 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .3s ease-in-out;
+}
+.link-underline-black {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(white, white);
+}
+.link-underline:hover {
+    background-size: 100% 2px;
+    background-position: 0 100%;
+}
+
+/* burger animation */
+.toggle #line1 {
+    transform: rotate(-45deg) translate(-5px, 9px);
+}
+.toggle #line2 {
+    opacity: 0;
+}
+.toggle #line3 {
+    transform: rotate(45deg) translate(-5px, -9px);
+}
+
+/* dropdown mobile menu animation */
+.dropdown-menu {
+    height: 90vh;
+    padding: 3rem 2.5rem 3rem 2.5rem;
+}
+.dropdown-menu-content{
+    opacity: 100%;
+}
+
+/* dropdown user menu */
+.dropdown-user-menu {
+    height: 240px;
+    padding: 0.75rem;
+}
+
+/* faq animation */
+#faq.active #answer {
+    max-height: 300px;
+    animation: fade 0.8s ease-in-out;
+}
+#faq.active #plus-minus-svg #line_1 {
+    opacity: 0;
+}
+#faq.active #plus-minus-svg #line_2 {
+    transform: rotate(90deg);
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* fade in animation */
+.fade-in {opacity: 0; transition: all 1s cubic-bezier(.215, .61, .355, 1);}
+.fade-in.in-page {opacity: 1;}

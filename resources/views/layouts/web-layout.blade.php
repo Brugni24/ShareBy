@@ -12,33 +12,10 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-        <style>
-            .link-underline {
-                border-bottom-width: 0;
-                background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
-                background-size: 0 2px;
-                background-position: 0 100%;
-                background-repeat: no-repeat;
-                transition: background-size .3s ease-in-out;
-            }
-
-            .link-underline-black {
-                background-image: linear-gradient(transparent, transparent), linear-gradient(white, white);
-            }
-
-            .link-underline:hover {
-                background-size: 100% 2px;
-                background-position: 0 100%;
-            }
-            .first-background{
-                background: radial-gradient(50% 50% at 50% 50%, rgba(14, 94, 204, 0.8) 0%, rgba(14, 94, 204, 0.9) 48.96%, #0E5ECC 100%);
-            }
-        </style>
     </head>
     <body class="antialiased font-main bg-secondary">
         {{-- navbar --}}
-        <nav class="w-full h-[10vh] bg-secondary py-4 pl-6 pr-4 sm:px-6">
+        <nav class="w-full bg-secondary py-4 px-6">
             <div class="max-w-screen flex flex-wrap items-center justify-between mx-auto">
                 {{-- logo --}}
                 <a href="{{ url('/')}}" class="flex">
@@ -47,7 +24,7 @@
                 {{-- desktop navigation menu --}}
                 <div class="hidden md:flex w-[50%] font-medium text-lg flex-row justify-evenly items-center">
                     <a class="link link-underline link-underline-black hover:text-white text-gray-100" href="/">Home</a>
-                    <a class="link link-underline link-underline-black hover:text-white  text-gray-100" href="{{ url('/prodotti') }}">Prodotti</a>
+                    <a class="link link-underline link-underline-black hover:text-white  text-gray-100" href="{{ url('/prodotti') }}">Servizi</a>
                     <a class="link link-underline link-underline-black hover:text-white  text-gray-100"href="{{ url('/chiSiamo')}}">Contatti</a>
                 </div>
                 {{-- menu --}}
@@ -55,79 +32,86 @@
                     @if (Route::has('login'))
                         @auth
                         {{-- desktop user menu --}}
-                        <button type="button" class="hidden md:flex aspect-square w-10 mr-3 rounded-full md:mr-0 md:w-11" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                        <button type="button" class="hidden md:flex aspect-square w-10 mr-3 rounded-full md:mr-0 md:w-11 hover:scale-110 hover:border-4 border-white transition-all duration-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                             <span class="sr-only">Open user menu</span>
                             <div class="flex items-center justify-center aspect-square w-10 md:w-11 bg-gray-300 rounded-full">
                                 <span class="text-gray-800 font-bold text-lg">A</span>
                             </div>
                         </button>
                         {{-- dropdown desktop user menu --}}
-                        <div class="hidden absolute right-0 w-min top-20 bg-gray-100 rounded-xl border border-gray-200 p-3 mr-4 sm:mx-6" id="user-dropdown">
-                            <div class="px-4 py-3">
-                                <span class="block text-md text-gray-900">{{ Auth::user()->name }} {{ Auth::user()->surname }}</span>
-                                <span class="block text-sm  text-gray-500 truncate">{{ Auth::user()->email }}</span>
-                            </div>
-                            <hr class="rounded border-gray-300">
-                            <ul class="py-2 px-2 text-md" aria-labelledby="user-menu-button">
-                                <li>
-                                    <a href="{{ url('/dashboard') }}" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Dashboard</a>
-                                </li>
-                                <li>
-                                    <x-dropdown-link class="block px-4 py-3 text-gray-700 hover:bg-gray-100" :href="route('profile.edit')">
-                                        {{ __('Impostazioni') }}
-                                    </x-dropdown-link>
-                                </li>
-                                <li>
-                                    {{-- Authentication --}}
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-
-                                        <x-dropdown-link class="block px-4 py-3 text-gray-700 hover:bg-gray-100" :href="route('logout')"
-                                                onclick="event.preventDefault();
-                                                            this.closest('form').submit();">
-                                            {{ __('Esci') }}
+                        <div id="user-dropdown" class="h-[0vh] absolute overflow-hidden right-0 w-min top-20 bg-gray-100 rounded-xl mr-4 transition-all duration-1000 ease-[cubic-bezier(.215, .61, .355, 1)] sm:mx-6">
+                            <div id="user-dropdown-content" class="opacity-0 transition-all duration-1000 ease-in-out">
+                                <div class="px-4 py-3">
+                                    <span class="block text-md text-gray-900">{{ Auth::user()->name }} {{ Auth::user()->surname }}</span>
+                                    <span class="block text-sm  text-gray-500 truncate">{{ Auth::user()->email }}</span>
+                                </div>
+                                <hr class="rounded border-gray-300">
+                                <ul class="py-2 px-2 text-md" aria-labelledby="user-menu-button">
+                                    <li>
+                                        <a href="{{ url('/dashboard') }}" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <x-dropdown-link class="block px-4 py-3 text-gray-700 hover:bg-gray-100" :href="route('profile.edit')">
+                                            {{ __('Impostazioni') }}
                                         </x-dropdown-link>
-                                    </form>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <li>
+                                        {{-- Authentication --}}
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+    
+                                            <x-dropdown-link class="block px-4 py-3 text-gray-700 hover:bg-gray-100" :href="route('logout')"
+                                                    onclick="event.preventDefault();
+                                                                this.closest('form').submit();">
+                                                {{ __('Esci') }}
+                                            </x-dropdown-link>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
                             <script>
                                 const user_button = document.querySelector('#user-menu-button');
                                 const user_menu = document.querySelector('#user-dropdown');
+                                const user_menu_content = document.querySelector('#user-dropdown-content');
                     
                                 user_button.addEventListener("click", () => {
-                                    user_menu.classList.toggle("hidden");
+                                    user_menu.classList.toggle("dropdown-user-menu");
+                                    user_menu_content.classList.toggle("dropdown-menu-content");
                                 });
                             </script>
                         </div>
                         {{-- bottoni accedi e registrati mostrati in formato desktop nel caso l'utente non abbia fatto l'accesso --}}  
                             @else
                             <div class="hidden md:flex">
-                                <div class="flex items-center justify-center px-3 py-2 mr-3 rounded-xl border-2 border-white hover:bg-primary">
-                                    <a href="{{ route('login') }}" class="text-white text-md font-semibold">Accedi</a>
-                                </div>
+                                <a href="{{ route('login') }}" class="mr-3">
+                                    <x-primary-button class="bg-secondary px-3 py-2 border-2 border-white text-md hover:text-secondary hover:bg-white">Accedi</x-primary-button>
+                                </a>
                                 @if (Route::has('register'))
-                                    <div class="flex items-center justify-center px-3 py-2 rounded-xl bg-primary border-2 border-primary hover:bg-white hover:border-white">
-                                        <a href="{{ route('register') }}" class="text-white text-md font-semibold hover:text-secondary">Registrati</a>
-                                    </div>
+                                        <a href="{{ route('register') }}">
+                                            <x-primary-button class="bg-primary px-3 py-2 border-2 border-white text-md hover:text-secondary hover:bg-white">Registrati</x-primary-button>
+                                        </a>
                                 @endif
                             </div>
                             @endauth
                     @endif
                     {{-- mobile menu --}}
-                    <button id="mobile-menu-button" data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 aspect-square w-10 sm:w-11 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none" aria-controls="navbar-user" aria-expanded="false">
+                    <button id="mobile-menu-button" class="md:hidden" data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 aspect-square w-10 sm:w-11 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:scale-110 transition-all duration-300" aria-controls="navbar-user" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
-                        <svg id="menu-logo" class="aspect-square w-10 sm:w-11" viewBox="0 0 20.00 20.00" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="0.8"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#ffffff" fill-rule="evenodd" d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"></path> </g></svg>
-                        <svg id="cross-logo" class="aspect-square w-10 sm:w-11" style="display: none"  fill="#ffffff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M18.8,16l5.5-5.5c0.8-0.8,0.8-2,0-2.8l0,0C24,7.3,23.5,7,23,7c-0.5,0-1,0.2-1.4,0.6L16,13.2l-5.5-5.5 c-0.8-0.8-2.1-0.8-2.8,0C7.3,8,7,8.5,7,9.1s0.2,1,0.6,1.4l5.5,5.5l-5.5,5.5C7.3,21.9,7,22.4,7,23c0,0.5,0.2,1,0.6,1.4 C8,24.8,8.5,25,9,25c0.5,0,1-0.2,1.4-0.6l5.5-5.5l5.5,5.5c0.8,0.8,2.1,0.8,2.8,0c0.8-0.8,0.8-2.1,0-2.8L18.8,16z"></path> </g></svg>
+                        <div id="burger-menu" class="aspect-square w-10 sm:w-11 p-1">
+                            <div id="line1" class="w-full h-[5px] bg-white rounded-xl my-[5px] transition-all duration-300 ease-in-out"></div>
+                            <div id="line2" class="w-full h-[5px] bg-white rounded-xl my-[5px] transition-all duration-300 ease-in-out"></div>
+                            <div id="line3" class="w-full h-[5px] bg-white rounded-xl my-[5px] transition-all duration-300 ease-in-out"></div>
+                        </div>
                     </button>
                     {{-- dropdown mobile menu --}}
-                    <div id="mobile-menu" class="hidden absolute left-0 right-0 mx-auto h-[90vh] w-full top-[10vh] px-12 py-12 bg-secondary">
-                        <div class="h-full flex flex-col justify-between">
+                    <div id="mobile-menu" class="h-[0vh] absolute left-0 right-0 mx-auto w-full top-[80px] bg-secondary overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
+                        <div id="mobile-menu-content" class="h-full flex flex-col justify-between p-4 opacity-0 transition-all duration-1000 ease-in-out">
                             <ul class="font-regular text-xl text-white">
                                 <li>
                                     <a href="{{ url('/')}}" class="flex py-4 rounded-xl font-medium">Home</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/prodotti')}}" class="flex py-4 rounded-xl font-medium">Prodotti</a>
+                                    <a href="{{ url('/prodotti')}}" class="flex py-4 rounded-xl font-medium">Servizi</a>
                                 </li>
                                 <li>
                                     <a href="{{ url('/chiSiamo')}}" class="flex py-4 rounded-xl font-medium">Chi Siamo</a>
@@ -172,13 +156,13 @@
                                     @else
                                     {{-- se non è loggato --}}
                                     <div class="w-full flex flex-row items-center justify-center gap-4">
-                                        <div class="flex items-center justify-center px-3 py-2 rounded-xl border-2 border-white hover:bg-primary">
-                                            <a href="{{ route('login') }}" class="text-white text-lg font-semibold">Accedi</a>
-                                        </div>
+                                        <a href="{{ route('login') }}">
+                                            <x-primary-button class="bg-secondary px-3 py-2 border-2 border-white text-lg hover:text-secondary hover:bg-white">Accedi</x-primary-button>
+                                        </a>
                                         @if (Route::has('register'))
-                                        <div class="flex items-center justify-center px-3 py-2 rounded-xl bg-primary border-2 border-primary hover:bg-white hover:border-white">
-                                            <a href="{{ route('register') }}" class="text-white text-lg font-semibold hover:text-secondary">Registrati</a>
-                                        </div>
+                                        <a href="{{ route('register') }}">
+                                            <x-primary-button class="bg-primary px-3 py-2 border-2 border-white text-lg hover:text-secondary hover:bg-white">Registrati</x-primary-button>
+                                        </a>
                                         @endif
                                     </div>                                        
                                     @endauth
@@ -189,22 +173,13 @@
                     <script>
                         const button = document.querySelector('#mobile-menu-button');
                         const menu = document.querySelector('#mobile-menu');
-    
-                        const menu_logo = document.getElementById("menu-logo");
-                        const cross_logo = document.getElementById("cross-logo");
-                        let menu_switch = false;
+                        const menu_content = document.querySelector('#mobile-menu-content');
+                        const burger = document.querySelector('#burger-menu');
             
                         button.addEventListener("click", () => {
-                            menu.classList.toggle("hidden");
-                            if(!menu_switch){
-                                menu_logo.style.display = "none";
-                                cross_logo.style.display = "block";
-                                menu_switch = true;
-                            }else{
-                                menu_logo.style.display = "block";
-                                cross_logo.style.display = "none";
-                                menu_switch = false;
-                            }
+                            menu.classList.toggle("dropdown-menu");
+                            menu_content.classList.toggle("dropdown-menu-content");
+                            burger.classList.toggle('toggle');
                         });
                     </script>
                 </div>
@@ -215,10 +190,35 @@
 
             @yield('content')
 
+            {{-- fade in script --}}
+            <script>
+                // elements
+                var elements_to_watch = document.querySelectorAll('.watch');
+
+                // callback
+                var callback = function(items){
+                    items.forEach((item) => {
+                        if (item.isIntersecting) {
+                            item.target.classList.add('in-page');
+                        }else{
+                            item.target.classList.remove('in-page');
+                        }
+                    });
+                }
+
+                // observer
+                var observer = new IntersectionObserver (callback, { threshold: 1 });
+
+                // apply
+                elements_to_watch.forEach((element) => {
+                    observer.observe(element);
+                });
+            </script>
+            
         </main>
         {{-- footer --}}
         <footer class="bg-secondary">
-            <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="mx-auto w-full max-w-screen-xl px-10 py-8">
                 <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="/" class="flex items-center">
@@ -241,10 +241,10 @@
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Prodotti</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Servizi</h2>
                         <ul class="text-gray-600 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <a href="{{ url('/prodotti')}}" class="hover:underline ">Algoritmo</a>
+                                <a href="{{ url('/prodotti')}}" class="hover:underline ">Analisi Aziendale</a>
                             </li>
                             <li class="mb-4">
                                 <a href="{{ url('/prodotti')}}" class="hover:underline">ShareBYOU</a>
