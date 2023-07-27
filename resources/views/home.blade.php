@@ -31,7 +31,7 @@
         </div>
     </section>
     {{-- intro --}}
-    <section class="bg-white px-[5vw] py-[7vh]">
+    <section class="bg-white px-[5vw] py-[8vh]">
         <div class="flex flex-col justify-center items-center">
             <span class="text-2xl font-bold text-center text-gray-900 md:text-2xl lg:text-3xl watch fade-in">
                 “Il rischio deriva dal non sapere cosa stai facendo”
@@ -40,20 +40,15 @@
                 ~ Warren Buffet
             </span>
         </div>
-        <div class="py-[5vh] md:grid grid-cols-2 gap-10 md:pt-[7vh] md:pb-0">
+        <div class="py-[5vh] md:pt-[7vh] md:pb-0">
             <div class="flex justify-center">
-                <img class="w-[70vw] sm:w-[50vw] md:w-[40vw] xl:w-[35vw]" src="/img/stock_market.svg" alt="Facile, Veloce, Intuitivo">
+                <img class="w-[70vw] sm:w-[50vw] md:w-[40vw] max-w-[450px]" src="/img/stock_market.svg" alt="Facile, Veloce, Intuitivo">
             </div>
-            <div class="pt-[5vh] md:py-0">
-                <div class="px-[4%]">
-                    <p class="text-center font-medium text-gray-800 text-lg leading-snug watch fade-in">
-                        Non seguire i trend, noi di shareBy ti offriamo una consulenza avanzata e 
-                        completa perché sia tu a costruire il tuo percorso nel campo degli investimenti con consapevolezza.
-                    </p>
-                </div>
-                <div class="flex justify-center pt-[5vh] sm:pt-[7vh] md:pt-[5vh]">
-                    <img class="w-[80vw] sm:w-[55vw] md:w-[35vw] lg:w-[30vw] xl:w-[25vw]" src="/img/statistiche_home_page.svg" alt="Numeri Statistiche Algoritmo">
-                </div>
+            <div class="px-[5vw] mt-[5vh] m-auto max-w-[700px] md:px-0 mt:mt-[7vh]">
+                <p class="text-center font-medium text-gray-800 text-lg leading-snug watch fade-in">
+                    Non seguire i trend, noi di shareBy ti offriamo una consulenza avanzata e 
+                    completa perché sia tu a costruire il tuo percorso nel campo degli investimenti con consapevolezza.
+                </p>
             </div>
         </div>
         <div class="flex justify-center pt-[3vh] md:pt-[6vh] xl:pt-[8vh]">
@@ -66,7 +61,7 @@
     <section style="background-image: url(/img/bg_landing_page.jpg)" class="bg-cover bg-fixed bg-center">
         <div class="px-[10%] py-[10vh] lg:pb-0 lg:px-[15%] xl:px-[20%]">
             <h1 class="watch fade-in text-2xl text-center text-white font-bold sm:text-3xl lg:text-4xl">Cerchi una consulenza intelligente?</h1>
-            <p class="watch fade-in text-center text-white font-medium text-lg pt-6">
+            <p class="watch fade-in text-center m-auto text-white font-medium text-lg pt-6 max-w-[700px]">
                 Prendi il controllo del tuo futuro finanziario: iscriviti ora per ricevere una consulenza 
                 completa per i tuoi investimenti, con un’analisi aziendale e una strategie personalizzata 
                 in base alle tue necessità.

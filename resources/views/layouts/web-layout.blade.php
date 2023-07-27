@@ -25,7 +25,7 @@
                 <div class="hidden md:flex w-[50%] font-medium text-lg flex-row justify-evenly items-center">
                     <a class="link link-underline link-underline-black hover:text-white text-gray-100" href="/">Home</a>
                     <a class="link link-underline link-underline-black hover:text-white  text-gray-100" href="{{ url('/prodotti') }}">Servizi</a>
-                    <a class="link link-underline link-underline-black hover:text-white  text-gray-100"href="{{ url('/chiSiamo')}}">Contatti</a>
+                    <a class="link link-underline link-underline-black hover:text-white  text-gray-100"href="{{ url('/chiSiamo')}}">Chi Siamo</a>
                 </div>
                 {{-- menu --}}
                 <div class="flex items-center sm:pt-0 md:order-2">
@@ -207,7 +207,7 @@
                 }
 
                 // observer
-                var observer = new IntersectionObserver (callback, { threshold: 1 });
+                var observer = new IntersectionObserver (callback, { threshold: 0.7 });
 
                 // apply
                 elements_to_watch.forEach((element) => {
