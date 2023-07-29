@@ -27,8 +27,6 @@ Route::get('/chiSiamo', function () {
     return view('chiSiamo');
 });
 
-
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -37,6 +35,14 @@ Route::middleware('auth')->group(function () {
     //Routes Dashboard
     Route::get('/dashboard', [CompaniesController::class, 'index'])->middleware(['verified'])->name('dashboard');
     Route::get('/dashboard/{id}', [CompaniesController::class, 'search'])->middleware(['verified']);
+
+    Route::get('/shareBYOU', function () {
+        return view('shareBYOU');
+    })->name('shareBYOU');
+    
+    Route::get('/consulente', function () {
+        return view('consulente');
+    })->name('consulente');
 });
 
 require __DIR__.'/auth.php';

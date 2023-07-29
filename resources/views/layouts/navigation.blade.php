@@ -1,12 +1,12 @@
-<nav x-data="{ open: false }" class="bg-primary">
+<nav class="bg-secondary">
     <!-- Primary Navigation Menu -->
-    <div class="max-w mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+    <div class="max-w mx-auto px-6 lg:px-8">
+        <div class="flex justify-between">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+                <div class="shrink-0 flex items-center py-4">
                     <a href="{{ route('dashboard') }}">
-                        <img class="block h-10 w-auto" src="/img/logo_shareBy_white.svg" alt="Logo ShareBy">
+                        <img class="h-10 w-auto" src="/img/logo_shareBy_white.svg" alt="Logo ShareBy">
                     </a>
                 </div>
 
@@ -15,59 +15,126 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Analisi Aziendale') }}
                     </x-nav-link>
-                    <x-nav-link>
+                    <x-nav-link :href="route('shareBYOU')" :active="request()->routeIs('shareBYOU')">
                         {{ __('ShareBYOU') }}
                     </x-nav-link>
-                    <x-nav-link>
-                        {{ __('AI consultant') }}
+                    <x-nav-link :href="route('consulente')" :active="request()->routeIs('consulente')">
+                        {{ __('Consulente AI') }}
                     </x-nav-link>
                 </div>
             </div>
 
             <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ml-6">
-                <x-dropdown align="right" width="48">
-                    <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 text-sm leading-4 font-medium text-white focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->name }}</div>
+            <div class="hidden py-4 md:flex md:items-center md:ml-6">
+                {{-- desktop user menu --}}
+                <button id="user-menu-button" class="inline-flex items-center px-3 text-sm leading-4 font-medium text-white focus:outline-none transition ease-in-out duration-150">
+                    <span class="sr-only">Open user menu</span>
+                    <div class="flex items-center justify-center aspect-square w-10 md:w-11 bg-gray-300 rounded-full">
+                        <span class="text-gray-800 font-bold text-lg">A</span>
+                    </div>
+                </button>
+                {{-- dropdown desktop user menu --}}
+                <div id="user-dropdown" class="h-[0vh] absolute overflow-hidden right-0 w-min top-20 bg-gray-100 rounded-xl mr-4 transition-all duration-1000 ease-[cubic-bezier(.215, .61, .355, 1)] sm:mx-6">
+                    <div id="user-dropdown-content" class="opacity-0 transition-all duration-1000 ease-in-out">
+                        <div class="px-4 py-3">
+                            <span class="block text-md text-gray-900">{{ Auth::user()->name }} {{ Auth::user()->surname }}</span>
+                            <span class="block text-sm  text-gray-500 truncate">{{ Auth::user()->email }}</span>
+                        </div>
+                        <hr class="rounded border-gray-300">
+                        <ul class="py-2 px-2 text-md" aria-labelledby="user-menu-button">
+                            <li>
+                                <a href="{{ url('/dashboard') }}" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Dashboard</a>
+                            </li>
+                            <li>
+                                <x-dropdown-link class="block px-4 py-3 text-gray-700 hover:bg-gray-100" :href="route('profile.edit')">
+                                    {{ __('Impostazioni') }}
+                                </x-dropdown-link>
+                            </li>
+                            <li>
+                                {{-- Authentication --}}
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
 
-                            <div class="ml-1">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                        </button>
-                    </x-slot>
-
-                    <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
-                        </x-dropdown-link>
-
-                        <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form>
-                    </x-slot>
-                </x-dropdown>
+                                    <x-dropdown-link class="block px-4 py-3 text-gray-700 hover:bg-gray-100" :href="route('logout')"
+                                            onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                        {{ __('Esci') }}
+                                    </x-dropdown-link>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <script>
+                    const user_button = document.querySelector('#user-menu-button');
+                    const user_menu = document.querySelector('#user-dropdown');
+                    const user_menu_content = document.querySelector('#user-dropdown-content');
+        
+                    user_button.addEventListener("click", () => {
+                        user_menu.classList.toggle("dropdown-user-menu");
+                        user_menu_content.classList.toggle("dropdown-menu-content");
+                    });
+                </script>
             </div>
 
             <!-- Hamburger -->
-            <div class="-mr-2 flex items-center sm:hidden">
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+            <button id="mobile-menu-button" type="button" class="inline-flex items-center aspect-square justify-center py-4 text-sm text-gray-500 rounded-lg md:hidden hover:scale-110 transition-all duration-300">
+                <span class="sr-only">Open main menu</span>
+                {{-- hamburger --}}
+                <div id="burger-menu">
+                    <div id="line1" class="w-[25px] h-[3px] bg-white rounded-xl m-[5px] transition-all duration-300 ease-in-out"></div>
+                    <div id="line2" class="w-[25px] h-[3px] bg-white rounded-xl m-[5px] transition-all duration-300 ease-in-out"></div>
+                    <div id="line3" class="w-[25px] h-[3px] bg-white rounded-xl m-[5px] transition-all duration-300 ease-in-out"></div>
+                </div>
+            </button>
+            {{-- dropdown mobile menu --}}
+            <div id="mobile-menu" class="h-[0vh] absolute left-0 right-0 mx-auto w-full top-[72px] bg-secondary overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
+                <div id="mobile-menu-content" class="h-full flex flex-col justify-between opacity-0 transition-all duration-1000 ease-in-out">
+                    {{-- parte di registrazione del menu --}}
+                    <div class="flex flex-col">
+                        <div class="flex items-center pl-2 pb-2">
+                            <div class="flex items-center justify-center aspect-square w-10 sm:w-11 md:w-12 bg-white rounded-full">
+                                <span class="text-gray-800 font-bold text-lg">A</span>
+                            </div>
+                            <span class="block text-white ml-6 sm:text-lg">{{ Auth::user()->name }} {{ Auth::user()->surname }}</span>
+                        </div>
+                        <ul class="py-2 sm:text-lg" aria-labelledby="user-menu-button">
+                            <li>
+                                <a href="{{ url('/dashboard') }}" class="block px-8 py-3 font-medium text-md text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <x-dropdown-link class="block px-8 py-3 text-white font-medium text-md" :href="route('profile.edit')">
+                                    {{ __('Impostazioni') }}
+                                </x-dropdown-link>
+                            </li>
+                            <li>
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                    <x-dropdown-link class="block px-8 py-3 font-medium text-md text-white" :href="route('logout')"
+                                            onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                        {{ __('Esci') }}
+                                    </x-dropdown-link>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
+            <script>
+                const button = document.querySelector('#mobile-menu-button');
+                const menu = document.querySelector('#mobile-menu');
+                const menu_content = document.querySelector('#mobile-menu-content');
+                const burger = document.querySelector('#burger-menu');
+    
+                button.addEventListener("click", () => {
+                    menu.classList.toggle("dropdown-menu");
+                    menu_content.classList.toggle("dropdown-menu-content");
+                    burger.classList.toggle('toggle');
+                });
+            </script>
     </div>
 
     <!-- Responsive Navigation Menu -->

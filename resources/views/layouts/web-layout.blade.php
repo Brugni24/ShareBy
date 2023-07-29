@@ -15,7 +15,7 @@
     </head>
     <body class="antialiased font-main bg-secondary">
         {{-- navbar --}}
-        <nav class="w-full bg-secondary py-4 px-6">
+        <nav class="w-full bg-secondary py-4 px-6 lg:px-8">
             <div class="max-w-screen flex flex-wrap items-center justify-between mx-auto">
                 {{-- logo --}}
                 <a href="{{ url('/')}}" class="flex">
@@ -32,7 +32,7 @@
                     @if (Route::has('login'))
                         @auth
                         {{-- desktop user menu --}}
-                        <button type="button" class="hidden md:flex aspect-square w-10 mr-3 rounded-full md:mr-0 md:w-11 hover:scale-110 hover:border-4 border-white transition-all duration-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                        <button type="button" id="user-menu-button" class="hidden md:flex aspect-square w-10 mr-3 rounded-full md:mr-0 md:w-11 hover:scale-110 hover:border-4 border-white transition-all duration-300" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                             <span class="sr-only">Open user menu</span>
                             <div class="flex items-center justify-center aspect-square w-10 md:w-11 bg-gray-300 rounded-full">
                                 <span class="text-gray-800 font-bold text-lg">A</span>
@@ -95,12 +95,13 @@
                             @endauth
                     @endif
                     {{-- mobile menu --}}
-                    <button id="mobile-menu-button" class="md:hidden" data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 aspect-square w-10 sm:w-11 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:scale-110 transition-all duration-300" aria-controls="navbar-user" aria-expanded="false">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center p-2 aspect-square justify-center text-sm text-gray-500 rounded-lg md:hidden hover:scale-110 transition-all duration-300">
                         <span class="sr-only">Open main menu</span>
-                        <div id="burger-menu" class="aspect-square w-10 sm:w-11 p-1">
-                            <div id="line1" class="w-full h-[5px] bg-white rounded-xl my-[5px] transition-all duration-300 ease-in-out"></div>
-                            <div id="line2" class="w-full h-[5px] bg-white rounded-xl my-[5px] transition-all duration-300 ease-in-out"></div>
-                            <div id="line3" class="w-full h-[5px] bg-white rounded-xl my-[5px] transition-all duration-300 ease-in-out"></div>
+                        {{-- hamburger --}}
+                        <div id="burger-menu">
+                            <div id="line1" class="w-[25px] h-[3px] bg-white rounded-xl m-[5px] transition-all duration-300 ease-in-out"></div>
+                            <div id="line2" class="w-[25px] h-[3px] bg-white rounded-xl m-[5px] transition-all duration-300 ease-in-out"></div>
+                            <div id="line3" class="w-[25px] h-[3px] bg-white rounded-xl m-[5px] transition-all duration-300 ease-in-out"></div>
                         </div>
                     </button>
                     {{-- dropdown mobile menu --}}

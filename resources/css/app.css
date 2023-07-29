@@ -23,13 +23,13 @@
 
 /* burger animation */
 .toggle #line1 {
-    transform: rotate(-45deg) translate(-5px, 9px);
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
 .toggle #line2 {
     opacity: 0;
 }
 .toggle #line3 {
-    transform: rotate(45deg) translate(-5px, -9px);
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* dropdown mobile menu animation */
@@ -45,6 +45,7 @@
 .dropdown-user-menu {
     height: 240px;
     padding: 0.75rem;
+    border: 2px solid rgb(209, 213, 219);
 }
 
 /* faq animation */
