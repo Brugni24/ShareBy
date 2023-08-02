@@ -13,24 +13,15 @@
                 </div>
 
                 <div class="w-full">
-                    <canvas id="roiChart"></canvas>
+                    <canvas id="roe-ros-chart"></canvas>
                 </div>
                 <script>
-                    var roi = {{$azienda->roi}};
-                    console.log(roi);
+                    var roe = {{$azienda->roe}};
+                    var ros = {{$azienda->ros}};
+                    console.log(roe);
+                    console.log(ros);
 
-                    const ctx = document.getElementById('roiChart').getContext('2d');
-
-                    const roiChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: [2018, 2019, 2020, 2021, 2022],
-                            datasets: [{
-                                label: 'roi',
-                                data: roi,
-                            }]
-                        }
-                    });
+                    const ctx = document.getElementById('roe-ros-chart').getContext('2d');
                 </script>
             @else
                 <div>
