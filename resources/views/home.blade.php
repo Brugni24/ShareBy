@@ -3,7 +3,7 @@
 @section('content')
     {{-- landing page --}}
     <section style="background-image: url(/img/bg_landing_page.jpg)" class="bg-cover bg-fixed bg-center lg:min-h-[90vh] flex justify-center items-center">
-        <div class="px-[7vw] py-12 lg:px-[5vw] lg:flex flex-col max-w-[1300px]">
+        <div class="mx-[7vw] my-12 lg:mx-[5vw] lg:flex flex-col max-w-[1300px]">
             <div class="lg:flex gap-10">
                 <div class="basis-[50%]">
                     <div class="flex justify-center">
@@ -29,7 +29,7 @@
         </div>
     </section>
     {{-- intro --}}
-    <section class="bg-white mx-[5vw] py-16 lg:py-20">
+    <section class="bg-white mx-[5vw] my-16 lg:my-20">
         <div class="flex flex-col justify-center items-center">
             <span class="text-2xl font-bold text-center text-gray-900 md:text-2xl lg:text-3xl watch fade-in">
                 “Il rischio deriva dal non sapere cosa stai facendo”
