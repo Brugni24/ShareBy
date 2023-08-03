@@ -24,7 +24,7 @@
                 {{-- desktop navigation menu --}}
                 <div class="hidden md:flex w-[50%] font-medium text-lg flex-row justify-evenly items-center">
                     <a class="link link-underline link-underline-black hover:text-white text-gray-100" href="/">Home</a>
-                    <a class="link link-underline link-underline-black hover:text-white  text-gray-100" href="{{ url('/prodotti') }}">Servizi</a>
+                    <a class="link link-underline link-underline-black hover:text-white  text-gray-100" href="{{ url('/servizi') }}">Servizi</a>
                     <a class="link link-underline link-underline-black hover:text-white  text-gray-100"href="{{ url('/chiSiamo')}}">Chi Siamo</a>
                 </div>
                 {{-- menu --}}
@@ -112,7 +112,7 @@
                                     <a href="{{ url('/')}}" class="flex py-4 rounded-xl font-medium">Home</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/prodotti')}}" class="flex py-4 rounded-xl font-medium">Servizi</a>
+                                    <a href="{{ url('/servizi')}}" class="flex py-4 rounded-xl font-medium">Servizi</a>
                                 </li>
                                 <li>
                                     <a href="{{ url('/chiSiamo')}}" class="flex py-4 rounded-xl font-medium">Chi Siamo</a>
@@ -245,13 +245,13 @@
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Servizi</h2>
                         <ul class="text-gray-600 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <a href="{{ url('/prodotti')}}" class="hover:underline ">Analisi Aziendale</a>
+                                <a href="{{ url('/servizi')}}" class="hover:underline ">Analisi Aziendale</a>
                             </li>
                             <li class="mb-4">
-                                <a href="{{ url('/prodotti')}}" class="hover:underline">ShareBYOU</a>
+                                <a href="{{ url('/servizi')}}" class="hover:underline">ShareBYOU</a>
                             </li>
                             <li>
-                                <a href="{{ url('/prodotti')}}" class="hover:underline">Consultant AI</a>
+                                <a href="{{ url('/servizi')}}" class="hover:underline">Consultant AI</a>
                             </li>
                         </ul>
                     </div>

@@ -3,7 +3,7 @@
 @section('content')
     {{-- landing page --}}
     <section style="background-image: url(/img/bg_landing_page.jpg)" class="bg-cover bg-fixed bg-center lg:min-h-[90vh] flex justify-center items-center">
-        <div class="mx-[7vw] my-12 lg:mx-[5vw] lg:flex flex-col max-w-[1300px]">
+        <div class="px-[7vw] py-12 lg:px-[5vw] lg:flex flex-col max-w-[1300px]">
             <div class="lg:flex gap-10">
                 <div class="basis-[50%]">
                     <div class="flex justify-center">
@@ -11,7 +11,7 @@
                             Entra nel mondo della FINANZA con ShareBY
                         </h1>
                     </div>
-                    <p class="text-white text-lg font-medium text-center mx-4 mt-4 mb-14 sm:max-w-[600px] lg:mx-8 lg:mb-0 lg:text-xl watch fade-in">
+                    <p class="text-white text-lg font-medium text-center px-4 pt-4 pb-14 sm:max-w-[600px] lg:px-8 lg:pb-0 lg:text-xl watch fade-in">
                         Shareby è la piattaforma che sfrutta la stretta connessione tra l’informatizzazione
                         e il mondo finanziario, al fine di ottenere analisi approfondite e dettagliate 
                         in pochi click.
@@ -21,7 +21,7 @@
                     <img class="w-full sm:w-[65vw] md:w-[55vw] xxl:w-[38vw]" src="/img/landing_page_illustration.svg" alt="illustration">
                 </div>
             </div>    
-            <div class="mt-10 mb-6 lg:flex flex-grow items-center justify-center lg:mt-12 xl:mt-14">
+            <div class="pt-10 pb-6 lg:flex flex-grow items-center justify-center lg:pt-12 xl:pt-14">
                 <a href="{{url('/prodotti')}}" class="basis-[50%] flex items-center justify-center">
                     <x-primary-button class="bg-primary py-3 px-6 border-2 hover:bg-secondary focus:bg-secondary">Scopri di più</x-primary-button>
                 </a>
@@ -29,7 +29,7 @@
         </div>
     </section>
     {{-- intro --}}
-    <section class="bg-white mx-[5vw] my-16 lg:my-20">
+    <section class="bg-white mx-[5vw] py-16 lg:py-20">
         <div class="flex flex-col justify-center items-center">
             <span class="text-2xl font-bold text-center text-gray-900 md:text-2xl lg:text-3xl watch fade-in">
                 “Il rischio deriva dal non sapere cosa stai facendo”

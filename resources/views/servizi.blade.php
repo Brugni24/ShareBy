@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- first slide --}}
-    <section class="px-[5vw] py-[5vh] sm:py-[7vh] min-h-[90vh]">
+    <section class="mx-[7vw] py-[5vh] sm:py-[7vh] min-h-[90vh]">
         <div class="flex flex-col items-center justify-center">
             <h1 class="text-center text-6xl font-bold text-secondary sm:text-7xl xl:text-[5rem] watch fade-in">I nostri servizi</h1>
             <p class="text-center text-lg text-gray-800 font-medium pt-[3vh] pb-[10vh] px-[7vw] md:px-0 md:max-w-[600px] watch fade-in">

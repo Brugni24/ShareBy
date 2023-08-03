@@ -19,8 +19,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/prodotti', function () {
-    return view('prodotti');
+Route::get('/servizi', function () {
+    return view('servizi');
 });
 
 Route::get('/chiSiamo', function () {

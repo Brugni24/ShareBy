@@ -33,7 +33,7 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-end mt-6">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-800 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" href="{{ route('password.request') }}">
                         {{ __('Password dimenticata?') }}
@@ -45,7 +45,7 @@
                 </x-submit-button>
             </div>
         </form>
-        <div class="py-[7vh] md:py-[10vh]">
+        <div class="mt-12 mb-4 md:mt-16">
             <p class="text-center text-xs text-gray-800">Non ti sei ancora registrato? <a href="/register" class="text-primary underline">Clicca qui</a></p>
         </div>
     </div>
