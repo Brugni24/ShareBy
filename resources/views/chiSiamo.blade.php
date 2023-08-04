@@ -3,9 +3,11 @@
 @section('content')
     {{-- Chi siamo --}}
     <section class="px-[5vw] pt-12 pb-16 md:pt-16 md:pb-20 bg-secondary">
-        <h1 class="text-white text-[2.75rem] leading-[3rem] font-extrabold text-center sm:text-[3.5rem] sm:leading-[3.85rem] lg:text-[3.75rem] lg:leading-[4.125rem] xl:text-[4.5rem] xl:leading-[4.95rem] xxl:text-[4.75rem] xxl:leading-[5.225rem] watch fade-in">Chi siamo?</h1>
+        <h1 class="text-white text-[2.75rem] leading-[3rem] font-extrabold text-center sm:text-[3.5rem] sm:leading-[3.85rem] lg:text-[3.75rem] lg:leading-[4.125rem] xl:text-[4.5rem] xl:leading-[4.95rem] xxl:text-[4.75rem] xxl:leading-[5.225rem]">
+            Chi siamo?
+        </h1>
         <div class="m-auto pt-4 px-[5vw] lg:pt-6 lg:px-0">
-            <p class="text-white text-center m-auto font-medium text-lg max-w-[700px] watch fade-in">
+            <p class="text-white text-center m-auto font-medium text-lg max-w-[700px]">
                 ShareBy è la prima piattaforma che semplifica complicate analisi finanziarie, fino ad ora accessibili solo agli esperti del settore, 
                 rendendole facili, veloci, intutitive ed accessibili a chiunque sfruttando la stretta connessione tra l’informatizzazione e il mondo finanziario.
             </p>

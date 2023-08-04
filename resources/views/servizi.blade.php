@@ -19,7 +19,7 @@
     {{-- Algoritmo di analisi aziendale --}}
     <section class="py-12 lg:py-16 xl:py-20">
         <div class="flex flex-col items-center justify-center px-[5vw]">
-            <h1 class="text-center text-4xl font-bold text-secondary mb-8 sm:mb-12 sm:text-[2.75rem] md:text-[3rem] lg:text-[3.25rem] xl:text-6xl watch fade-in">
+            <h1 class="text-center text-4xl font-bold text-secondary mb-8 sm:mb-12 sm:text-[2.75rem] md:text-[3rem] lg:text-[3.25rem] xl:text-6xl">
                 Analisi Aziendale
             </h1>
             <div class="md:flex gap-6 md:mb-14">
@@ -27,7 +27,7 @@
                     <img class="w-[80vw] mx-auto max-w-[350px] md:max-w-[400px] md:w-[40vw]" src="/img/facile_veloce_intuitivo.svg" alt="Facile, Veloce, Intuitivo">
                 </div>
                 <div class="md:basis-[50%]">
-                    <p class="text-lg text-gray-800 text-center font-medium px-[10vw] pt-6 max-w-[600px] md:px-6 md:pt-0 watch fade-in">
+                    <p class="text-lg text-gray-800 text-center font-medium px-[10vw] pt-6 max-w-[600px] md:px-6 md:pt-0">
                         Abbiamo sviluppato un algortimo in grado di fornire velocemente una dettagliata analisi dei bilanci aziendali, che semplifica e riduce il tempo richiesto per valutare un investimento.
                     </p>
                     <img class="m-auto w-[80vw] py-12 max-w-[350px] md:max-w-[400px] md:py-6 md:w-[40vw]" src="/img/statistiche_analisi.svg" alt="Statistiche Analisi">
@@ -47,7 +47,7 @@
                 <img class="w-full bg-white rounded-xl p-[5%] my-[5vh] sm:my-[2vh]" src="/img/analysis_charts.png" alt="">
             </div>
             <div class="flex items-center justify-center">
-                <a href="{{ url('/dashboard')}}">
+                <a href="{{ url('/analisiAziendale')}}">
                     <x-primary-button class="px-6 py-3 bg-primary text-white border-4 text-lg border-white hover:bg-white hover:text-primary hover:border-primary">
                         Prova Gratuita!
                     </x-primary-button>
@@ -112,7 +112,7 @@
                 </div>
             </div>
             <div class="flex items-center justify-center pt-16">
-                <a href="{{ url('/dashboard')}}">
+                <a href="{{ url('/analisiAziendale')}}">
                     <x-primary-button class="px-6 py-3 bg-primary text-white border-4 text-lg border-primary hover:bg-white hover:text-primary hover:border-primary">
                         Prova Gratuita!
                     </x-primary-button>

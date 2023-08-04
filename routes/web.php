@@ -33,16 +33,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     //Routes Dashboard
-    Route::get('/dashboard', [CompaniesController::class, 'index'])->middleware(['verified'])->name('dashboard');
-    Route::get('/dashboard/{id}', [CompaniesController::class, 'search'])->middleware(['verified']);
+    Route::get('/analisiAziendale', [CompaniesController::class, 'index'])->middleware(['verified'])->name('analisiAziendale');
+    Route::get('/analisiAziendale/{id}', [CompaniesController::class, 'search'])->middleware(['verified']);
 
     Route::get('/shareBYOU', function () {
         return view('shareBYOU');
-    })->name('shareBYOU');
+    })->middleware(['verified'])->name('shareBYOU');
     
     Route::get('/consulente', function () {
         return view('consulente');
-    })->name('consulente');
+    })->middleware(['verified'])->name('consulente');
 });
 
 require __DIR__.'/auth.php';

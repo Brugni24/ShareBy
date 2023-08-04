@@ -26,7 +26,7 @@
             @else
                 <div>
                     <h1 class="font-bold text-2xl text-center">NESSUNA AZIENDA CERCATA...</h1>
-                    <p class="text-gray-600 text-sm text-center my-2">Cerca un'azienda utilizzando la barra di ricerca sovrastante.</p>
+                    <p class="text-gray-600 text-sm text-center my-2">Cerca un'azienda utilizzando la barra di ricerca qui sopra.</p>
                     <div class="mt-20">
                         <img src="/img/search.svg" class="w-[50%] m-auto">
                     </div>

@@ -7,11 +7,11 @@
             <div class="lg:flex gap-10">
                 <div class="basis-[50%]">
                     <div class="flex justify-center">
-                        <h1 class="text-white text-[2.75rem] leading-[3rem] font-extrabold text-center sm:text-[3.5rem] sm:leading-[3.85rem] lg:text-[3.75rem] lg:leading-[4.125rem] xl:text-[4.5rem] xl:leading-[4.95rem] xxl:text-[4.75rem] xxl:leading-[5.225rem] watch fade-in">
+                        <h1 class="text-white text-[2.75rem] leading-[3rem] font-extrabold text-center sm:text-[3.5rem] sm:leading-[3.85rem] lg:text-[3.75rem] lg:leading-[4.125rem] xl:text-[4.5rem] xl:leading-[4.95rem] xxl:text-[4.75rem] xxl:leading-[5.225rem]">
                             Entra nel mondo della FINANZA con ShareBY
                         </h1>
                     </div>
-                    <p class="text-white text-lg font-medium text-center px-4 pt-4 pb-14 sm:max-w-[600px] lg:px-8 lg:pb-0 lg:text-xl watch fade-in">
+                    <p class="text-white text-lg font-medium text-center px-4 pt-4 pb-14 sm:max-w-[600px] lg:px-8 lg:pb-0 lg:text-xl">
                         Shareby è la piattaforma che sfrutta la stretta connessione tra l’informatizzazione
                         e il mondo finanziario, al fine di ottenere analisi approfondite e dettagliate 
                         in pochi click.

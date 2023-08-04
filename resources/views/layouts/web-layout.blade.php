@@ -48,7 +48,7 @@
                                 <hr class="rounded border-gray-300">
                                 <ul class="py-2 px-2 text-md" aria-labelledby="user-menu-button">
                                     <li>
-                                        <a href="{{ url('/dashboard') }}" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Dashboard</a>
+                                        <a href="{{ url('/analisiAziendale') }}" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Dashboard</a>
                                     </li>
                                     <li>
                                         <x-dropdown-link class="block px-4 py-3 text-gray-700 hover:bg-gray-100" :href="route('profile.edit')">
@@ -133,7 +133,7 @@
                                             </div>
                                             <ul class="py-2 sm:text-lg" aria-labelledby="user-menu-button">
                                                 <li>
-                                                    <a href="{{ url('/dashboard') }}" class="block px-8 py-3 font-medium text-md text-white">Dashboard</a>
+                                                    <a href="{{ url('/analisiAziendale') }}" class="block px-8 py-3 font-medium text-md text-white">Dashboard</a>
                                                 </li>
                                                 <li>
                                                     <x-dropdown-link class="block px-8 py-3 text-white font-medium text-md" :href="route('profile.edit')">
