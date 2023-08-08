@@ -8,6 +8,7 @@
                     <a href="{{ route('analisiAziendale') }}">
                         <img class="h-10 w-auto" src="/img/logo_shareBy_white.svg" alt="Logo ShareBy">
                     </a>
+                    <hr class="w-12 rotate-90">
                 </div>
 
                 <!-- Navigation Links -->
@@ -34,7 +35,7 @@
                     </div>
                 </button>
                 {{-- dropdown desktop user menu --}}
-                <div id="user-dropdown" class="h-[0vh] absolute overflow-hidden right-0 w-min top-20 bg-gray-100 rounded-xl mr-4 transition-all duration-1000 ease-[cubic-bezier(.215, .61, .355, 1)] sm:mx-6">
+                <div id="user-dropdown" class="h-[0vh] absolute overflow-hidden right-0 w-min top-20 bg-white rounded-xl mr-4 transition-all duration-1000 ease-[cubic-bezier(.215, .61, .355, 1)] sm:mx-6">
                     <div id="user-dropdown-content" class="opacity-0 transition-all duration-1000 ease-in-out">
                         <div class="px-4 py-3">
                             <span class="block text-md text-gray-900">{{ Auth::user()->name }} {{ Auth::user()->surname }}</span>
@@ -92,6 +93,11 @@
                 <div id="mobile-menu-content" class="h-full flex flex-col justify-between opacity-0 transition-all duration-1000 ease-in-out">
                     {{-- parte di registrazione del menu --}}
                     <div class="flex flex-col">
+                        <div class="mb-12">
+                            <a href="{{ url('/analisiAziendale') }}" class="block px-8 py-3 font-medium text-lg text-white">Analisi Aziendale</a>
+                            <a href="{{ url('/shareBYOU') }}" class="block px-8 py-3 font-medium text-lg text-white">ShareBYOU</a>
+                            <a href="{{ url('/consulente') }}" class="block px-8 py-3 font-medium text-lg text-white">Consulente AI</a>  
+                        </div>
                         <div class="flex items-center pl-2 pb-2">
                             <div class="flex items-center justify-center aspect-square w-10 sm:w-11 md:w-12 bg-white rounded-full">
                                 <span class="text-gray-800 font-bold text-lg">A</span>
@@ -99,9 +105,6 @@
                             <span class="block text-white ml-6 sm:text-lg">{{ Auth::user()->name }} {{ Auth::user()->surname }}</span>
                         </div>
                         <ul class="py-2 sm:text-lg" aria-labelledby="user-menu-button">
-                            <li>
-                                <a href="{{ url('/analisiAziendale') }}" class="block px-8 py-3 font-medium text-md text-white">Dashboard</a>
-                            </li>
                             <li>
                                 <x-dropdown-link class="block px-8 py-3 text-white font-medium text-md" :href="route('profile.edit')">
                                     {{ __('Impostazioni') }}

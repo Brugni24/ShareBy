@@ -35,6 +35,9 @@ Route::middleware('auth')->group(function () {
     //Routes Dashboard
     Route::get('/analisiAziendale', [CompaniesController::class, 'index'])->middleware(['verified'])->name('analisiAziendale');
     Route::get('/analisiAziendale/{id}', [CompaniesController::class, 'search'])->middleware(['verified']);
+    Route::get('/analisiAziendale/{id}/company/logo/{companyName}', [CompaniesController::class, 'getCompanyLogo'])->middleware(['verified'])->name('company.logo');
+    Route::get('/analisiAziendale/{id}/stockdata', [CompaniesController::class, 'getStockData'])->middleware(['verified'])->name('stock.data');
+
 
     Route::get('/shareBYOU', function () {
         return view('shareBYOU');

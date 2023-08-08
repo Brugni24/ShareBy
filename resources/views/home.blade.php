@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- landing page --}}
-    <section style="background-image: url(/img/bg_landing_page.jpg)" class="bg-cover bg-fixed bg-center lg:min-h-[90vh] flex justify-center items-center">
+    <section style="background-image: url(/img/bg_landing_page.jpg)" class="bg-cover bg-clip-border bg-fixed bg-center lg:min-h-[90vh] flex justify-center items-center">
         <div class="mx-[7vw] my-12 lg:mx-[5vw] lg:flex flex-col max-w-[1300px]">
             <div class="lg:flex gap-10">
                 <div class="basis-[50%]">
@@ -22,7 +22,7 @@
                 </div>
             </div>    
             <div class="pt-10 pb-6 lg:flex flex-grow items-center justify-center lg:pt-12 xl:pt-14">
-                <a href="{{url('/prodotti')}}" class="basis-[50%] flex items-center justify-center">
+                <a href="{{url('/servizi')}}" class="basis-[50%] flex items-center justify-center">
                     <x-primary-button class="bg-primary py-3 px-6 border-2 hover:bg-secondary focus:bg-secondary">Scopri di più</x-primary-button>
                 </a>
             </div>
@@ -113,6 +113,11 @@
                 </div>
             </div>
         </div>
+        <div class="pt-10 pb-6 lg:flex flex-grow items-center justify-center lg:pt-12 xl:pt-14">
+            <a href="{{url('/servizi')}}" class="basis-[50%] flex items-center justify-center">
+                <x-primary-button class="bg-primary py-3 px-6 border-2 border-primary hover:bg-secondary hover:border-secondary focus:bg-secondary focus:border-secondary">Scopri di più</x-primary-button>
+            </a>
+        </div>
     </section>        
     {{-- FAQ --}}
     <section class="bg-white px-[5vw] mt-10 pb-20 lg:pb-24">
@@ -172,6 +177,50 @@
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ex quaerat incidunt esse quasi, magnam quas natus corrupti distinctio, delectus molestias perspiciatis aspernatur voluptate consequatur! Rerum hic similique doloribus natus.
                     </p>
                 </div>
+            </div>
+            {{-- 4° domanda --}}
+            <div id="faq" class="w-full border border-gray-300 rounded-xl hover:bg-gray-50 cursor-pointer py-5 px-6">
+                <div id="question" class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium">
+                        Come funziona?
+                    </h3>
+                    <div id="plus-minus-svg" class="w-6 h-6 rounded-full border-2 border-primary flex justify-center items-center">
+                        <div id="line_1" class="w-3 h-[2px] rounded-xl bg-primary transition-all duration-700 ease-in-out"></div>
+                        <div id="line_2" class="w-[2px] h-3 bg-primary absolute transition-all duration-700 ease-in-out"></div>
+                    </div>
+                </div>
+                <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
+                    <p class="py-5 px-6">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ex quaerat incidunt esse quasi, magnam quas natus corrupti distinctio, delectus molestias perspiciatis aspernatur voluptate consequatur! Rerum hic similique doloribus natus.
+                    </p>
+                </div>
+            </div>
+            {{-- 5° domanda --}}
+            <div id="faq" class="w-full border border-gray-300 rounded-xl hover:bg-gray-50 cursor-pointer py-5 px-6">
+                <div id="question" class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium">
+                        Come funziona?
+                    </h3>
+                    <div id="plus-minus-svg" class="w-6 h-6 rounded-full border-2 border-primary flex justify-center items-center">
+                        <div id="line_1" class="w-3 h-[2px] rounded-xl bg-primary transition-all duration-700 ease-in-out"></div>
+                        <div id="line_2" class="w-[2px] h-3 bg-primary absolute transition-all duration-700 ease-in-out"></div>
+                    </div>
+                </div>
+                <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
+                    <p class="py-5 px-6">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ex quaerat incidunt esse quasi, magnam quas natus corrupti distinctio, delectus molestias perspiciatis aspernatur voluptate consequatur! Rerum hic similique doloribus natus.
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center max-w-[500px] mx-auto mt-10 bg-blue-50 rounded-xl px-8 py-10">
+                <h2 class="text-center text-xl font-semibold mb-4">Hai ancora delle domande?</h2>
+                <p class="text-center">
+                    Ci dispiace di non essere riusciti a fornirti le informazioni di cui avevi bisogno. 
+                    Ti preghiamo di contattarci e saremo felici di risponderti.
+                </p>
+                <x-primary-button class="px-6 py-4 bg-primary mt-8 hover:bg-secondary hover:border-secondary focus:bg-secondary focus:border-secondary">
+                    Conttataci!
+                </x-primary-button>
             </div>
         </div>
         <script>

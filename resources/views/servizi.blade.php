@@ -48,7 +48,7 @@
             </div>
             <div class="flex items-center justify-center">
                 <a href="{{ url('/analisiAziendale')}}">
-                    <x-primary-button class="px-6 py-3 bg-primary text-white border-4 text-lg border-white hover:bg-white hover:text-primary hover:border-primary">
+                    <x-primary-button class="px-6 py-3 bg-primary text-white border-2 text-lg border-white hover:bg-white hover:text-primary hover:border-primary">
                         Prova Gratuita!
                     </x-primary-button>
                 </a>

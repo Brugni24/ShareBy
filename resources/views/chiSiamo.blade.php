@@ -56,50 +56,50 @@
         <h1 class="text-center text-4xl font-bold text-secondary sm:mb-12 sm:text-[2.75rem] md:text-[3rem] lg:text-[3.25rem] xl:text-6xl watch fade-in">
             Team
         </h1>
-        <div class="flex flex-col items-center gap-10 px-[5vw] py-8 sm:grid grid-cols-2 justify-items-center xmd:grid-cols-6 lg:mb-24">
-            <div class="w-[40vw] sm:w-[25vw] xmd:w-[15vw] col-span-2 lg:w-[15vw] xl:w-[10vw]">
-                <div class="m-auto aspect-square bg-white rounded-full border border-gray-500">
+        <div class="flex flex-col items-center justify-items-center gap-10 px-[5vw] my-8 lg:mb-24 sm:grid sm:grid-cols-2 md:grid-cols-6">
+            <div class="md:col-span-2">
+                <div class="mx-auto w-[140px] aspect-square bg-white rounded-full border border-gray-500">
                     <img src="" alt="">
                 </div>
-                <p class="text-center font-regular pt-6">
+                <p class="mx-auto text-center font-regular pt-6">
                     Nome Cognome<br>
                     Funder & CEO
                 </p>
             </div>
-            <div class="w-[40vw] sm:w-[25vw] xmd:w-[17vw] col-span-2 lg:w-[15vw]">
-                <div class="m-auto aspect-square bg-white rounded-full border border-gray-500 xmd:w-[15vw] xl:w-[10vw]">
+            <div class="md:col-span-2">
+                <div class="mx-auto w-[140px] aspect-square bg-white rounded-full border border-gray-500">
                     <img src="" alt="">
                 </div>
-                <p class="text-center font-regular pt-6">
+                <p class="mx-auto text-center font-regular pt-6">
                     Nome Cognome<br>
-                    Co-Funder & CFO
+                    Funder & CEO
                 </p>
             </div>
-            <div class="w-[40vw] sm:w-[25vw] xmd:w-[15vw] col-span-2 lg:w-[15vw] xl:w-[10vw]">
-                <div class="m-auto aspect-square bg-white rounded-full border border-gray-500">
+            <div class="md:col-span-2">
+                <div class="mx-auto w-[140px] aspect-square bg-white rounded-full border border-gray-500">
                     <img src="" alt="">
                 </div>
-                <p class="text-center font-regular pt-6">
+                <p class="mx-auto text-center font-regular pt-6">
                     Nome Cognome<br>
-                    Co-Funder
+                    Funder & CEO
                 </p>
             </div>
-            <div class="w-[40vw] sm:w-[25vw] xmd:w-[15vw] col-span-3 lg:w-[15vw] xl:w-[10vw]">
-                <div class="m-auto aspect-square bg-white rounded-full border border-gray-500">
+            <div class="md:col-span-3">
+                <div class="mx-auto w-[140px] aspect-square bg-white rounded-full border border-gray-500">
                     <img src="" alt="">
                 </div>
-                <p class="text-center font-regular pt-6">
+                <p class="mx-auto text-center font-regular pt-6">
                     Nome Cognome<br>
-                    Co-Funder
+                    Funder & CEO
                 </p>
             </div>
-            <div class="w-[40vw] sm:w-[25vw] col-span-2 xmd:w-[15vw] xmd:col-span-3 lg:w-[15vw] xl:w-[10vw]">
-                <div class="m-auto aspect-square bg-white rounded-full border border-gray-500">
+            <div class="col-span-2 md:col-span-3">
+                <div class="mx-auto w-[140px] aspect-square bg-white rounded-full border border-gray-500">
                     <img src="" alt="">
                 </div>
-                <p class="text-center font-regular pt-6">
+                <p class="mx-auto text-center font-regular pt-6">
                     Nome Cognome<br>
-                    Co-Funder
+                    Funder & CEO
                 </p>
             </div>
         </div>

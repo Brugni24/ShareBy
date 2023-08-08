@@ -9,15 +9,12 @@ class BarraDiRicerca extends Component
 {
     public $term = "";
 
-    public function render()
-    {
-        sleep(1);
-        $companies = Company::search($this->term)->paginate(10);
-
-        $data = [
-            'companies' => $companies,
-        ];
-
-        return view('livewire.barra-di-ricerca', $data);
+    public function render(){
+        if (empty($this->term)) {
+            $this->companies = Company::where('name', $this->term)->get();
+        } else {
+            $this->companies = Company::where('name', 'like', '%'.$this->term.'%')->get();
+        }
+        return view('livewire.barra-di-ricerca');
     }
 }

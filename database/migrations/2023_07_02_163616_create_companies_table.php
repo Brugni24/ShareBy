@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('symbol');
             $table->json('roi');
             $table->json('roe');
             $table->json('ros');
@@ -23,10 +24,11 @@ return new class extends Migration
             $table->json('leverage');
             $table->json('leva_finanziaria');
             $table->json('ebitda');
-            $table->float('P/E_ratio');
-            $table->integer('orizzonte_temporale');
-            $table->integer('proiezione_vendite');
-            $table->integer('proiezione_utili');
+            $table->json('P/E_ratio');
+            $table->json('reddito_operativo');
+            $table->json('utile');
+            $table->json('capitale_proprio');
+            $table->json('capitale_di_debito');
             $table->timestamps();
         });
 

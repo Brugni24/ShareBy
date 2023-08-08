@@ -71,5 +71,13 @@
 }
 
 /* fade in animation */
-.fade-in {opacity: 0; transition: all 1s cubic-bezier(.215, .61, .355, 1);}
+.fade-in {opacity: 0; transition: all 0.7s cubic-bezier(.215, .61, .355, 1);}
 .fade-in.in-page {opacity: 1;}
+
+/* classe active tab links */
+#tab button.active{
+    border-bottom: 2px solid;
+    border-color: #0E5ECC;
+    opacity: 1;
+    color: rgb(31 41 55);
+} 
