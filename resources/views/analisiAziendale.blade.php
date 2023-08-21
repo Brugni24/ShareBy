@@ -81,9 +81,25 @@
                 </div>
                 
                 <div id="dati-finanziari" class="tabcontent hidden px-[5vw] py-14 border border-t-0 border-gray-300 rounded-b-2xl bg-white">
-                    <h3>Tokyo</h3>
-                    <p>Tokyo is the capital of Japan.</p>
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="h-[800px]">
+                    <div class=""></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                    {
+                    "colorTheme": "light",
+                    "isTransparent": false,
+                    "largeChartUrl": "",
+                    "displayMode": "adaptive",
+                    "width": "100%",
+                    "height": "100%",
+                    "symbol": "NASDAQ:"+"{{$azienda->symbol}}",
+                    "locale": "it"
+                    }
+                    </script>
+                    </div>
+                    <!-- TradingView Widget END -->
                 </div>
+                <div class="tradingview-widget-copyright"><a href="https://it.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Segui tutti i mercati su TradingView</span></a></div>
                 <script>
                     function openCity(evt, cityName) {
                     // Declare all variables

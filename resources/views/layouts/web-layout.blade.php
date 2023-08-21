@@ -13,7 +13,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="antialiased font-main bg-secondary">
+    <body class="antialiased font-main bg-background">
         {{-- navbar --}}
         <nav class="w-full bg-secondary py-4 px-6 lg:px-8">
             <div class="max-w-screen flex flex-wrap items-center justify-between mx-auto">
@@ -84,11 +84,11 @@
                             @else
                             <div class="hidden md:flex">
                                 <a href="{{ route('login') }}" class="mr-3">
-                                    <x-primary-button class="bg-secondary px-3 py-2 border-2 border-white text-md hover:text-secondary hover:bg-white">Accedi</x-primary-button>
+                                    <x-secondary-button class="">Accedi</x-secondary-button>
                                 </a>
                                 @if (Route::has('register'))
                                         <a href="{{ route('register') }}">
-                                            <x-primary-button class="bg-primary px-3 py-2 border-2 border-white text-md hover:text-secondary hover:bg-white">Registrati</x-primary-button>
+                                            <x-primary-button class="">Registrati</x-primary-button>
                                         </a>
                                 @endif
                             </div>
@@ -187,7 +187,7 @@
             </div>
         </nav>
 
-        <main class="bg-white">
+        <main class="bg-background">
 
             @yield('content')
 
@@ -218,7 +218,7 @@
             
         </main>
         {{-- footer --}}
-        <footer class="bg-secondary">
+        <footer class="bg-background pt-[60px] md:pt-[120px]">
             <div class="mx-auto w-full max-w-screen-xl px-10 py-8">
                 <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
@@ -228,7 +228,7 @@
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase text-white">Azienda</h2>
+                        <h3 class="mb-6 text-sm font-semibold uppercase text-white">Azienda</h3>
                         <ul class="text-gray-400 font-medium">
                             <li class="mb-4">
                                 <a href="{{ url('/chiSiamo')}}" class="hover:underline">Chi Siamo</a>
@@ -242,7 +242,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase text-white">Servizi</h2>
+                        <h3 class="mb-6 text-sm font-semibold uppercase text-white">Servizi</h3>
                         <ul class="text-gray-400 font-medium">
                             <li class="mb-4">
                                 <a href="{{ url('/servizi')}}" class="hover:underline ">Analisi Aziendale</a>
@@ -256,7 +256,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase text-white">Legal</h2>
+                        <h3 class="mb-6 text-sm font-semibold uppercase text-white">Legal</h3>
                         <ul class="text-gray-400 font-medium">
                             <li class="mb-4">
                                 <a href="#" class="hover:underline">Privacy Policy</a>
