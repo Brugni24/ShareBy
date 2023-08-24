@@ -64,6 +64,42 @@ p {
     margin-right: 5vw;
 }
 
+@media (min-width: 720px) {
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    .sottotitolo {
+        font-size: 20px;
+    }
+    .paragrafo {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 900px) {
+    h1 {
+        font-size: 70px;
+    }
+    h2 {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 80px;
+    }
+    h2 {
+        font-size: 60px;
+    }
+    .sottotitolo {
+        font-size: 22px;
+    }
+}
+
 .bottoni {
     display: flex;
     gap: 8px;

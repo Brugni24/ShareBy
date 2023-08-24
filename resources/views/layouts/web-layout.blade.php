@@ -19,7 +19,7 @@
             <div class="max-w-screen flex flex-wrap items-center justify-between mx-auto">
                 {{-- logo --}}
                 <a href="{{ url('/')}}" class="flex">
-                    <img class="h-[3rem]" src="/img/logo_shareBy_white.svg" alt="ShareBy Logo">
+                    <img class="h-[48px]" src="/img/logo_shareBy_white.svg" alt="ShareBy Logo">
                 </a>
                 {{-- desktop navigation menu --}}
                 <div class="hidden md:flex w-[50%] font-medium text-lg flex-row justify-evenly items-center">
@@ -83,12 +83,12 @@
                         {{-- bottoni accedi e registrati mostrati in formato desktop nel caso l'utente non abbia fatto l'accesso --}}  
                             @else
                             <div class="hidden md:flex">
-                                <a href="{{ route('login') }}" class="mr-3">
+                                <a href="{{ route('login') }}" class="scale-90">
                                     <x-secondary-button class="">Accedi</x-secondary-button>
                                 </a>
                                 @if (Route::has('register'))
                                         <a href="{{ route('register') }}">
-                                            <x-primary-button class="">Registrati</x-primary-button>
+                                            <x-primary-button class="scale-90">Registrati</x-primary-button>
                                         </a>
                                 @endif
                             </div>

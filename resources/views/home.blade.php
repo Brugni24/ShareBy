@@ -4,10 +4,10 @@
     {{-- landing page --}}
     <section class="bg-gradient-to-b from-secondary to-[#0C1031] ">
         <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
-            <h1 class="sm:text-[60px] md:text-[70px] lg:text-[80px] ">
+            <h1 class="">
                 Entra nel mondo della finanza con ShareBy
             </h1>
-            <p class="sottotitolo sm:text-[20px] lg:text-[22px] ">
+            <p class="sottotitolo">
                 Shareby è ciò che ti serve per entrare nel mondo della finanza con consapevolezza.
             </p>
             <div class="bottoni lg:gap-4 lg:mt-8">
@@ -19,12 +19,12 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> 
     {{-- dashboard --}}
     <section class="bg-gradient-to-b from-[#0C1031] to-[#080C26] ">
         <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
             <img class="max-w-[800px] sm:mx-[5vw] mb-[50px] sm:mb-[80px]" src="/img/dashboard.svg" alt="">
-            <p class="paragrafo m-0 sm:text-[20px] lg:text-[22px] ">
+            <p class="paragrafo m-0">
                 Shareby è la piattaforma che sfrutta la stretta connessione tra l’informatizzazione e il mondo finanziario, 
                 al fine di ottenere analisi approfondite e dettagliate in pochi click.
             </p>
@@ -32,26 +32,30 @@
     </section>
     {{-- citazione --}}
     <section class="">
-        <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
-            <h2 class="sm:text-[40px] md:text-[50px] lg:text-[60px] ">
+        <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px]">
+            <h2 class="">
                 "Il rischio deriva dal non sapere cosa stai facendo"
             </h2>
-            <p class="sottotitolo ">
+            <p class="sottotitolo">
                 ~ Warren Buffet
             </p>
-            <div class="flex flex-col justify-center items-center ">
-                <img class="mx-[10vw] my-[50px] max-w-[500px]" src="/img/stock_market.svg" alt="">
-                <p class="paragrafo sm:text-[20px] lg:text-[22px] ">
-                    Non seguire i trend, noi di ShareBy ti offriamo una consulenza avanzata e completa perché 
-                    sia tu a costruire il tuo percorso nel campo degli investimenti con consapevolezza.
-                </p>
-                <div class="bottoni lg:gap-4 lg:mt-8">
-                    <a href="{{url('/dashboard')}}">
-                        <x-primary-button>Prova gratis</x-primary-button>
-                    </a>
-                    <a href="{{url('/servizi')}}">
-                        <x-secondary-button>Scopri di più</x-secondary-button>
-                    </a>
+            <div class="flex flex-col justify-center items-center md:flex-row md:mt-[80px] md:gap-[50px] lg:gap-[80px]">
+                <div class="w-full max-w-[500px] md:basis-1/2">
+                    <img class="mx-[10vw] my-[50px] md:mx-0 md:my-0" src="/img/stock_market.svg" alt="">
+                </div>
+                <div class="flex flex-col items-center md:items-start md:basis-1/2">
+                    <p class="paragrafo md:text-left md:mx-0">
+                        Non seguire i trend, noi di ShareBy ti offriamo una consulenza avanzata e completa perché 
+                        sia tu a costruire il tuo percorso nel campo degli investimenti con consapevolezza.
+                    </p>
+                    <div class="bottoni lg:gap-4 lg:mt-8">
+                        <a href="{{url('/dashboard')}}">
+                            <x-primary-button>Prova gratis</x-primary-button>
+                        </a>
+                        <a href="{{url('/servizi')}}">
+                            <x-secondary-button>Scopri di più</x-secondary-button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,10 +63,10 @@
     {{-- banner --}}
     <section class="">
         <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
-            <h2 class="sm:text-[40px] md:text-[50px] lg:text-[60px] ">
+            <h2 class="">
                 Cerchi una consulenza intelligente?
             </h2>
-            <p class="paragrafo sm:text-[20px] lg:text-[22px]">
+            <p class="paragrafo">
                 Prendi il controllo del tuo futuro finanziario: iscriviti ora per ricevere una consulenza 
                 completa per i tuoi investimenti, con un’analisi aziendale e una strategie personalizzata 
                 in base alle tue necessità.
@@ -85,7 +89,7 @@
     {{-- I nostri servizi --}}
     <section class="">
         <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] ">
-            <h2 class="sm:text-[40px] md:text-[50px] lg:text-[60px] ">
+            <h2 class="">
                 I nostri servizi:
             </h2>
             {{-- cards --}}
