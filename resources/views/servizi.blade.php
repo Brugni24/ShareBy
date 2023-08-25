@@ -11,7 +11,7 @@
                 ShareBy offre una serie di servizi con lo scopo di aiutare le persone a migliorare 
                 la propria FINANCIAL AWARNESS e comprendere al meglio le società su cui si intende investire
             </p>
-            <div class="mx-[5vw] max-w-[500px] ">
+            <div class="mx-[5vw] max-w-[600px] ">
                 <img class="my-[50px] w-full " src="/img/products_tour.svg" alt="Products Tour">
             </div>
             <a class="" href="{{url('/dashboard')}}">
@@ -112,7 +112,7 @@
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center gap-[20px] mx-[5vw] pb-[40px] md:flex-row">
-                <div class="bg-secondary border border-white/20 rounded-[20px] p-[30px] max-w-[300px] h-[175px]">
+                <div class="bg-white/10 border border-white/20 rounded-[20px] p-[30px] max-w-[300px] h-[175px]">
                     <h3 class="text-2xl font-bold text-white">
                         Analisi Azionaria
                     </h3>
@@ -120,7 +120,7 @@
                         Learn about hosting built for scale and reliability.
                     </p>
                 </div>
-                <div class="bg-secondary border border-white/20 rounded-[20px] p-[30px] max-w-[300px] h-[175px]">
+                <div class="bg-white/10 border border-white/20 rounded-[20px] p-[30px] max-w-[300px] h-[175px]">
                     <h3 class="text-2xl font-bold text-white">
                         Analisi Aziendale
                     </h3>
@@ -128,7 +128,7 @@
                         Learn about hosting built for scale and reliability.
                     </p>
                 </div>
-                <div class="bg-secondary border border-white/20 rounded-[20px] p-[30px] max-w-[300px] h-[175px]">
+                <div class="bg-white/10 border border-white/20 rounded-[20px] p-[30px] max-w-[300px] h-[175px]">
                     <h3 class="text-2xl font-bold text-white">
                         Dati Finanziari
                     </h3>
@@ -143,8 +143,8 @@
         </div>  
     </section>
     {{-- analisi aziendale --}}
-    <section class="">
-        <div class="flex flex-col items-center justify-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
+    <section class="overflow-x-hidden">
+        <div class="flex flex-col items-center justify-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px]">
             <x-page-link class="">{{ __('Analisi Aziendale') }}</x-page-link>
             <h2 class="">
                 Come funziona?<br class="sm:hidden"> È facile.
@@ -152,10 +152,40 @@
             <p class="sottotitolo">
                 Il nostro algoritmo si basa su 3 tipi di analisi basati su modelli economici e statistici ottimizzati.
             </p>
-
-            <a class="" href="{{url('/dashboard')}}">
-                <x-primary-button>Prova gratis</x-primary-button>
-            </a>
+            <div class="flex flex-col items-center justify-center px-[10vw] gap-10 md:flex-row md:gap-6 md:px-0 lg:px-[5vw] xl:gap-12 mt-[50px]">
+                <div style="height: 450px" class="card-container bg-white/10 border border-white/20 shadow-xl pt-[48px] pb-[32px] px-[24px]  md:h-[430px] md:basis-1/3 hover:scale-110 focus:scale-110">
+                    <div class="flex items-center justify-center bg-gray-300 rounded-full aspect-square w-[45px] mx-auto">
+                        <span class="text-[18px] font-bold">1</span>
+                    </div>
+                    <h3 class="card-title text-white mb-[10px] mx-auto">Analisi Redditività</h3>
+                    <p class="mx-[10px]">
+                        Quest’analisi si avvale di alcuni indici come ROE, ROS e ROI, che vengono opportunamente 
+                        confrontati con la media nazionale, così da ricavare il trend sulla reddività aziendale rispetto 
+                        al mercato di riferimento.
+                    </p>
+                </div>
+                <div style="height: 450px" class="card-container bg-white/10 border border-white/20 shadow-xl pt-[48px] pb-[32px] px-[24px]  md:h-[430px] md:basis-1/3 hover:scale-110 focus:scale-110">
+                    <div class="flex items-center justify-center bg-primary rounded-full aspect-square w-[45px] mx-auto">
+                        <span class="text-white text-[18px] font-bold">2</span>
+                    </div>
+                    <h3 class="card-title text-white mb-[10px] mx-auto">Analisi Struttura Patrimoniale</h3>
+                    <p class="mx-[10px]">
+                        La struttura patrimoniale viene analizzata tramite l’uso dell’IGGC e MRI che vengono anch’essi 
+                        valutati in maniera statica, confrontati con la media nazionale e in maniera dinamica, valutati 
+                        tramite l’uso della statistica interferenziale.
+                    </p>
+                </div>
+                <div style="height: 450px" class="card-container bg-white/10 border border-white/20 shadow-xl pt-[48px] pb-[32px] px-[24px]  md:h-[430px] md:basis-1/3 hover:scale-110 focus:scale-110">
+                    <div class="flex items-center justify-center bg-secondary rounded-full aspect-square w-[45px] mx-auto">
+                        <span class="text-white text-[18px] font-bold">3</span>
+                    </div>
+                    <h3 class="card-title text-white mb-[10px] mx-auto">Analisi Indebitamento Pubblico</h3>
+                    <p class="mx-[10px]">
+                        La struttura patrimoniale viene analizzata tramite l’uso del ROD, Leverage e Leva finanziaria, 
+                        strumenti che vengono valutati sia in maniera statica che in maniera dinamica con l’utilizzo di contatori.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
     {{-- ShareBYOU --}}

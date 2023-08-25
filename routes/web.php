@@ -33,6 +33,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     //Routes Dashboard
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['verified'])->name('dashboard');
+
     Route::get('/analisiAziendale', [CompaniesController::class, 'index'])->middleware(['verified'])->name('analisiAziendale');
     Route::get('/analisiAziendale/{id}', [CompaniesController::class, 'search'])->middleware(['verified']);
     Route::get('/analisiAziendale/{id}/company/logo/{companyName}', [CompaniesController::class, 'getCompanyLogo'])->middleware(['verified'])->name('company.logo');
