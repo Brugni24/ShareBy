@@ -71,7 +71,7 @@
         </div>
     </section>
     {{-- analisi --}}
-    <section class="">
+    <section id="analisi" class="">
         <div class="flex flex-col items-center justify-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
             <x-page-link class="">{{ __('Analisi') }}</x-page-link>
             <h2 class="">
@@ -143,7 +143,7 @@
         </div>  
     </section>
     {{-- analisi aziendale --}}
-    <section class="overflow-x-hidden">
+    <section id="analisi-aziendale" class="overflow-x-hidden">
         <div class="flex flex-col items-center justify-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px]">
             <x-page-link class="">{{ __('Analisi Aziendale') }}</x-page-link>
             <h2 class="">
@@ -179,7 +179,7 @@
                     <div class="flex items-center justify-center bg-secondary rounded-full aspect-square w-[45px] mx-auto">
                         <span class="text-white text-[18px] font-bold">3</span>
                     </div>
-                    <h3 class="card-title text-white mb-[10px] mx-auto">Analisi Indebitamento Pubblico</h3>
+                    <h3 class="card-title text-white mb-[10px] mx-auto">Analisi Indebitamento</h3>
                     <p class="mx-[10px]">
                         La struttura patrimoniale viene analizzata tramite l’uso del ROD, Leverage e Leva finanziaria, 
                         strumenti che vengono valutati sia in maniera statica che in maniera dinamica con l’utilizzo di contatori.
@@ -189,7 +189,7 @@
         </div>
     </section>
     {{-- ShareBYOU --}}
-    <section class="">
+    <section id="shareBYOU" class="">
         <div class="flex flex-col items-center justify-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
             <x-page-link class="">{{ __('ShareBYOU') }}</x-page-link>
             <h2 class="">
@@ -242,7 +242,7 @@
         </div>
     </section>
     {{-- PYLO --}}
-    <section class="">
+    <section id="PYLO" class="">
         <div class="flex flex-col items-center justify-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
             <x-page-link class="">{{ __('PYLO') }}</x-page-link>
             <h2 class="">

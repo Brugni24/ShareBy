@@ -64,6 +64,23 @@ p {
     margin-right: 5vw;
 }
 
+.text-hover-effect {
+    transition: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.text-hover-effect:hover {
+    color: #0E5ECC;
+    scale: 105%;
+}
+
+.text-hover-effect:focus {
+    color: #0E5ECC;
+    scale: 105%;
+}
+
+
 @media (min-width: 720px) {
     h1 {
         font-size: 60px;
@@ -106,11 +123,54 @@ p {
     margin-top: 2.5rem;
 }
 
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown button {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.dropdown-container {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 20px;
+}
+
+.dropdown-content {
+    background-color: rgb(55 65 81);
+    border-radius: 12px;
+    padding: 30px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    float: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(229 231 235);
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-container {
+    display: block;
+}
+
+
+
 /* cards css */
 .card-container {
     height: 400px;
     border-radius: 20px;
-    max-width: 288px;
+    max-width: 300px;
     transition: all;
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
@@ -179,7 +239,7 @@ p {
 /* dropdown mobile menu animation */
 .dropdown-menu {
     height: 90vh;
-    padding: 3rem 2.5rem 3rem 2.5rem;
+    padding: 1rem 2.5rem 3rem 2.5rem;
 }
 .dropdown-menu-content{
     opacity: 100%;
@@ -188,8 +248,13 @@ p {
 /* dropdown user menu */
 .dropdown-user-menu {
     height: 240px;
-    padding: 0.75rem;
-    border: 2px solid rgb(209, 213, 219);
+    padding: 20px;
+}
+
+@media (min-width: 1280px) {
+    .dropdown-user-menu {
+        height: 175px;
+    }
 }
 
 /* faq animation */

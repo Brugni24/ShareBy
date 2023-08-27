@@ -14,7 +14,7 @@
         </div>
     </section>
     {{-- brand vision --}}
-    <section class="bg-gradient-to-b from-[#0C1031] to-[#080C26] ">
+    <section id="brand-vision" class="bg-gradient-to-b from-[#0C1031] to-[#080C26] ">
         <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
             <x-page-link class="">{{ __('Brand Vision') }}</x-page-link>
             <h2 class="">
@@ -100,7 +100,7 @@
         </div>
     </section>
     {{-- mission --}}
-    <section class="">
+    <section id="mission-aziendale" class="">
         <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
             <x-page-link class="">{{ __('Mission Aziendale') }}</x-page-link>
             <h2 class="">
@@ -116,7 +116,7 @@
         </div>
     </section>
     {{-- perchè shareBy? --}}
-    <section class="">
+    <section id="perche-shareby" class="">
         <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
             <x-page-link class="">{{ __('Perchè ShareBy?') }}</x-page-link>
             <h2 class="">
@@ -132,7 +132,7 @@
         </div>
     </section>
     {{-- immagini team --}}
-    <section class="">
+    <section id="team" class="">
         <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
             <x-page-link class="">{{ __('Team') }}</x-page-link>
             <h1 class="">
