@@ -22,73 +22,29 @@
 
         <!-- Page Content -->
         <main class="bg-gray-50">
-            <!-- TradingView Widget BEGIN -->
-            <div class="mx-auto">
-                <div class="tradingview-widget-container__widget"></div>
-                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-                {
-                "symbols": [
-                {
-                    "description": "Intesa San Paolo",
-                    "proName": "MIL:ISP"
-                },
-                {
-                    "description": "Enel",
-                    "proName": "MIL:ENEL"
-                },
-                {
-                    "description": "Unicredit",
-                    "proName": "MIL:UCG"
-                },
-                {
-                    "description": "Eni",
-                    "proName": "MIL:ENI"
-                },
-                {
-                    "description": "Stellantis",
-                    "proName": "MIL:STLAM"
-                },
-                {
-                    "description": "Ferrari",
-                    "proName": "MIL:RACE"
-                },
-                {
-                    "description": "Telecom Italia",
-                    "proName": "MIL:TIT"
-                }
-                ],
-                "showSymbolLogo": true,
-                "colorTheme": "light",
-                "isTransparent": false,
-                "displayMode": "adaptive",
-                "locale": "it"
-                }
-                </script>
-            </div>
-            <div class="tradingview-widget-copyright"><a href="https://it.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Segui tutti i mercati su TradingView</span></a></div>
+            
             {{ $slot }}
         </main>
     </body>
-    
     {{-- footer --}}
-    <footer class="bg-secondary">
+    <footer class="bg-background pt-[60px] md:pt-[120px]">
         <div class="mx-auto w-full max-w-screen-xl px-10 py-8">
             <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="/" class="flex items-center">
                     <img src="/img/logo_shareBy_white.svg" class="h-16 mr-3" alt="ShareBy Logo" />
+                    <a class="text-gray-400 text-sm" href="https://clearbit.com">Logos provided by Clearbit</a>
                 </a>
-                <a class="text-gray-400 text-sm" href="https://clearbit.com">Logos provided by Clearbit</a>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold uppercase text-white">Azienda</h2>
+                    <h3 class="mb-6 text-sm font-semibold uppercase text-white">Azienda</h3>
                     <ul class="text-gray-400 font-medium">
                         <li class="mb-4">
                             <a href="{{ url('/chiSiamo')}}" class="hover:underline">Chi Siamo</a>
                         </li>
                         <li class="mb-4">
-                            <a href="{{ url('/chiSiamo')}}" class="hover:underline">Contatti</a>
+                            <a href="{{ url('/chiSiamo')}}" class="hidden hover:underline">Contatti</a>
                         </li>
                         <li>
                             <a href="#" class="hidden hover:underline">Lavora con noi</a>
@@ -96,21 +52,21 @@
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold uppercase text-white">Servizi</h2>
+                    <h3 class="mb-6 text-sm font-semibold uppercase text-white">Servizi</h3>
                     <ul class="text-gray-400 font-medium">
                         <li class="mb-4">
-                            <a href="{{ url('/servizi')}}" class="hover:underline ">Analisi Aziendale</a>
+                            <a href="{{ url('/servizi#analisi-aziendale')}}" class="hover:underline ">Analisi Aziendale</a>
                         </li>
                         <li class="mb-4">
-                            <a href="{{ url('/servizi')}}" class="hover:underline">ShareBYOU</a>
+                            <a href="{{ url('/servizi#shareBYOU')}}" class="hover:underline">ShareBYOU</a>
                         </li>
                         <li>
-                            <a href="{{ url('/servizi')}}" class="hover:underline">Consulente AI</a>
+                            <a href="{{ url('/servizi#PYLO')}}" class="hover:underline">Consulente AI</a>
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <h2 class="mb-6 text-sm font-semibold uppercase text-white">Legal</h2>
+                <div class="hidden">
+                    <h3 class="mb-6 text-sm font-semibold uppercase text-white">Legal</h3>
                     <ul class="text-gray-400 font-medium">
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Privacy Policy</a>

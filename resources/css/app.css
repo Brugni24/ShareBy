@@ -154,10 +154,17 @@ p {
     float: none;
     font-size: 16px;
     font-weight: 400;
-    color: rgb(229 231 235);
+    color: rgb(209 213 219);
     text-decoration: none;
     display: block;
     text-align: left;
+    transition: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.dropdown-content a:hover {
+    color: white;
 }
 
 .dropdown:hover .dropdown-container {
