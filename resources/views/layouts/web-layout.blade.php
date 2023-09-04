@@ -77,7 +77,7 @@
                         </div>
 
                         {{-- desktop user menu --}}
-                        <button type="button" id="user-menu-button" class="hidden md:flex aspect-square w-[24px] md:mr-0 xl:hidden hover:scale-105 transition-all duration-300">
+                        <button type="button" id="user-menu-button" class="hidden md:flex aspect-square w-[24px] md:mr-0 xl:hidden hover:scale-105 transition-all duration-300 ease-in-out">
                             <img src="/img/profile.svg" alt="">
                         </button>
                         {{-- dropdown desktop user menu --}}
@@ -195,7 +195,12 @@
                             {{-- se è loggato --}}
                                 @auth
                                     <div class="pt-[30px] pb-20">
-                                        <h3 class="text-white text-[24px] md:text-[28px] font-bold pb-4 text-hover-effect">Area Personale</h3>
+                                        <a href="{{ url('/dashboard')}}" class="font-bold text-[24px] md:text-[28px] text-white">
+                                            <div class="flex items-center text-hover-effect">
+                                                <span class="mr-[10px]">Area Personale</span>
+                                                <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                            </div>
+                                        </a>
                                         <div class="hidden md:block">
                                             <div class="flex items-center pl-2 pb-2">
                                                 <span class="block text-white ml-6 sm:text-lg">{{ Auth::user()->name }} {{ Auth::user()->surname }}</span>

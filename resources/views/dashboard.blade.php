@@ -1,5 +1,5 @@
 <x-app-layout>
-    <section class="px-[7vw] py-[7vh] lg:px-[10vw]">
+    <section class="w-full">
         <!-- TradingView Widget BEGIN -->
         <div class="mx-auto">
             <div class="tradingview-widget-container__widget"></div>
@@ -44,5 +44,12 @@
             </script>
         </div>
         <div class="tradingview-widget-copyright"><a href="https://it.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Segui tutti i mercati su TradingView</span></a></div>
+
+        {{-- widgets dashboard --}}
+        <div class="px-[7vw] py-[7vh] lg:px-[10vw]">
+            <div class="rounded-[20px] bg-white border border-gray-300 w-60 h-60">
+
+            </div>
+        </div>
     </section>
 </x-app-layout>

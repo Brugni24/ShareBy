@@ -2,7 +2,7 @@ import './bootstrap';
 
 import Alpine from 'alpinejs';
 
-import './roiChart.js';
+import './chart.js';
 
 window.Alpine = Alpine;
 
