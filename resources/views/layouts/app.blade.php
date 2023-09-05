@@ -27,16 +27,16 @@
         </main>
     </body>
     {{-- footer --}}
-    <footer class="bg-background pt-[60px] md:pt-[120px]">
+    <footer class="bg-gray-300 pt-[20px]">
         <div class="mx-auto w-full max-w-screen-xl px-10 py-8">
             <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="/" class="flex items-center">
-                    <img src="/img/logo_shareBy_white.svg" class="h-16 mr-3" alt="ShareBy Logo" />
+                    <img src="/img/logo_shareBy_white.svg" class="h-16 mr-3 mb-[20px]" alt="ShareBy Logo"/>
                     <a class="text-gray-400 text-sm" href="https://clearbit.com">Logos provided by Clearbit</a>
                 </a>
             </div>
-            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div class="grid grid-cols-2 gap-8">
                 <div>
                     <h3 class="mb-6 text-sm font-semibold uppercase text-white">Azienda</h3>
                     <ul class="text-gray-400 font-medium">
@@ -52,20 +52,6 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="mb-6 text-sm font-semibold uppercase text-white">Servizi</h3>
-                    <ul class="text-gray-400 font-medium">
-                        <li class="mb-4">
-                            <a href="{{ url('/servizi#analisi-aziendale')}}" class="hover:underline ">Analisi Aziendale</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="{{ url('/servizi#shareBYOU')}}" class="hover:underline">ShareBYOU</a>
-                        </li>
-                        <li>
-                            <a href="{{ url('/servizi#PYLO')}}" class="hover:underline">Consulente AI</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="hidden">
                     <h3 class="mb-6 text-sm font-semibold uppercase text-white">Legal</h3>
                     <ul class="text-gray-400 font-medium">
                         <li class="mb-4">
@@ -78,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
+        <hr class="my-6 sm:mx-auto border-gray-400 lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-sm sm:text-center text-gray-400">© 2023 <a href="/" class="hover:underline">ShareBy™</a>. All Rights Reserved.
             </span>
