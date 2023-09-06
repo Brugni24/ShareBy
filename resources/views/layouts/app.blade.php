@@ -17,17 +17,16 @@
         @livewireStyles
 
     </head>
-    <body class="font-main antialiased bg-secondary min-h-screen lg:relative w-full overflow-hidden">
+    <body class="font-main antialiased bg-secondary">
         @include('layouts.navigation')
 
         <!-- Page Content -->
-        <main class="bg-gray-50 min-h-screen lg:left-[78px]">
-            
+        <main class="bg-gray-50 min-h-screen sm:ml-[78px]">  
             {{ $slot }}
         </main>
     </body>
     {{-- footer --}}
-    <footer class="bg-gray-300 pt-[20px]">
+    <footer class="bg-gray-300 pt-[20px] sm:ml-[78px]">
         <div class="mx-auto w-full max-w-screen-xl px-10 py-8">
             <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
