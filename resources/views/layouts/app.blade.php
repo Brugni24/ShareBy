@@ -17,11 +17,11 @@
         @livewireStyles
 
     </head>
-    <body class="font-main antialiased bg-secondary min-h-screen">
+    <body class="font-main antialiased bg-secondary min-h-screen lg:relative w-full overflow-hidden">
         @include('layouts.navigation')
 
         <!-- Page Content -->
-        <main class="bg-gray-50">
+        <main class="bg-gray-50 min-h-screen lg:left-[78px]">
             
             {{ $slot }}
         </main>
