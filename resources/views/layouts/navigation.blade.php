@@ -9,23 +9,6 @@
                     <a href="{{ route('dashboard') }}">
                         <img class="h-10 w-auto" src="/img/logo_shareBy_white.svg" alt="Logo ShareBy">
                     </a>
-                    <hr class="w-12 rotate-90">
-                </div>
-
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('analisiAziendale')" :active="request()->routeIs('analisiAziendale')">
-                        {{ __('Analisi Aziendale') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('shareBYOU')" :active="request()->routeIs('shareBYOU')">
-                        {{ __('ShareBYOU') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('consulente')" :active="request()->routeIs('consulente')">
-                        {{ __('Consulente AI') }}
-                    </x-nav-link>
                 </div>
             </div>
 

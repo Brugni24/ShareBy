@@ -4,7 +4,7 @@
     {{-- landing page --}}
     <section class="bg-gradient-to-b from-secondary to-[#0C1031] ">
         <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
-            <h1 class="">
+            <h1 class="gradient-white-title">
                 Entra nel mondo della finanza con ShareBy
             </h1>
             <p class="sottotitolo">
@@ -33,7 +33,7 @@
     {{-- citazione --}}
     <section class="">
         <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px]">
-            <h2 class="">
+            <h2 class="gradient-white-title">
                 "Il rischio deriva dal non sapere cosa stai facendo"
             </h2>
             <p class="sottotitolo">
@@ -63,7 +63,7 @@
     {{-- banner --}}
     <section class="">
         <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
-            <h2 class="">
+            <h2 class="gradient-white-title">
                 Cerchi una consulenza intelligente?
             </h2>
             <p class="paragrafo">
@@ -89,7 +89,7 @@
     {{-- I nostri servizi --}}
     <section class="">
         <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] ">
-            <h2 class="">
+            <h2 class="gradient-white-title">
                 I nostri servizi:
             </h2>
             {{-- cards --}}
@@ -138,7 +138,7 @@
     {{-- FAQ --}}
     <section class="">
         <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] ">
-            <h2 class="sm:text-[40px] md:text-[50px] lg:text-[60px] ">
+            <h2 class="sm:text-[40px] md:text-[50px] lg:text-[60px] gradient-white-title">
                 FAQs
             </h2>
             <div class="flex flex-col gap-4 w-[80vw] m-auto pt-[30px] md:w-[45rem]">

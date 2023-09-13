@@ -1,0 +1,197 @@
+/* sidebar - area personale */
+.sidebar {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    min-height: 530px;
+    width: 78px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    padding: 20px 10px 20px 10px;
+    background-color: #111849;
+    transition: all 0.5s ease-in-out;
+}
+
+.sidebar.active {
+    width: 240px;
+    padding: 20px;
+}
+
+.sidebar .logo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+}
+
+.sidebar.active .logo-content {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sidebar .logo-content .logo {
+    color: #fff;
+    display: none;
+    height: 40px;
+    width: fit-content;
+    align-items: center;
+    pointer-events: none;
+}
+
+.sidebar.active .logo-content .logo {
+    display: flex;
+    pointer-events: none;
+}
+
+.logo-content .logo img {
+    height: 100%;
+    margin-left: 5px;
+}
+
+.sidebar .nav-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar.active .nav-list-container {
+    gap: 20px;
+}
+
+.sidebar ul {
+    position: flex;
+}
+
+.sidebar ul li {
+    list-style: none;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 58px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar.active ul li {
+    margin-top: 10px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active ul li a {
+    padding-left: 5px;
+    justify-content: start;
+}
+
+.sidebar ul li a span {
+    display: none;
+}
+
+.sidebar.active ul li a span {
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    color: #111849;
+    background-color: #fff;
+}
+
+.sidebar .nav-list-item a:hover svg path {
+    fill: #111849;
+}
+
+.sidebar ul li a svg {
+    height: 28px;
+    width: 28px;
+}
+
+.sidebar.active ul li a svg {
+    margin-right: 20px;
+}
+
+.sidebar .logout-content .logout {
+    height: 58px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .logout-content .logout {
+    padding-left: 5px;
+    width: 100%;
+    justify-content: start;
+}
+
+.sidebar.active .logout-content .logout svg {
+    margin-right: 20px;
+}
+
+.sidebar .logout-content .logout .links-name {
+    display: none;
+}
+
+.sidebar.active .logout-content .logout .links-name {
+    color: #fff;
+    display: block;
+}
+
+.sidebar .logout-content .logout:hover {
+    background-color: #fff;
+}
+
+.sidebar.active .logout-content .logout:hover .links-name {
+    color: #111849;
+}
+
+.tooltip {
+    position: absolute;
+    height: min-content;
+    width: min-content;
+    left: 38px;
+    line-height: 20px;
+    border-radius: 6px;
+    padding: 8px 16px 8px 16px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+.sidebar ul li:hover .tooltip {
+    opacity: 1;
+    left: 80px;
+}
+
+.sidebar.active ul li:hover .tooltip {
+    display: none;
+}
+
+.logout-content .logout:hover .tooltip {
+    opacity: 1;
+    left: 90px;
+}
+
+.sidebar.active .logout-content .logout:hover .tooltip {
+    display: none;
+}

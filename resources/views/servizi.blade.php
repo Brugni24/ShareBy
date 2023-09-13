@@ -4,7 +4,7 @@
     {{-- first slide --}}
     <section class="bg-gradient-to-b from-secondary to-[#0C1031] ">
         <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
-            <h1 class="">
+            <h1 class="gradient-white-title">
                 I nostri servizi
             </h1>
             <p class="sottotitolo">
@@ -22,7 +22,7 @@
     {{-- servizi --}}
     <section class="bg-gradient-to-b from-[#0C1031] to-[#080C26] ">
         <div class="flex flex-col items-center justify-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
-            <h2 class="">
+            <h2 class="gradient-white-title">
                 Uno strumento unico come nessun'altro
             </h2>
             <p class="sottotitolo">
@@ -74,7 +74,7 @@
     <section id="analisi" class="">
         <div class="flex flex-col items-center justify-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
             <x-page-link class="">{{ __('Analisi') }}</x-page-link>
-            <h2 class="">
+            <h2 class="gradient-white-title">
                 Facile. Veloce. Intuitiva.
             </h2>
             <p class="sottotitolo">
@@ -146,7 +146,7 @@
     <section id="analisi-aziendale" class="overflow-x-hidden">
         <div class="flex flex-col items-center justify-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px]">
             <x-page-link class="">{{ __('Analisi Aziendale') }}</x-page-link>
-            <h2 class="">
+            <h2 class="gradient-white-title">
                 Come funziona?<br class="sm:hidden"> È facile.
             </h2>
             <p class="sottotitolo">
@@ -192,7 +192,7 @@
     <section id="shareBYOU" class="">
         <div class="flex flex-col items-center justify-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
             <x-page-link class="">{{ __('ShareBYOU') }}</x-page-link>
-            <h2 class="">
+            <h2 class="gradient-white-title">
                 Unisciti alla Community
             </h2>
             <p class="sottotitolo">
@@ -245,7 +245,7 @@
     <section id="PYLO" class="">
         <div class="flex flex-col items-center justify-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
             <x-page-link class="">{{ __('PYLO') }}</x-page-link>
-            <h2 class="">
+            <h2 class="gradient-white-title">
                 L'intelligenza artificiale al tuo servizio
             </h2>
             <p class="sottotitolo">

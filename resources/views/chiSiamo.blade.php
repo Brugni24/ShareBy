@@ -4,7 +4,7 @@
     {{-- first slide --}}
     <section class="bg-gradient-to-b from-secondary to-[#0C1031] ">
         <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
-            <h1 class="">
+            <h1 class="gradient-white-title">
                 Chi siamo?
             </h1>
             <p class="sottotitolo ">
@@ -17,7 +17,7 @@
     <section id="brand-vision" class="bg-gradient-to-b from-[#0C1031] to-[#080C26] ">
         <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
             <x-page-link class="">{{ __('Brand Vision') }}</x-page-link>
-            <h2 class="">
+            <h2 class="gradient-white-title">
                 La finanza a portata di tutti
             </h2>
             <div class="bg-gradient-to-b from-secondary to-[#080C26] flex flex-col mx-[5vw] rounded-[30px] my-[40px] p-[10%] md:p-[50px] max-w-[550px] md:flex-row md:max-w-[800px] md:gap-[40px] lg:gap-[50px]">
@@ -87,7 +87,7 @@
                     </div>
                 </div>
             </div>
-            <h2 class="">
+            <h2 class="gradient-white-title">
                 La nostra Vision:
             </h2>
             <p class="paragrafo ">
@@ -103,7 +103,7 @@
     <section id="mission-aziendale" class="">
         <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
             <x-page-link class="">{{ __('Mission Aziendale') }}</x-page-link>
-            <h2 class="">
+            <h2 class="gradient-white-title">
                 La nostra Mission:
             </h2>
             <p class="paragrafo ">
@@ -119,7 +119,7 @@
     <section id="perche-shareby" class="">
         <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
             <x-page-link class="">{{ __('Perchè ShareBy?') }}</x-page-link>
-            <h2 class="">
+            <h2 class="gradient-white-title">
                 La nostra forza è la semplicità
             </h2>
             <p class="paragrafo ">
@@ -135,7 +135,7 @@
     <section id="team" class="">
         <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
             <x-page-link class="">{{ __('Team') }}</x-page-link>
-            <h1 class="">
+            <h1 class="gradient-white-title">
                 Team
             </h1>
             <div class="flex flex-col items-center justify-items-center gap-[30px] px-[5vw] my-8 lg:mb-24 sm:grid sm:grid-cols-2 md:grid-cols-6">

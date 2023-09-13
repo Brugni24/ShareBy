@@ -7,7 +7,7 @@
         </div>
 
         {{-- output algoritmo --}}
-        <div class="mx-auto">
+        <div class="mx-auto mt-[60px]">
             @if($found == 1)
                 <div class="flex flex-row items-center pt-[40px] pb-[24px] px-[5vw]">
                     <img class="aspect-square h-10" src="{{ route('company.logo', ['id' => $azienda->id, 'companyName' => $azienda->name]) }}">
