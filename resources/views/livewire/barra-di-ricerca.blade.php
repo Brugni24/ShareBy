@@ -15,7 +15,7 @@
                     @foreach($companies as $company)
                         <div class="flex flex-row items-center hover:bg-gray-100 rounded-lg w-[86vw] max-w-[700px] px-4">
                             <img class="aspect-square h-6 mr-2" src="{{ route('company.logo', ['id' => $company->id, 'companyName' => $company->name]) }}">
-                            <a href="/analisiAziendale/{{$company->id}}"><p class="text-sm text-gray-900 text-bold py-4">{{$company->name}}</p></a>
+                            <a href="/analisiAziendale/{{$company->id}}" class="w-full"><p class="text-sm text-gray-900 text-bold py-4 text-left">{{$company->name}}</p></a>
                         </div>
                     @endforeach
                 @else

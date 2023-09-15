@@ -3,7 +3,7 @@
 @section('content')
     {{-- first slide --}}
     <section class="bg-gradient-to-b from-secondary to-[#0C1031] ">
-        <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
+        <div class="flex flex-col justify-center items-center py-[80px] sm:min-h-[80vh] mx-[5vw] ">
             <h1 class="gradient-white-title">
                 Chi siamo?
             </h1>
@@ -15,7 +15,7 @@
     </section>
     {{-- brand vision --}}
     <section id="brand-vision" class="bg-gradient-to-b from-[#0C1031] to-[#080C26] ">
-        <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
+        <div class="flex flex-col justify-center items-center py-[60px] mx-[5vw] ">
             <x-page-link class="">{{ __('Brand Vision') }}</x-page-link>
             <h2 class="gradient-white-title">
                 La finanza a portata di tutti
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col gap-[30px] mt-[30px] mb-[80px] md:flex-row ">
+            <div class="flex flex-col gap-[30px] mt-[30px] mb-[100px] md:flex-row ">
                 <div class="flex flex-col ">
                     <div class="inline-flex justify-center leading-tight">
                         <span class="font-bold text-[50px] lg:text-[70px] text-white">49.2</span>
@@ -101,7 +101,7 @@
     </section>
     {{-- mission --}}
     <section id="mission-aziendale" class="">
-        <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
+        <div class="flex flex-col justify-center items-center py-[60px] mx-[5vw] ">
             <x-page-link class="">{{ __('Mission Aziendale') }}</x-page-link>
             <h2 class="gradient-white-title">
                 La nostra Mission:
@@ -117,7 +117,7 @@
     </section>
     {{-- perchè shareBy? --}}
     <section id="perche-shareby" class="">
-        <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
+        <div class="flex flex-col justify-center items-center py-[60px] mx-[5vw] ">
             <x-page-link class="">{{ __('Perchè ShareBy?') }}</x-page-link>
             <h2 class="gradient-white-title">
                 La nostra forza è la semplicità
@@ -133,7 +133,7 @@
     </section>
     {{-- immagini team --}}
     <section id="team" class="">
-        <div class="flex flex-col justify-center items-center py-[80px] min-h-[80vh] mx-[5vw] ">
+        <div class="flex flex-col justify-center items-center py-[60px] mx-[5vw] ">
             <x-page-link class="">{{ __('Team') }}</x-page-link>
             <h1 class="gradient-white-title">
                 Team

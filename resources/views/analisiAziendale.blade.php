@@ -7,7 +7,7 @@
         </div>
 
         {{-- output algoritmo --}}
-        <div class="mx-auto mt-[60px]">
+        <div class="mx-auto mt-[30px]">
             @if($found == 1)
                 <div class="flex flex-row items-center pt-[40px] pb-[24px] px-[5vw]">
                     <img class="aspect-square h-10" src="{{ route('company.logo', ['id' => $azienda->id, 'companyName' => $azienda->name]) }}">
@@ -20,7 +20,7 @@
                         <div class="rounded-xl bg-blue-100 aspect-square w-[36px] p-2 sm:mr-4 md:w-[42px]">
                             <img src="/img/azioni-tab-link.svg" alt="">
                         </div>
-                        <h3 class="hidden leading-tight sm:block">Prezzo<br>di Mercato</h3>
+                        <h3 class="hidden leading-tight sm:block">Quotazioni<br>di Mercato</h3>
                     </button>
                     <button class="tablinks basis-1/3 py-4 md:py-5 inline-flex items-center justify-center transition-all duration-100 opacity-50 hover:opacity-100" onclick="openTab(event, 'analisi-aziendale')">
                         <div class="rounded-xl bg-blue-100 aspect-square w-[36px] p-2 sm:mr-4 md:w-[42px]">
@@ -37,7 +37,7 @@
                 </div>
 
                 <!-- Tab content -->
-                {{-- prezzo di mercato --}}
+                {{-- quotazioni di mercato --}}
                 <div id="prezzo-mercato" class="tabcontent px-[5vw] py-[30px] border border-t-0 border-gray-300 rounded-b-2xl bg-white">
                     <!-- TradingView Widget BEGIN -->
                     <div class="mx-auto max-w-[1000px]">
@@ -348,23 +348,23 @@
                 
                 {{-- dati finanziari --}}
                 <div id="dati-finanziari" class="tabcontent hidden px-[5vw] py-14 border border-t-0 border-gray-300 rounded-b-2xl bg-white">
-                    <!-- TradingView Widget BEGIN -->
-                    <div class="h-[800px]">
-                    <div class=""></div>
-                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
-                    {
-                    "colorTheme": "light",
-                    "isTransparent": false,
-                    "largeChartUrl": "",
-                    "displayMode": "adaptive",
-                    "width": "100%",
-                    "height": "100%",
-                    "symbol": "NASDAQ:"+"{{$azienda->symbol}}",
-                    "locale": "it"
-                    }
-                    </script>
+                    <div class="min-w-[240px] mx-auto h-[500px]">
+                        <!-- TradingView Widget BEGIN -->
+                            <div class=""></div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                            "colorTheme": "light",
+                            "isTransparent": false,
+                            "largeChartUrl": "",
+                            "displayMode": "adaptive",
+                            "width": "100%",
+                            "height": "100%",
+                            "symbol": "NASDAQ:{{$azienda->symbol}}",
+                            "locale": "it"
+                            }
+                            </script>
+                        <!-- TradingView Widget END -->
                     </div>
-                    <!-- TradingView Widget END -->
                 </div>
                 
                 {{-- tab script --}}
