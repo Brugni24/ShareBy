@@ -115,28 +115,28 @@
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center gap-[20px] mx-[5vw] pb-[40px] md:flex-row">
-                <div class="bg-white/10 border border-white/20 rounded-[20px] p-[30px] max-w-[300px] h-[175px]">
+                <div class="bg-white/10 border border-white/20 rounded-[20px] p-[30px] max-w-[300px] h-[200px]">
                     <h3 class="text-2xl font-bold text-white">
                         Quotazioni di Mercato
                     </h3>
                     <p class="font-medium mt-2 text-left">
-                        Learn about hosting built for scale and reliability.
+                        Monitora in tempo reale gli andamenti azionari di più di 500 aziende.
                     </p>
                 </div>
-                <div class="bg-white/10 border border-white/20 rounded-[20px] p-[30px] max-w-[300px] h-[175px]">
+                <div class="bg-white/10 border border-white/20 rounded-[20px] p-[30px] max-w-[300px] h-[200px]">
                     <h3 class="text-2xl font-bold text-white">
                         Analisi Aziendale
                     </h3>
                     <p class="font-medium mt-2 text-left">
-                        Learn about hosting built for scale and reliability.
+                        Sfrutta la nostra innovativa analisi aziendale su più di 12 indici basata sull'intelligenza artificiale.
                     </p>
                 </div>
-                <div class="bg-white/10 border border-white/20 rounded-[20px] p-[30px] max-w-[300px] h-[175px]">
+                <div class="bg-white/10 border border-white/20 rounded-[20px] p-[30px] max-w-[300px] h-[200px]">
                     <h3 class="text-2xl font-bold text-white">
                         Dati Finanziari
                     </h3>
                     <p class="font-medium mt-2 text-left">
-                        Learn about hosting built for scale and reliability.
+                        Esamina i report e i bilanci aziendali sempre aggiornati.
                     </p>
                 </div>
             </div>

@@ -4,13 +4,13 @@
     {{-- landing page --}}
     <section class="bg-gradient-to-b from-secondary to-[#0C1031] ">
         <div class="flex flex-col justify-center items-center py-[60px] sm:min-h-[80vh] mx-[5vw] ">
-            <h1 class="gradient-white-title">
+            <h1 id="title-lp" class="gradient-white-title">
                 Entra nel mondo della finanza con ShareBy
             </h1>
-            <p class="sottotitolo">
+            <p id="sottotitolo-lp" class="sottotitolo">
                 Shareby è ciò che ti serve per entrare nel mondo della finanza con consapevolezza.
             </p>
-            <div class="bottoni lg:gap-4 lg:mt-8">
+            <div id="btn-lp" class="bottoni lg:gap-4 lg:mt-8">
                 <a href="{{url('/dashboard')}}">
                     <x-primary-button>Prova gratis</x-primary-button>
                 </a>
@@ -85,7 +85,7 @@
     </section>
     {{-- I nostri servizi --}}
     <section class="">
-        <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] ">
+        <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px]">
             <h2 class="gradient-white-title">
                 I nostri servizi:
             </h2>
@@ -135,7 +135,7 @@
     </section>        
     {{-- FAQ --}}
     <section class="">
-        <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] ">
+        <div class="flex flex-col justify-center items-center mx-[5vw] pt-[100px] pb-[60px] ">
             <h2 class="sm:text-[40px] md:text-[50px] lg:text-[60px] gradient-white-title">
                 FAQs
             </h2>
