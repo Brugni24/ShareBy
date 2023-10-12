@@ -3,6 +3,7 @@
 use App\Http\Controllers\CompaniesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,14 +43,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/analisiAziendale/{id}/company/logo/{companyName}', [CompaniesController::class, 'getCompanyLogo'])->middleware(['verified'])->name('company.logo');
     Route::get('/analisiAziendale/{id}/stockdata', [CompaniesController::class, 'getStockData'])->middleware(['verified'])->name('stock.data');
 
-
     Route::get('/shareBYOU', function () {
         return view('shareBYOU');
     })->middleware(['verified'])->name('shareBYOU');
     
     Route::get('/consulente', function () {
-        return view('consulente');
+        $chatLog = session('chatLog', []);
+    
+        return view('consulente', compact('chatLog'));
     })->middleware(['verified'])->name('consulente');
+
+    Route::post('/consulente/reply', [ChatController::class, 'reply'])->name('consulente.reply');
 });
 
 require __DIR__.'/auth.php';
