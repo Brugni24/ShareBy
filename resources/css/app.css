@@ -9,6 +9,9 @@
 /* sidebar style */
 @import 'sidebar_style.css';
 
+/* PYLO chat style */
+@import 'chatbot.css';
+
 
 /* developing */
 .br {

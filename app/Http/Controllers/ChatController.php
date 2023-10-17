@@ -13,10 +13,13 @@ class ChatController extends Controller
         $userMessage = $request->input('message');
 
         $response = Http::withHeaders([
-            'Authorization' => 'Bearer ' . Config::get('app.openai_api_key'),
+            'Authorization' => 'Bearer ' .env('CHAT_GPT_KEY'),
             'Content-Type' => 'application/json',
         ])->post('https://api.openai.com/v1/chat/completions', [
-            'messages' => [[ 'role' => 'user', 'content' => 'Reply as a financial advisor.\n' . $userMessage ]],
+            'messages' => [[ 
+                'role' => 'user', 
+                'content' => 'Reply as a financial advisor.\n' . $userMessage
+            ]],
             'model' => "gpt-3.5-turbo",
             'max_tokens' => 50,
         ]);
