@@ -6,23 +6,59 @@
                 <span class="text-white font-bold text-[28px]">PYLO</span>
             </div>
             <div id="chat-container">
-                @foreach ($chatLog as $message)
-                    @if ($message['role'] === 'user')
-                        <div class="user-message">
-                            <div class="message-bubble">{{ $message['message'] }}</div>
-                        </div>
-                    @else
-                        <div class="bot-message">
-                            <div class="message-bubble">{{ $message['message'] }}</div>
-                        </div>
-                    @endif
-                @endforeach
             </div>
-            <form class="chat-form" method="POST" action="{{ route('consulente.reply') }}">
+            <form class="chat-form">
                 @csrf
-                <input class="chat-input" type="text" name="message" placeholder="Type your message..." autocomplete="off">
+                <input class="chat-input" id="message" type="text" name="message" placeholder="Type your message..." autocomplete="off">
                 <button class="chat-send-btn" type="submit">Send</button>
             </form>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //Broadcast messages
+        $("form").submit(function (event) {
+          event.preventDefault();
+      
+          //Stop empty messages
+          if ($("form #message").val().trim() === '') {
+            return;
+          }
+      
+          //Disable form
+          $("form #message").prop('disabled', true);
+          $("form button").prop('disabled', true);
+      
+          $.ajax({
+            url: "/consulente/reply",
+            method: 'POST',
+            headers: {
+              'X-CSRF-TOKEN': "{{csrf_token()}}"
+            },
+            data: {
+              "content": $("form #message").val()
+            }
+          }).done(function (res) {
+      
+            var chatContainer = $('#chat-container');
+            chatContainer.append('<div class="user-message">' +
+                '<div class="message-bubble">' + $("form #message").val() + '</div>' +
+                '</div>');
+
+            // Aggiungi il messaggio ricevuto al div con id "chat-container"
+            chatContainer.append('<div class="bot-message">' +
+                '<div class="message-bubble">' + res + '</div>' +
+                '</div>');
+
+            $("form #message").val('');
+            chatContainer.scrollTop(chatContainer.height());
+
+      
+            //Enable form
+            $("form #message").prop('disabled', false);
+            $("form button").prop('disabled', false);
+          });
+        });
+      
+      </script>
 </x-app-layout>
