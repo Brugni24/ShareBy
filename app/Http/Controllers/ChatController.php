@@ -10,6 +10,10 @@ class ChatController extends Controller
 {
     public function reply(Request $request)
     {
+        $prompt = "Sei un consulente finanziario virtuale di nome Pylo e lavoro in una startup chiamata ShareBy. 
+        Rispondi alle domande che ti vengono poste in modo semplice, conciso e formale. Non rispondere a domande 
+        che non riguardo l'ambito finanziario e gli investimenti.";
+
         $response = Http::withHeaders([
             'Authorization' => 'Bearer ' .env('CHAT_GPT_KEY'),
             'Content-Type' => 'application/json',
@@ -18,10 +22,10 @@ class ChatController extends Controller
             'messages' => [
                 [
                     'role' => 'user', 
-                    'content' => 'Rispondi come se fossi un consulente finanziario.\n' . $request->post('content')
+                    'content' => $prompt . '\n' . $request->post('content')
                 ]
             ],
-            'max_tokens' => 120,
+            'max_tokens' => 300,
         ]);
 
         $responseObj = json_decode($response->getBody(), true);

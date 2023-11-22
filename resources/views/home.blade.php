@@ -4,13 +4,13 @@
     {{-- landing page --}}
     <section class="bg-gradient-to-b from-secondary to-[#0C1031] ">
         <div class="flex flex-col justify-center items-center py-[60px] sm:min-h-[80vh] mx-[5vw] ">
-            <h1 id="title-lp" class="gradient-white-title">
+            <h1 id="title-landingpage" class="gradient-white-title">
                 Entra nel mondo della finanza con ShareBy
             </h1>
-            <p id="sottotitolo-lp" class="sottotitolo">
+            <p id="sottotitolo-landingpage" class="sottotitolo">
                 Shareby è ciò che ti serve per entrare nel mondo della finanza con consapevolezza.
             </p>
-            <div id="btn-lp" class="bottoni lg:gap-4 lg:mt-8">
+            <div id="btn-landingpage" class="bottoni lg:gap-4 lg:mt-8">
                 <a href="{{url('/dashboard')}}">
                     <x-primary-button>Prova gratis</x-primary-button>
                 </a>
@@ -21,34 +21,34 @@
         </div>
     </section> 
     {{-- dashboard --}}
-    <section class="bg-gradient-to-b from-[#0C1031] to-[#080C26] ">
+    <section id="dashboard-section" class="bg-gradient-to-b from-[#0C1031] to-[#080C26] ">
         <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
-            <img class="max-w-[600px] mb-[30px] sm:mx-[5vw] sm:mb-[60px] xl:max-w-[800px]" src="/img/dashboard.svg" alt="">
-            <p class="paragrafo m-0">
+            <img class="max-w-[600px] mb-[30px] sm:mx-[5vw] sm:mb-[60px] xl:max-w-[700px]" src="/img/dashboard.svg" alt="dashboard">
+            <p id="p-dashboard" class="paragrafo m-0">
                 Shareby è la piattaforma che sfrutta la stretta connessione tra l’informatizzazione e il mondo finanziario, 
                 al fine di ottenere analisi approfondite e dettagliate in pochi click.
             </p>
         </div>
     </section>
     {{-- citazione --}}
-    <section class="">
+    <section id="citazione-section">
         <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px]">
-            <h2 class="gradient-white-title">
+            <h2 id="citazione-title" class="gradient-white-title">
                 "Il rischio deriva dal non sapere cosa stai facendo"
             </h2>
-            <p class="sottotitolo">
+            <p id="citazione-subtitle" class="sottotitolo">
                 ~ Warren Buffet
             </p>
             <div class="flex flex-col justify-center items-center md:flex-row md:mt-[80px] md:gap-[50px] lg:gap-[80px]">
                 <div class="w-full max-w-[500px] md:basis-1/2">
-                    <img class="mx-[10vw] my-[50px] md:mx-0 md:my-0" src="/img/stock_market.svg" alt="">
+                    <img id="citazione-img" class="mx-[10vw] my-[50px] md:mx-0 md:my-0" src="/img/stock_market.svg" alt="">
                 </div>
                 <div class="flex flex-col items-center md:items-start md:basis-1/2">
-                    <p class="paragrafo md:text-left md:mx-0">
+                    <p id="citazione-p" class="paragrafo md:text-left md:mx-0">
                         Non seguire i trend, noi di ShareBy ti offriamo una consulenza avanzata, completa e <b>INDIPENDENTE</b> perché 
                         sia tu a costruire il tuo percorso nel campo degli investimenti con consapevolezza.
                     </p>
-                    <div class="lg:mt-8">
+                    <div id="citazione-btn" class="mt-12 md:mt-6 lg:mt-8">
                         <a href="{{url('/servizi')}}">
                             <x-secondary-button>Scopri di più</x-secondary-button>
                         </a>
@@ -58,17 +58,17 @@
         </div>
     </section>
     {{-- banner --}}
-    <section class="">
+    <section id="banner-section">
         <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px] sm:py-[100px] md:py-[120px] ">
-            <h2 class="gradient-white-title">
+            <h2 id="banner-title" class="gradient-white-title">
                 Cerchi una consulenza intelligente?
             </h2>
-            <p class="paragrafo">
+            <p id="banner-p" class="paragrafo mt-6">
                 Prendi il controllo del tuo futuro finanziario: iscriviti ora per ricevere una consulenza 
                 completa per i tuoi investimenti, con un’analisi aziendale e una strategie personalizzata 
                 in base alle tue necessità.
             </p>
-            <div class="bottoni lg:gap-4 lg:mt-8">
+            <div id="banner-btns" class="bottoni lg:gap-4 lg:mt-8">
                 <a href="{{url('/dashboard')}}">
                     <x-primary-button>Prova gratis</x-primary-button>
                 </a>
@@ -84,13 +84,13 @@
         </div>
     </section>
     {{-- I nostri servizi --}}
-    <section class="">
+    <section id="servizi-section">
         <div class="flex flex-col justify-center items-center mx-[5vw] py-[60px]">
-            <h2 class="gradient-white-title">
+            <h2 id="servizi-title" class="gradient-white-title">
                 I nostri servizi:
             </h2>
             {{-- cards --}}
-            <div class="flex flex-col items-center justify-center px-[10vw] gap-10 pt-[50px] md:flex-row md:gap-6 md:px-0 lg:px-[5vw] xl:gap-12 ">
+            <div id="servizi-cards" class="flex flex-col items-center justify-center px-[10vw] gap-10 pt-[50px] md:flex-row md:gap-6 md:px-0 lg:px-[5vw] xl:gap-12 ">
                 <a href="{{url('/dashboard')}}">
                     <div class="card-container bg-white shadow-xl md:h-[430px] md:basis-1/3 hover:scale-110 focus:scale-110">
                         <div class="card-background bg-[url('/public/img/white_card.svg')]">
@@ -134,12 +134,12 @@
         </div>
     </section>        
     {{-- FAQ --}}
-    <section class="">
+    <section id="faq-section">
         <div class="flex flex-col justify-center items-center mx-[5vw] pt-[100px] pb-[60px] ">
-            <h2 class="sm:text-[40px] md:text-[50px] lg:text-[60px] gradient-white-title">
+            <h2 id="faq-title" class="sm:text-[40px] md:text-[50px] lg:text-[60px] gradient-white-title">
                 FAQs
             </h2>
-            <div class="flex flex-col gap-4 w-[80vw] m-auto pt-[30px] md:w-[45rem]">
+            <div id="faq-questions" class="flex flex-col gap-4 w-[80vw] m-auto pt-[30px] md:w-[45rem]">
                 {{-- 1° domanda --}}
                 <div id="faq" class="w-full border border-white/40 rounded-xl hover:bg-slate-950 cursor-pointer py-5 px-6">
                     <div id="question" class="flex justify-between items-center">
