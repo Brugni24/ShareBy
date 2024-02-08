@@ -120,16 +120,33 @@
                                     </div>
                                     <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
                                         <p class="text-left py-5 text-gray-800">
-                                            In questo caso, l'azienda mostra un andamento della redditività sul capitale proprio che può essere descritto 
-                                            come (non molto positivo/positivo/molto positivo). Ciò significa che l'utile, considerando tutte le fonti di 
-                                            reddito e rapportandolo al capitale investito dagli stakeholder, è (leggermente basso/basso/molto basso). 
-                                            Questa informazione è preziosa per gli stakeholder esterni all'azienda, poiché aiuta a valutare se un potenziale 
-                                            investimento nell'azienda potrebbe essere redditizio o meno. La somma possibile da investire corrisponderà al capitale 
-                                            proprio dell'azienda, ovvero il capitale fornito dagli azionisti e dai finanziatori.<br>
-                                            Nel corso degli anni, non si nota mai un superamento della soglia del 7% per l'indice ROS (Return on Sales). 
-                                            Questo indica che la redditività del capitale proprio è rimasta bassa a causa di una scarsa capacità dell'azienda 
-                                            di convertire il fatturato in profitti effettivi. In altre parole, i costi di gestione sembrano assorbire una parte 
-                                            eccessiva del fatturato, riducendo così il ROE (Return on Equity).
+                                            @php
+                                                echo($cont_roe);
+                                                echo($cont_ros);
+                                                if($cont_roe > 5){
+                                                    if($cont_ros > 5){
+                                                        // roe e ros max
+                                                        echo("Il roe è il ros mostrano entrambi carattere espansivo, ciò significa che l’equity è coperto da un corretto flusso di cassa.");
+                                                    }else if($cont_ros < 2){
+                                                        // roe max e ros min
+                                                        echo("C'è uno scostamento tra l'andamento del roe e quello del ros.");
+                                                    }else{
+                                                        // roe max e ros neutro
+                                                        echo("Ha un andamento neutro.");
+                                                    }
+                                                }else if($cont_roe < 2){
+                                                    if($cont_ros > 5){
+                                                        // roe min e ros max
+                                                        echo("C'è uno scostamento tra l'andamento del roe e quello del ros.");
+                                                    }else if($cont_ros < 2){
+                                                        // roe min e ros min
+                                                        echo("Il roe è il ros mostrano entrambi carattere restrittivo, ciò significa che l’equity non è coperto da un corretto flusso di cassa.");
+                                                    }else{
+                                                        // roe min e ros neutro
+                                                        echo("Ha un andamento neutro.");
+                                                    }
+                                                }
+                                            @endphp
                                         </p>
                                     </div>
                                 </div>
