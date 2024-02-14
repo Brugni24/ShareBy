@@ -72,14 +72,106 @@
                 {{-- analisi aziendale --}}
                 <div id="analisi-aziendale" class="tabcontent hidden px-[5vw] py-[30px] border border-t-0 border-gray-300 rounded-b-2xl bg-white">
                     
-                    {{-- 1° analisi della redditività --}}
+                    {{-- 1° analisi dell'EBITDA --}}
                     <div class="mb-[50px]">
                         <div class="inline-flex items-center">
                             <div class="flex items-center justify-center bg-gray-300 rounded-full aspect-square w-[45px] mx-auto">
                                 <span class="text-[18px] font-bold">1</span>
                             </div>
                             <h3 class="ml-[16px] font-bold leading-tight text-[26px]">
-                                Analisi della Redditività
+                                Analisi EBITDA
+                            </h3>
+                        </div>
+                        
+                        {{-- ebitda --}}
+                        <div class="pt-[20px]">
+                            {{-- grafico ebitda --}}
+                            <div class="max-w-[1000px] mx-auto">
+                                <canvas id="ebitda-chart" class="w-full"></canvas>
+                            </div>
+                            <script>
+                                var ebitda = {{$azienda->ebitda}};
+                            </script>
+    
+                            {{-- commento grafico ebitda --}}
+                            <div class="mt-[30px] mx-auto max-w-[800px]">
+                                <div class="border border-b-0 border-gray-300 rounded-t-[20px]">
+                                    <div class="px-[20px] py-[20px]">
+                                        <h3 class="font-semibold text-[22px] mb-[6px]">
+                                            Commento:
+                                        </h3>
+                                        <p class="text-gray-800 text-left">
+                                            L'analisi di redditività valuta l'efficacia di un'azienda nel generare profitti da investimenti e attività 
+                                            operative, utilizzando indicatori finanziari chiave come ROE, ROI ed EBITDA, riteniamo quest’analisi 
+                                            la più solida da cui partire per valutare le prospettive future di un azienda.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="faq" class="w-full border border-gray-300 rounded-b-[20px] cursor-pointer py-5 px-[20px]">
+                                    <div id="question" class="flex justify-between items-center">
+                                        <h3 class="font-medium">
+                                            Scopri di più
+                                        </h3>
+                                        <div id="plus-minus-svg" class="w-6 h-6 rounded-full border-2 border-primary flex justify-center items-center">
+                                            <div id="line_1" class="w-3 h-[2px] rounded-xl bg-primary transition-all duration-700 ease-in-out"></div>
+                                            <div id="line_2" class="w-[2px] h-3 bg-primary absolute transition-all duration-700 ease-in-out"></div>
+                                        </div>
+                                    </div>
+                                    <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
+                                        <p class="text-left py-5 text-gray-800">
+                                            @php
+                                                echo($cont_ebitda);
+                                                echo "<br>";
+                                                echo($cont_ebitdaDebiti);
+                                                echo "<br>";
+                                                echo($cont_ebitdaVendite);
+                                                echo "<br>";
+                                                $MAX = 12.3;
+                                                $MIN = 3.7;
+                                                $MED = 8;
+
+                                                // EBITDA
+                                                if ($cont_ebitda > $MAX) {
+                                                    printf("\n%f\n", $cont_ebitda);
+                                                } else if ($cont_ebitda > $MIN && $cont_ebitda < $MAX) {
+                                                    printf("\n%f\n", $cont_ebitda);
+                                                } else if ($cont_ebitda < $MIN) {
+                                                    printf("\n%f\n", $cont_ebitda);
+                                                }
+                                                echo "<br>";
+                                                ///EBITDA_DEBITI
+                                                if ($cont_ebitdaDebiti > $MAX) {
+                                                    printf("\n%f\n", $cont_ebitdaDebiti);
+                                                } else if ($cont_ebitda > $MIN && $cont_ebitdaDebiti < $MAX) {
+                                                    printf("\n%f\n", $cont_ebitdaDebiti);
+                                                } else if ($cont_ebitdaDebiti < $MIN) {
+                                                    printf("\n%f\n", $cont_ebitdaDebiti);
+                                                }
+                                                echo "<br>";
+                                                ///EBITDA_VENDITE
+                                                if ($cont_ebitdaVendite > $MAX) {
+                                                    printf("\n%f\n", $cont_ebitdaVendite);
+                                                } else if ($cont_ebitdaVendite > $MIN && $cont_ebitdaVendite < $MAX) {
+                                                    printf("\n%f\n", $cont_ebitdaVendite);
+                                                } else if ($cont_ebitdaVendite < $MIN) {
+                                                    printf("\n%f\n", $cont_ebitdaVendite);
+                                                }
+                                            @endphp
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- 2° analisi della struttura patrimoniale --}}
+                    <div class="mb-[50px]">
+                        <div class="inline-flex items-center">
+                            <div class="flex items-center justify-center bg-primary rounded-full aspect-square w-[45px] mx-auto">
+                                <span class="text-[18px] text-white font-bold">2</span>
+                            </div>
+                            <h3 class="ml-[16px] font-bold leading-tight text-[26px]">
+                                Analisi della struttura patrimoniale
                             </h3>
                         </div>
                         
@@ -102,9 +194,9 @@
                                             Commento:
                                         </h3>
                                         <p class="text-gray-800 text-left">
-                                            Nel primo passo dell'analisi, si valuta la redditività dell'azienda, concentrandosi sull'efficacia 
-                                            con cui il capitale proprio viene utilizzato per generare ricchezza, misurato tramite il ROE 
-                                            (Return on Equity).
+                                            L'analisi di redditività valuta l'efficacia di un'azienda nel generare profitti da investimenti e attività 
+                                            operative, utilizzando indicatori finanziari chiave come ROE, ROI ed EBITDA, riteniamo quest’analisi 
+                                            la più solida da cui partire per valutare le prospettive future di un azienda.
                                         </p>
                                     </div>
                                 </div>
@@ -121,163 +213,11 @@
                                     <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
                                         <p class="text-left py-5 text-gray-800">
                                             @php
-                                                echo($cont_roe);
-                                                echo($cont_ros);
-                                                if($cont_roe > 5){
-                                                    if($cont_ros > 5){
-                                                        // roe e ros max
-                                                        echo("Il roe è il ros mostrano entrambi carattere espansivo, ciò significa che l’equity è coperto da un corretto flusso di cassa.");
-                                                    }else if($cont_ros < 2){
-                                                        // roe max e ros min
-                                                        echo("C'è uno scostamento tra l'andamento del roe e quello del ros.");
-                                                    }else{
-                                                        // roe max e ros neutro
-                                                        echo("Ha un andamento neutro.");
-                                                    }
-                                                }else if($cont_roe < 2){
-                                                    if($cont_ros > 5){
-                                                        // roe min e ros max
-                                                        echo("C'è uno scostamento tra l'andamento del roe e quello del ros.");
-                                                    }else if($cont_ros < 2){
-                                                        // roe min e ros min
-                                                        echo("Il roe è il ros mostrano entrambi carattere restrittivo, ciò significa che l’equity non è coperto da un corretto flusso di cassa.");
-                                                    }else{
-                                                        // roe min e ros neutro
-                                                        echo("Ha un andamento neutro.");
-                                                    }
-                                                }
+                                                echo($cont_ebitda);
                                             @endphp
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        {{-- gestione non caratterisitica --}}
-                        <div class="pt-[50px]">
-                            <div class="w-full mb-[20px]">
-                                <h3 class="w-full font-bold text-[22px] leading-snug">
-                                    Gestione non caratteristica
-                                </h3>
-                            </div>
-
-                            {{-- grafico gestione non caratteristica --}}
-                            <div class="w-full max-w-[1000px]">
-                                <canvas id="gnc-chart" class="w-full"></canvas>
-                            </div>
-                            <script>
-                                var utile = {{$azienda->utile}};
-                                var ignc = {{$azienda->incidenza_gestione_nn_caratteristica}};
-                            </script>
-
-                            {{-- commento gestione non carattersitica --}}
-                            <div class="mt-[30px] mx-auto max-w-[800px]">
-                                <div class="border border-b-0 border-gray-300 rounded-t-[20px]">
-                                    <div class="px-[20px] py-[20px]">
-                                        <h3 class="font-semibold text-[22px] mb-[6px]">
-                                            Commento:
-                                        </h3>
-                                        <p class="text-gray-800 text-left">
-                                            Va evidenziato che negli anni considerati, l'utile conseguito è stato particolarmente influenzato da elementi 
-                                            positivi di reddito che non derivano dalla gestione caratteristica o dal "core business" dell'azienda. 
-                                            Questi elementi potrebbero includere entrate straordinarie, guadagni derivanti da vendite di asset non ricorrenti 
-                                            o altre fonti non tipiche dell'attività principale dell'azienda.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div id="faq" class="w-full border border-gray-300 rounded-b-[20px] cursor-pointer py-5 px-[20px]">
-                                    <div id="question" class="flex justify-between items-center">
-                                        <h3 class="font-medium">
-                                            Scopri di più
-                                        </h3>
-                                        <div id="plus-minus-svg" class="w-6 h-6 rounded-full border-2 border-primary flex justify-center items-center">
-                                            <div id="line_1" class="w-3 h-[2px] rounded-xl bg-primary transition-all duration-700 ease-in-out"></div>
-                                            <div id="line_2" class="w-[2px] h-3 bg-primary absolute transition-all duration-700 ease-in-out"></div>
-                                        </div>
-                                    </div>
-                                    <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
-                                        <p class="text-left py-5 text-gray-800">
-                                            È importante notare che tali fonti di reddito non sono prevedibili e potrebbero non ripetersi positivamente 
-                                            negli anni futuri. Pertanto, l'utile risultante da questi elementi atipici potrebbe essere meno stabile e meno 
-                                            rappresentativo della reale situazione dell'azienda nel lungo termine. Al contrario, l'utile derivante dalla gestione 
-                                            caratteristica o dal core business dell'azienda tende ad essere più stabile nel tempo e fornisce una visione più 
-                                            oggettiva delle prestazioni reali dell'azienda. Questi utili riflettono le operazioni ricorrenti dell'azienda e sono 
-                                            indicativi della sua capacità di generare profitti nel lungo periodo. Pertanto, nell'analisi della redditività 
-                                            dell'azienda, è fondamentale distinguere tra gli elementi di reddito che derivano dalle attività principali dell'azienda 
-                                            e quelli che possono essere considerati come eventi eccezionali o non ricorrenti. Questo permette agli investitori 
-                                            di ottenere una visione più accurata e affidabile della salute finanziaria e delle prospettive future dell'azienda.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {{-- 2° analisi della struttura patrimoniale --}}
-                    <div class="mb-[50px]">
-                        <div class="inline-flex items-center">
-                            <div class="flex items-center justify-center bg-primary rounded-full aspect-square w-[45px] mx-auto">
-                                <span class="text-[18px] text-white font-bold">2</span>
-                            </div>
-                            <h3 class="ml-[16px] font-bold leading-tight text-[26px]">
-                                Analisi della struttura patrimoniale
-                            </h3>
-                        </div>
-                        
-                        {{-- roi --}}
-                        <div class="pt-[20px]">
-                            {{-- grafico roi --}}
-                            <div class="max-w-[1000px] mx-auto">
-                                <canvas id="roi-chart" class="w-full"></canvas>
-                            </div>
-                            <script>
-                                var roi = {{$azienda->roi}};
-                            </script>
-    
-                            {{-- commento grafico roi --}}
-                            <div class="mt-[30px] mx-auto max-w-[800px]">
-                                <div class="border border-b-0 border-gray-300 rounded-t-[20px]">
-                                    <div class="px-[20px] py-[20px]">
-                                        <h3 class="font-semibold text-[22px] mb-[6px]">
-                                            Commento:
-                                        </h3>
-                                        <p class="text-gray-800 text-left">
-                                            Viene indicato, tramite l’utilizzo del ROI (Return On Investment) che la redditività sul capitale investito 
-                                            ha un andamento negativo, ciò vuol dire che negli anni considerati l’azienda ha generato una capacità di produrre 
-                                            utile prodotto esclusivamente dal suo “core business” (bassa) rispetto al volume delle immobilizzazioni dell’azienda."
-                                        </p>
-                                    </div>
-                                </div>
-                                <div id="faq" class="w-full border border-gray-300 rounded-b-[20px] cursor-pointer py-5 px-[20px]">
-                                    <div id="question" class="flex justify-between items-center">
-                                        <h3 class="font-medium">
-                                            Scopri di più
-                                        </h3>
-                                        <div id="plus-minus-svg" class="w-6 h-6 rounded-full border-2 border-primary flex justify-center items-center">
-                                            <div id="line_1" class="w-3 h-[2px] rounded-xl bg-primary transition-all duration-700 ease-in-out"></div>
-                                            <div id="line_2" class="w-[2px] h-3 bg-primary absolute transition-all duration-700 ease-in-out"></div>
-                                        </div>
-                                    </div>
-                                    <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
-                                        <p class="text-left py-5 text-gray-800">
-                                            In oltre negli anni (2020-2022) tramite l’indice di rotazione degli impieghi si evidenzia che il fatturato 
-                                            dell’impresa considerate le immobilizzazioni ha un andamento negativo in misura che esso non riesce a coprire 
-                                            neanche una volta gli impieghi. Questo dato ci permette di ipotizzare che l’andamento negativo (basso) della 
-                                            redditività può derivare da una scarsa capacità dell’azienda nel generare ricchezza dalle vendite.<br>
-                                            Viene specificato l’anno 2019 come l’anno peggiore e l’anno 2021 come anno migliore, in totale sui 5 anni mantene 
-                                            una media di roi di 0.78.
-                                        </p>
-                                    </div>
-                                </div>
-                                <script>
-                                    const faqs = document.querySelectorAll('#faq');
-                        
-                                    faqs.forEach(faq => {
-                                        faq.addEventListener("click", () => {
-                                            faq.classList.toggle('active');
-                                        })
-                                    });
-                                </script>
                             </div>
                         </div>
                     </div>
