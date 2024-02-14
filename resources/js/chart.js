@@ -1,17 +1,13 @@
 import Chart from 'chart.js/auto';
 
-const roe_ros_chart = new Chart(
-    document.getElementById('roe-ros-chart').getContext('2d'), {
+const ebitda_chart = new Chart(
+    document.getElementById('ebitda-chart').getContext('2d'), {
     type: 'line',
     data: {
         labels: [2018, 2019, 2020, 2021, 2022],
         datasets: [{
-            label: 'Roe',
-            data: roe,
-        },
-        {
-            label: 'Ros',
-            data: ros,
+            label: 'Ebitda',
+            data: ebitda,
         }]
     },
     options: {
@@ -29,18 +25,18 @@ const roe_ros_chart = new Chart(
     }
 });
 
-const gnc_chart = new Chart(
-    document.getElementById('gnc-chart').getContext('2d'), {
-    type: 'bar',
+const roe_ros_chart = new Chart(
+    document.getElementById('roe-ros-chart').getContext('2d'), {
+    type: 'line',
     data: {
         labels: [2018, 2019, 2020, 2021, 2022],
         datasets: [{
-            label: 'Utile',
-            data: utile,
+            label: 'Roe',
+            data: roe,
         },
         {
-            label: 'Incidenza gestione non caratteristica',
-            data: ignc,
+            label: 'Ros',
+            data: ros,
         }]
     },
     options: {

@@ -14,10 +14,14 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        {{-- gsap cdn --}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
         @livewireStyles
 
     </head>
-    <body class="font-main antialiased bg-secondary">
+    <body class="font-main antialiased">
         @include('layouts.navigation')
 
         <!-- Page Content -->
