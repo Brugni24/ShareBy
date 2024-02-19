@@ -20,6 +20,11 @@ class CompaniesController extends Controller
         $cont_ebitda = $this->calculating_ebitda($id, $azienda);
         $cont_ebitdaDebiti = $this->calculating_ebitdaDebiti($id, $azienda);
         $cont_ebitdaVendite = $this->calculating_ebitdaVendite($id, $azienda);
+        $cont_roe = $this->calculating_roe($id, $azienda);
+        $cont_roi = $this->calculating_roi($id, $azienda);
+        $cont_ros = $this->calculating_ros($id, $azienda);
+        $cont_roa = $this->calculating_roa($id, $azienda);
+        $cont_rod = $this->calculating_rod($id, $azienda);
 
         return view('analisiAziendale', [
             'found' => 1,
@@ -27,6 +32,11 @@ class CompaniesController extends Controller
             'cont_ebitda' => $cont_ebitda,
             'cont_ebitdaDebiti' => $cont_ebitdaDebiti,
             'cont_ebitdaVendite' => $cont_ebitdaVendite,
+            'cont_roe' => $cont_roe, 
+            'cont_roi'=> $cont_roi,
+            'cont_ros' => $cont_ros, 
+            'cont_roa' => $cont_roa,
+            'cont_rod' => $cont_rod,
         ]);
     }
 
@@ -108,6 +118,128 @@ class CompaniesController extends Controller
         return $cont;
     }
 
+    // INDICI REDDITIVITA' (2 parte algortimo)
+    private function calculating_roe($id, $azienda) {
+        // $storicoroe = json_decode($azienda->roe);
+
+        $media_roe = array(5.8 , -2.04, -1.30 , 6.98 , 7.95);
+        $varianza_roe = array(5.43, 11.78 ,	17.24 ,9.80 , 15.02);
+        $storicoroe = array(7.45 , 7.15 , 3.59 , 15.04 , 10.29) ; 
+        $cont = 0;
+    
+        for($i=0;$i<4;$i++) {
+            if ($storicoroe[$i] > ($media_roe[$i] + 2*$varianza_roe[$i])) {
+                $cont = $cont + 3;
+            }else if (($media_roe[$i] + $varianza_roe[$i])<$storicoroe[$i] && $storicoroe[$i] <($media_roe[$i] + 2*$varianza_roe[$i])) {
+                $cont = $cont + 2;
+            }else if (($media_roe[$i] - 2*$varianza_roe[$i])<$storicoroe[$i] && $storicoroe[$i] <($media_roe[$i]-$varianza_roe[$i])){
+                $cont = $cont + 1;
+            }else if (($media_roe[$i] - $varianza_roe[$i])<$storicoroe[$i] && $storicoroe[$i] <($media_roe[$i]+$varianza_roe[$i])){
+                $cont = $cont + 0.75;
+            }else if ($storicoroe[$i] < ($media_roe[$i] - 2*$varianza_roe[$i])){
+                $cont = $cont + 0.5;
+            }
+        }
+        return $cont;
+   }
+
+   private function calculating_roi($id, $azienda) {
+        // $storicoroe = json_decode($azienda->roi);
+        
+        $media_roi = array(5.8 , -2.04, -1.30 , 6.98 , 7.95);
+        $varianza_roi = array(5.43, 11.78 ,	17.24 ,9.80 , 15.02);
+        $storicoroi = array(7.45 , 7.15 , 3.59 , 15.04 , 10.29) ; 
+        $cont = 0;
+
+        for($i=0;$i<4;$i++) {
+            if ($storicoroi[$i] > ($media_roi[$i] + 2*$varianza_roi[$i])) {
+                $cont = $cont + 3;
+            }else if (($media_roi[$i] + $varianza_roi[$i])<$storicoroi[$i] && $storicoroi[$i] <($media_roi[$i] + 2*$varianza_roi[$i])) {
+                $cont = $cont + 2;
+            }else if (($media_roi[$i] - 2*$varianza_roi[$i])<$storicoroi[$i] && $storicoroi[$i] <($media_roi[$i]-$varianza_roi[$i])){
+                $cont = $cont + 1;
+            }else if (($media_roi[$i] - $varianza_roi[$i])<$storicoroi[$i] && $storicoroi[$i] <($media_roi[$i]+$varianza_roi[$i])){
+                $cont = $cont + 0.75;
+            }else if ($storicoroi[$i] < ($media_roi[$i] - 2*$varianza_roe[$i])){
+                $cont = $cont + 0.5;
+            }
+        }
+        return $cont;
+    }
+
+    private function calculating_ros($id, $azienda) {
+        // $storicoroe = json_decode($azienda->ros);
+    
+        $media_ros = array(5.8 , -2.04, -1.30 , 6.98 , 7.95);
+        $varianza_ros = array(5.43, 11.78 ,	17.24 ,9.80 , 15.02);
+        $storicoros = array(7.45 , 7.15 , 3.59 , 15.04 , 10.29) ; 
+        $cont = 0;
+    
+        for($i=0;$i<4;$i++) {
+            if ($storicoros[$i] > ($media_ros[$i] + 2*$varianza_ros[$i])) {
+                $cont = $cont + 3;
+            }else if (($media_ros[$i] + $varianza_ros[$i])<$storicoros[$i] && $storicoros[$i] <($media_ros[$i] + 2*$varianza_ros[$i])) {
+                $cont = $cont + 2;
+            }else if (($media_ros[$i] - 2*$varianza_ros[$i])<$storicoros[$i] && $storicoros[$i] <($media_ros[$i]-$varianza_ros[$i])){
+                $cont = $cont + 1;
+            }else if (($media_ros[$i] - $varianza_ros[$i])<$storicoros[$i] && $storicoros[$i] <($media_ros[$i]+$varianza_ros[$i])){
+                $cont = $cont + 0.75;
+            }else if ($storicoros[$i] < ($media_ros[$i] - 2*$varianza_ros[$i])){
+                $cont = $cont + 0.5;
+            }
+        }
+        return $cont;
+    }
+
+    private function calculating_roa($id, $azienda) {
+        // $storicoroe = json_decode($azienda->roa);
+    
+        $media_roa = array(5.8 , -2.04, -1.30 , 6.98 , 7.95);
+        $varianza_roa = array(5.43, 11.78 ,	17.24 ,9.80 , 15.02);
+        $storicoroa = array(7.45 , 7.15 , 3.59 , 15.04 , 10.29) ; 
+        $cont = 0;
+    
+        for($i=0;$i<4;$i++) {
+            if ($storicoroa[$i] > ($media_roa[$i] + 2*$varianza_roa[$i])) {
+                $cont = $cont + 3;
+            }else if (($media_roa[$i] + $varianza_roa[$i])<$storicoroa[$i] && $storicoroa[$i] <($media_roa[$i] + 2*$varianza_roa[$i])) {
+                $cont = $cont + 2;
+            }else if (($media_roa[$i] - 2*$varianza_roa[$i])<$storicoroa[$i] && $storicoroa[$i] <($media_roa[$i]-$varianza_roa[$i])){
+                $cont = $cont + 1;
+            }else if (($media_roa[$i] - $varianza_roa[$i])<$storicoroa[$i] && $storicoroa[$i] <($media_roa[$i]+$varianza_roa[$i])){
+                $cont = $cont + 0.75;
+            }else if ($storicoroa[$i] < ($media_roa[$i] - 2*$varianza_roa[$i])){
+                $cont = $cont + 0.5;
+            }
+        }
+        return $cont;
+    }
+    
+    private function calculating_rod($id, $azienda) {
+        // $storicoroe = json_decode($azienda->rod);
+    
+        $media_rod = array(5.8 , -2.04, -1.30 , 6.98 , 7.95);
+        $varianza_rod = array(5.43, 11.78 ,	17.24 ,9.80 , 15.02);
+        $storicorod = array(7.45 , 7.15 , 3.59 , 15.04 , 10.29) ; 
+        $cont = 0;
+    
+        for($i=0;$i<4;$i++) {
+            if ($storicorod[$i] > ($media_rod[$i] + 2*$varianza_rod[$i])) {
+                $cont = $cont + 3;
+            }else if (($media_rod[$i] + $varianza_rod[$i])<$storicorod[$i] && $storicorod[$i] <($media_rod[$i] + 2*$varianza_rod[$i])) {
+                $cont = $cont + 2;
+            }else if (($media_rod[$i] - 2*$varianza_rod[$i])<$storicorod[$i] && $storicorod[$i] <($media_rod[$i]-$varianza_rod[$i])){
+               $cont = $cont + 1;
+            }else if (($media_rod[$i] - $varianza_rod[$i])<$storicorod[$i] && $storicorod[$i] <($media_rod[$i]+$varianza_rod[$i])){
+                $cont = $cont + 0.75;
+            }else if ($storicorod[$i] < ($media_rod[$i] - 2*$varianza_rod[$i])){
+                $cont = $cont + 0.5;
+            }
+        }
+        return $cont;
+    }
+
+
     public function getCompanyLogo($id, $companyName)
     {
         $apiKey = 'sk_81cc2648a12da525a6a4b452e685ce78';
@@ -124,6 +256,5 @@ class CompaniesController extends Controller
             // Gestione degli errori
             return null;
         }
-    }
-    
+    }    
 }

@@ -92,6 +92,15 @@
                             <script>
                                 var ebitda = {{$azienda->ebitda}};
                             </script>
+
+                            {{-- grafico ebitda vendite vs debiti --}}
+                            <div class="max-w-[1000px] mx-auto">
+                                <canvas id="ebitdaVenditeDebiti-chart" class="w-full"></canvas>
+                            </div>
+                            <script>
+                                var ebitda_debiti = {{$azienda->ebitda_debiti}};
+                                var ebitda_vendite = {{$azienda->ebitda_vendite}};
+                            </script>
     
                             {{-- commento grafico ebitda --}}
                             <div class="mt-[30px] mx-auto max-w-[800px]">
@@ -155,6 +164,33 @@
                                                     printf("\n%f\n", $cont_ebitdaVendite);
                                                 } else if ($cont_ebitdaVendite < $MIN) {
                                                     printf("\n%f\n", $cont_ebitdaVendite);
+                                                }
+                                                // ROE e ROI
+                                                if ($cont_roe > $MAX && $cont_roi < $MED) {
+                                                    echo("12.1/n");
+                                                } else if ($cont_roe < $MIN && $cont_roi > $MAX) {
+                                                    echo("12.2/n");
+                                                }
+
+                                                // ROI e ROS
+                                                if ($cont_roi > $MAX && $cont_ros < $MED) {
+                                                   echo("13.1/n");
+                                                } else if ($cont_roi < $MIN && $cont_ros > $MAX) {
+                                                    echo("13.2/n");
+                                                }
+
+                                                // ROD e ROA
+                                                if ($cont_rod > $MAX && $cont_roa < $MED) {
+                                                    echo("14.1/n");
+                                                } else if ($cont_rod < $MIN && $cont_roa > $MAX) {
+                                                    echo("14.2/n");
+                                                }
+
+                                                // ROA e ROS
+                                                if ($cont_roa > $MAX && $cont_ros < $MED) {
+                                                    echo("15.1/n");
+                                                } else if ($cont_roa < $MIN && $cont_ros > $MAX) {
+                                                    echo("15.2/n");
                                                 }
                                             @endphp
                                         </p>
