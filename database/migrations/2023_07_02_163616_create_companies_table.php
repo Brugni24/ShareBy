@@ -16,19 +16,14 @@ return new class extends Migration
             $table->string('name');
             $table->string('symbol');
             $table->json('roi');
+            $table->json('roa');
             $table->json('roe');
             $table->json('ros');
             $table->json('rod');
             $table->json('rotazione_impieghi');
             $table->json('incidenza_gestione_nn_caratteristica');
             $table->json('leverage');
-            $table->json('leva_finanziaria');
             $table->json('ebitda');
-            $table->json('P/E_ratio');
-            $table->json('reddito_operativo');
-            $table->json('utile');
-            $table->json('capitale_proprio');
-            $table->json('capitale_di_debito');
             $table->timestamps();
         });
 

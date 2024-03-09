@@ -71,6 +71,13 @@
                 
                 {{-- analisi aziendale --}}
                 <div id="analisi-aziendale" class="tabcontent hidden px-[5vw] py-[30px] border border-t-0 border-gray-300 rounded-b-2xl bg-white">
+
+                    <p class="text-gray-800 text-left pt-[20px] pb-[60px]">
+                        L'analisi di redditività valuta l'efficienza con cui un'azienda genera profitti utilizzando i suoi mezzi finanziari e operativi.
+                        Attraverso indicatori come ROE, ROI e ROS,ROA e ROD l'analisi di redditività fornisce un quadro della capacità dell'azienda di 
+                        generare profitti rispetto ai suoi investimenti e alle sue operazioni , inoltre ci avvaliamo di indici come l'EBITDA che consente 
+                        di misurare la performance finanziaria.
+                    </p>
                     
                     {{-- 1° analisi dell'EBITDA --}}
                     <div class="mb-[50px]">
@@ -86,7 +93,7 @@
                         {{-- ebitda --}}
                         <div class="pt-[20px]">
                             {{-- grafico ebitda --}}
-                            <div class="max-w-[1000px] mx-auto">
+                            <div class="max-w-[800px] mx-auto">
                                 <canvas id="ebitda-chart" class="w-full"></canvas>
                             </div>
                             <script>
@@ -94,7 +101,7 @@
                             </script>
 
                             {{-- grafico ebitda vendite vs debiti --}}
-                            <div class="max-w-[1000px] mx-auto">
+                            <div class="max-w-[800px] mx-auto pt-[50px]">
                                 <canvas id="ebitdaVenditeDebiti-chart" class="w-full"></canvas>
                             </div>
                             <script>
@@ -110,9 +117,11 @@
                                             Commento:
                                         </h3>
                                         <p class="text-gray-800 text-left">
-                                            L'analisi di redditività valuta l'efficacia di un'azienda nel generare profitti da investimenti e attività 
-                                            operative, utilizzando indicatori finanziari chiave come ROE, ROI ed EBITDA, riteniamo quest’analisi 
-                                            la più solida da cui partire per valutare le prospettive future di un azienda.
+                                            Nella prima parte dell'analisi, ci concentriamo sull'analisi dell'EBITDA classico, debiti e vendite, che valuta la 
+                                            redditività operativa di un'azienda, escludendo gli effetti di interessi, imposte, ammortamenti e rivalutazioni. 
+                                            L'EBITDA rapportato alle vendite indica la percentuale di guadagno operativo lordo rispetto al volume delle vendite,
+                                             mentre l'EBITDA rapportato ai debiti valuta la capacità dell'azienda di coprire i suoi obblighi finanziari utilizzando 
+                                             l'utile operativo lordo , nel detttaglio dell'azienda:
                                         </p>
                                     </div>
                                 </div>
@@ -129,68 +138,79 @@
                                     <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
                                         <p class="text-left py-5 text-gray-800">
                                             @php
-                                                echo($cont_ebitda);
-                                                echo "<br>";
-                                                echo($cont_ebitdaDebiti);
-                                                echo "<br>";
-                                                echo($cont_ebitdaVendite);
-                                                echo "<br>";
                                                 $MAX = 12.3;
                                                 $MIN = 3.7;
                                                 $MED = 8;
 
                                                 // EBITDA
                                                 if ($cont_ebitda > $MAX) {
-                                                    printf("\n%f\n", $cont_ebitda);
+                                                    echo($cont_ebitda);
+                                                    echo "<br>";
                                                 } else if ($cont_ebitda > $MIN && $cont_ebitda < $MAX) {
-                                                    printf("\n%f\n", $cont_ebitda);
+                                                    echo($cont_ebitda);
+                                                    echo "<br>";
                                                 } else if ($cont_ebitda < $MIN) {
-                                                    printf("\n%f\n", $cont_ebitda);
+                                                    echo($cont_ebitda);
+                                                    echo "<br>";
                                                 }
                                                 echo "<br>";
                                                 ///EBITDA_DEBITI
                                                 if ($cont_ebitdaDebiti > $MAX) {
-                                                    printf("\n%f\n", $cont_ebitdaDebiti);
+                                                    echo($cont_ebitdaDebiti);
+                                                    echo "<br>";
                                                 } else if ($cont_ebitda > $MIN && $cont_ebitdaDebiti < $MAX) {
-                                                    printf("\n%f\n", $cont_ebitdaDebiti);
+                                                    echo($cont_ebitdaDebiti);
+                                                    echo "<br>";
                                                 } else if ($cont_ebitdaDebiti < $MIN) {
-                                                    printf("\n%f\n", $cont_ebitdaDebiti);
+                                                    echo($cont_ebitdaDebiti);
+                                                    echo "<br>";
                                                 }
                                                 echo "<br>";
                                                 ///EBITDA_VENDITE
                                                 if ($cont_ebitdaVendite > $MAX) {
-                                                    printf("\n%f\n", $cont_ebitdaVendite);
+                                                    echo($cont_ebitdaVendite);
+                                                    echo "<br>";
                                                 } else if ($cont_ebitdaVendite > $MIN && $cont_ebitdaVendite < $MAX) {
-                                                    printf("\n%f\n", $cont_ebitdaVendite);
+                                                    echo($cont_ebitdaVendite);
+                                                    echo "<br>";
                                                 } else if ($cont_ebitdaVendite < $MIN) {
-                                                    printf("\n%f\n", $cont_ebitdaVendite);
+                                                    echo($cont_ebitdaVendite);
+                                                    echo "<br>";
                                                 }
                                                 // ROE e ROI
                                                 if ($cont_roe > $MAX && $cont_roi < $MED) {
-                                                    echo("12.1/n");
+                                                    echo("12.1");
+                                                    echo "<br>";
                                                 } else if ($cont_roe < $MIN && $cont_roi > $MAX) {
-                                                    echo("12.2/n");
+                                                    echo("12.2");
+                                                    echo "<br>";
                                                 }
 
                                                 // ROI e ROS
                                                 if ($cont_roi > $MAX && $cont_ros < $MED) {
-                                                   echo("13.1/n");
+                                                   echo("13.1");
+                                                   echo "<br>";
                                                 } else if ($cont_roi < $MIN && $cont_ros > $MAX) {
-                                                    echo("13.2/n");
+                                                    echo("13.2");
+                                                    echo "<br>";
                                                 }
 
                                                 // ROD e ROA
                                                 if ($cont_rod > $MAX && $cont_roa < $MED) {
-                                                    echo("14.1/n");
+                                                    echo("14.1");
+                                                    echo "<br>";
                                                 } else if ($cont_rod < $MIN && $cont_roa > $MAX) {
-                                                    echo("14.2/n");
+                                                    echo("14.2");
+                                                    echo "<br>";
                                                 }
 
                                                 // ROA e ROS
                                                 if ($cont_roa > $MAX && $cont_ros < $MED) {
-                                                    echo("15.1/n");
+                                                    echo("15.1");
+                                                    echo "<br>";
                                                 } else if ($cont_roa < $MIN && $cont_ros > $MAX) {
-                                                    echo("15.2/n");
+                                                    echo("15.2");
+                                                    echo "<br>";
                                                 }
                                             @endphp
                                         </p>
@@ -200,29 +220,36 @@
                         </div>
                     </div>
 
-                    {{-- 2° analisi della struttura patrimoniale --}}
+                    {{-- 2° analisi sugli indici di redditività singola --}}
                     <div class="mb-[50px]">
                         <div class="inline-flex items-center">
                             <div class="flex items-center justify-center bg-primary rounded-full aspect-square w-[45px] mx-auto">
                                 <span class="text-[18px] text-white font-bold">2</span>
                             </div>
                             <h3 class="ml-[16px] font-bold leading-tight text-[26px]">
-                                Analisi della struttura patrimoniale
+                                Analisi sugli indici di redditività singola
                             </h3>
                         </div>
+                        <p class="text-gray-800 text-left py-[10px] px-[7%]">
+                            L'analisi combinata dei cinque indici finanziari - ROE , ROI , ROS, ROA e ROD fornisce una panoramica completa della performance 
+                            finanziaria e operativa di un'azienda. Questa analisi consente di valutare l'efficienza nell'utilizzo di risorse finanziarie ed 
+                            operative, la redditività generale dell'azienda e la gestione del debito, fornendo una visione integrata delle sue prestazioni e 
+                            della sua solidità finanziaria. Fornendo dei parametri essenziali per prendere decisioni sull'investimento e sul miglioramento 
+                            delle prestazioni aziendali.
+                        </p>
                         
-                        {{-- roe e ros --}}
+                        {{-- roe --}}
                         <div class="pt-[20px]">
-                            {{-- grafico roe e ros --}}
-                            <div class="max-w-[1000px] mx-auto">
-                                <canvas id="roe-ros-chart" class="w-full"></canvas>
+                            <h3 class="font-bold leading-tight text-[24px]">Roe</h3>
+                            {{-- grafico roe --}}
+                            <div class="max-w-[800px] mx-auto">
+                                <canvas id="roe-chart" class="w-full"></canvas>
                             </div>
                             <script>
                                 var roe = {{$azienda->roe}};
-                                var ros = {{$azienda->ros}};
                             </script>
     
-                            {{-- commento grafico roe e ros --}}
+                            {{-- commento grafico roe --}}
                             <div class="mt-[30px] mx-auto max-w-[800px]">
                                 <div class="border border-b-0 border-gray-300 rounded-t-[20px]">
                                     <div class="px-[20px] py-[20px]">
@@ -230,9 +257,9 @@
                                             Commento:
                                         </h3>
                                         <p class="text-gray-800 text-left">
-                                            L'analisi di redditività valuta l'efficacia di un'azienda nel generare profitti da investimenti e attività 
-                                            operative, utilizzando indicatori finanziari chiave come ROE, ROI ed EBITDA, riteniamo quest’analisi 
-                                            la più solida da cui partire per valutare le prospettive future di un azienda.
+                                            Il ROE, o Ritorno sul Patrimonio Netto, misura la redditività dell'azienda rispetto agli investimenti degli azionisti. 
+                                            Un ROE più alto indica una maggiore capacità dell'azienda di generare profitti con il capitale degli azionisti. 
+                                            Tuttavia, va considerato insieme ad altri indicatori per una valutazione completa della performance aziendale.
                                         </p>
                                     </div>
                                 </div>
@@ -249,37 +276,40 @@
                                     <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
                                         <p class="text-left py-5 text-gray-800">
                                             @php
-                                                echo($cont_ebitda);
+                                                $MAX = 12.3;
+                                                $MIN = 3.7;
+                                                $MED = 8;
+
+                                                // ROE
+                                                if ($cont_roe > $MAX) {
+                                                    echo("7.1");
+                                                    echo "<br>";
+                                                } else if ($cont_roe > $MIN && $cont_roe < $MAX) {
+                                                    echo("7.2");
+                                                    echo "<br>";
+                                                } else if ($cont_roe < $MIN) {
+                                                    echo("7.3");
+                                                    echo "<br>";
+                                                }
                                             @endphp
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    {{-- 3° analisi sull'indebitamento --}}
-                    <div class="mb-[50px]">
-                        <div class="inline-flex items-center">
-                            <div class="flex items-center justify-center bg-secondary rounded-full aspect-square w-[45px] mx-auto">
-                                <span class="text-[18px] text-white font-bold">3</span>
-                            </div>
-                            <h3 class="ml-[16px] font-bold leading-tight text-[26px]">
-                                Analisi sull'indebitamento
-                            </h3>
-                        </div>
-                        
-                        {{-- leverage --}}
+                        {{-- roi --}}
                         <div class="pt-[20px]">
-                            {{-- grafico leverage --}}
-                            <div class="max-w-[1000px] mx-auto">
-                                <canvas id="leverage-chart" class="w-full"></canvas>
+                            <h3 class="font-bold leading-tight text-[24px]">Roi</h3>
+                            {{-- grafico roi --}}
+                            <div class="max-w-[800px] mx-auto">
+                                <canvas id="roi-chart" class="w-full"></canvas>
                             </div>
                             <script>
-                                var leverage = {{$azienda->leverage}};
+                                var roi = {{$azienda->roi}};
                             </script>
     
-                            {{-- commento grafico leverage --}}
+                            {{-- commento grafico roi --}}
                             <div class="mt-[30px] mx-auto max-w-[800px]">
                                 <div class="border border-b-0 border-gray-300 rounded-t-[20px]">
                                     <div class="px-[20px] py-[20px]">
@@ -287,9 +317,10 @@
                                             Commento:
                                         </h3>
                                         <p class="text-gray-800 text-left">
-                                            Viene indicato, tramite l’utilizzo del ROI (Return On Investment) che la redditività sul capitale investito 
-                                            ha un andamento negativo, ciò vuol dire che negli anni considerati l’azienda ha generato una capacità di produrre 
-                                            utile prodotto esclusivamente dal suo “core business” (bassa) rispetto al volume delle immobilizzazioni dell’azienda."
+                                            Il ROI, o Ritorno sugli Investimenti, è un indicatore finanziario che valuta l'efficienza di un investimento 
+                                            confrontando il guadagno ottenuto con il costo dell'investimento stesso. Un ROI più elevato indica un investimento 
+                                            più redditizio, mentre un ROI negativo indica una perdita. È uno strumento cruciale per valutare la redditività e 
+                                            l'efficacia degli investimenti aziendali.
                                         </p>
                                     </div>
                                 </div>
@@ -305,12 +336,319 @@
                                     </div>
                                     <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
                                         <p class="text-left py-5 text-gray-800">
-                                            In oltre negli anni (2020-2022) tramite l’indice di rotazione degli impieghi si evidenzia che il fatturato 
-                                            dell’impresa considerate le immobilizzazioni ha un andamento negativo in misura che esso non riesce a coprire 
-                                            neanche una volta gli impieghi. Questo dato ci permette di ipotizzare che l’andamento negativo (basso) della 
-                                            redditività può derivare da una scarsa capacità dell’azienda nel generare ricchezza dalle vendite.<br>
-                                            Viene specificato l’anno 2019 come l’anno peggiore e l’anno 2021 come anno migliore, in totale sui 5 anni mantene 
-                                            una media di roi di 0.78.
+                                            @php
+                                                $MAX = 12.3;
+                                                $MIN = 3.7;
+                                                $MED = 8;
+
+                                                // ROI
+                                                if ($cont_roi > $MAX) {
+                                                    echo("8.1");
+                                                    echo "<br>";
+                                                } else if ($cont_roi > $MIN && $cont_roi < $MAX) {
+                                                    echo("8.2");
+                                                    echo "<br>";
+                                                } else if ($cont_roi < $MIN) {
+                                                    echo("8.3");
+                                                    echo "<br>";
+                                                }
+                                            @endphp
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- ros --}}
+                        <div class="pt-[20px]">
+                            <h3 class="font-bold leading-tight text-[24px]">Ros</h3>
+                            {{-- grafico ros --}}
+                            <div class="max-w-[800px] mx-auto">
+                                <canvas id="ros-chart" class="w-full"></canvas>
+                            </div>
+                            <script>
+                                var ros = {{$azienda->ros}};
+                            </script>
+    
+                            {{-- commento grafico roe --}}
+                            <div class="mt-[30px] mx-auto max-w-[800px]">
+                                <div class="border border-b-0 border-gray-300 rounded-t-[20px]">
+                                    <div class="px-[20px] py-[20px]">
+                                        <h3 class="font-semibold text-[22px] mb-[6px]">
+                                            Commento:
+                                        </h3>
+                                        <p class="text-gray-800 text-left">
+                                            Il ROS, o Margine Operativo Netto, misura la percentuale di guadagno operativo netto rispetto al fatturato 
+                                            totale dell'azienda. È un indicatore della redditività operativa dell'azienda, indicando quanto margine l'azienda 
+                                            riesce a mantenere dopo aver scontato i costi operativi.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="faq" class="w-full border border-gray-300 rounded-b-[20px] cursor-pointer py-5 px-[20px]">
+                                    <div id="question" class="flex justify-between items-center">
+                                        <h3 class="font-medium">
+                                            Scopri di più
+                                        </h3>
+                                        <div id="plus-minus-svg" class="w-6 h-6 rounded-full border-2 border-primary flex justify-center items-center">
+                                            <div id="line_1" class="w-3 h-[2px] rounded-xl bg-primary transition-all duration-700 ease-in-out"></div>
+                                            <div id="line_2" class="w-[2px] h-3 bg-primary absolute transition-all duration-700 ease-in-out"></div>
+                                        </div>
+                                    </div>
+                                    <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
+                                        <p class="text-left py-5 text-gray-800">
+                                            @php
+                                                $MAX = 12.3;
+                                                $MIN = 3.7;
+                                                $MED = 8;
+
+                                                // ROS
+                                                if ($cont_ros > $MAX) {
+                                                    echo("9.1");
+                                                    echo "<br>";
+                                                } else if ($cont_ros > $MIN && $cont_ros < $MAX) {
+                                                    echo("9.2");
+                                                    echo "<br>";
+                                                } else if ($cont_ros < $MIN) {
+                                                    echo("9.3");
+                                                    echo "<br>";
+                                                }
+                                            @endphp
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- roa --}}
+                        <div class="pt-[20px]">
+                            <h3 class="font-bold leading-tight text-[24px]">Roa</h3>
+                            {{-- grafico roa --}}
+                            <div class="max-w-[800px] mx-auto">
+                                <canvas id="roa-chart" class="w-full"></canvas>
+                            </div>
+                            <script>
+                                var roa = {{$azienda->roa}};
+                            </script>
+    
+                            {{-- commento grafico roa --}}
+                            <div class="mt-[30px] mx-auto max-w-[800px]">
+                                <div class="border border-b-0 border-gray-300 rounded-t-[20px]">
+                                    <div class="px-[20px] py-[20px]">
+                                        <h3 class="font-semibold text-[22px] mb-[6px]">
+                                            Commento:
+                                        </h3>
+                                        <p class="text-gray-800 text-left">
+                                            Il ROA, o Ritorno sull'Attivo, è un indicatore finanziario che misura la redditività di un'azienda rispetto ai suoi 
+                                            asset totali. Esso indica la capacità dell'azienda di generare profitti utilizzando gli asset a sua disposizione.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="faq" class="w-full border border-gray-300 rounded-b-[20px] cursor-pointer py-5 px-[20px]">
+                                    <div id="question" class="flex justify-between items-center">
+                                        <h3 class="font-medium">
+                                            Scopri di più
+                                        </h3>
+                                        <div id="plus-minus-svg" class="w-6 h-6 rounded-full border-2 border-primary flex justify-center items-center">
+                                            <div id="line_1" class="w-3 h-[2px] rounded-xl bg-primary transition-all duration-700 ease-in-out"></div>
+                                            <div id="line_2" class="w-[2px] h-3 bg-primary absolute transition-all duration-700 ease-in-out"></div>
+                                        </div>
+                                    </div>
+                                    <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
+                                        <p class="text-left py-5 text-gray-800">
+                                            @php
+                                                $MAX = 12.3;
+                                                $MIN = 3.7;
+                                                $MED = 8;
+
+                                                // ROA
+                                                if ($cont_roa > $MAX) {
+                                                    echo("10.1");
+                                                    echo "<br>";
+                                                } else if ($cont_roa > $MIN && $cont_roa < $MAX) {
+                                                    echo("10.2");
+                                                    echo "<br>";
+                                                } else if ($cont_roa < $MIN) {
+                                                    echo("10.3");
+                                                    echo "<br>";
+                                                }
+                                            @endphp
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- rod --}}
+                        <div class="pt-[20px]">
+                            <h3 class="font-bold leading-tight text-[24px]">Rod</h3>
+                            {{-- grafico rod --}}
+                            <div class="max-w-[800px] mx-auto">
+                                <canvas id="rod-chart" class="w-full"></canvas>
+                            </div>
+                            <script>
+                                var rod = {{$azienda->rod}};
+                            </script>
+    
+                            {{-- commento grafico rod --}}
+                            <div class="mt-[30px] mx-auto max-w-[800px]">
+                                <div class="border border-b-0 border-gray-300 rounded-t-[20px]">
+                                    <div class="px-[20px] py-[20px]">
+                                        <h3 class="font-semibold text-[22px] mb-[6px]">
+                                            Commento:
+                                        </h3>
+                                        <p class="text-gray-800 text-left">
+                                            Il ROD, o Ritorno sull'Investimento in Debito, è un indicatore finanziario che misura la redditività di un'azienda 
+                                            rispetto al debito utilizzato per finanziare le sue operazioni. Esso indica la capacità dell'azienda di generare 
+                                            profitti utilizzando il debito come fonte di finanziamento.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="faq" class="w-full border border-gray-300 rounded-b-[20px] cursor-pointer py-5 px-[20px]">
+                                    <div id="question" class="flex justify-between items-center">
+                                        <h3 class="font-medium">
+                                            Scopri di più
+                                        </h3>
+                                        <div id="plus-minus-svg" class="w-6 h-6 rounded-full border-2 border-primary flex justify-center items-center">
+                                            <div id="line_1" class="w-3 h-[2px] rounded-xl bg-primary transition-all duration-700 ease-in-out"></div>
+                                            <div id="line_2" class="w-[2px] h-3 bg-primary absolute transition-all duration-700 ease-in-out"></div>
+                                        </div>
+                                    </div>
+                                    <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
+                                        <p class="text-left py-5 text-gray-800">
+                                            @php
+                                                $MAX = 12.3;
+                                                $MIN = 3.7;
+                                                $MED = 8;
+
+                                                // ROD
+                                                if ($cont_rod > $MAX) {
+                                                    echo("11.1");
+                                                    echo "<br>";
+                                                } else if ($cont_rod > $MIN && $cont_rod < $MAX) {
+                                                    echo("11.2");
+                                                    echo "<br>";
+                                                } else if ($cont_rod < $MIN) {
+                                                    echo("11.3");
+                                                    echo "<br>";
+                                                }
+                                            @endphp
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- 3° analisi di redditività combinata --}}
+                    <div class="mb-[50px]">
+                        <div class="inline-flex items-center">
+                            <div class="flex items-center justify-center bg-secondary rounded-full aspect-square w-[45px] mx-auto">
+                                <span class="text-[18px] text-white font-bold">3</span>
+                            </div>
+                            <h3 class="ml-[16px] font-bold leading-tight text-[26px]">
+                                Analisi di redditività combinata
+                            </h3>
+                        </div>
+                        
+                        {{-- indici --}}
+                        <div class="pt-[20px]">
+                            {{-- grafico indici --}}
+                            <div class="max-w-[800px] mx-auto">
+                                <canvas id="indici-redditivita-chart" class="w-full"></canvas>
+                            </div>
+                            <script>
+                                var roe = {{$azienda->roe}};
+                                var roi = {{$azienda->roi}};
+                                var ros = {{$azienda->ros}};
+                                var roa = {{$azienda->roa}};
+                                var rod = {{$azienda->rod}};
+                            </script>
+    
+                            {{-- commento grafico indici --}}
+                            <div class="mt-[30px] mx-auto max-w-[800px]">
+                                <div class="border border-b-0 border-gray-300 rounded-t-[20px]">
+                                    <div class="px-[20px] py-[20px]">
+                                        <h3 class="font-semibold text-[22px] mb-[6px]">
+                                            Commento:
+                                        </h3>
+                                        <p class="text-gray-800 text-left">
+                                            In questa sezione, esaminiamo la redditività attraverso una serie di combinazioni di indici , tra cui le seguenti  
+                                            (ROE, ROI), (ROI, ROS), (ROD, ROA), (ROA, ROS).Questi indici forniscono una panoramica completa della performance 
+                                            finanziaria, consentendo una valutazione approfondita dell'efficacia aziendale nell'utilizzo delle risorse.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="faq" class="w-full border border-gray-300 rounded-b-[20px] cursor-pointer py-5 px-[20px]">
+                                    <div id="question" class="flex justify-between items-center">
+                                        <h3 class="font-medium">
+                                            Scopri di più
+                                        </h3>
+                                        <div id="plus-minus-svg" class="w-6 h-6 rounded-full border-2 border-primary flex justify-center items-center">
+                                            <div id="line_1" class="w-3 h-[2px] rounded-xl bg-primary transition-all duration-700 ease-in-out"></div>
+                                            <div id="line_2" class="w-[2px] h-3 bg-primary absolute transition-all duration-700 ease-in-out"></div>
+                                        </div>
+                                    </div>
+                                    <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
+                                        <p class="text-left py-5 text-gray-800">
+                                            @php
+                                                $MAX = 12.3;
+                                                $MIN = 3.7;
+                                                $MED = 8;
+                                                
+                                                $f = 0;
+
+                                                if ($cont_roe > $MED && $cont_roi < $MED) {
+                                                    echo("12.1");
+                                                    echo "<br>";
+                                                    $f = 0;
+                                                } else if ($cont_roe < $MIN && $cont_roi > $MAX) {
+                                                    echo("12.2");
+                                                    echo "<br>";
+                                                    $f = 0;
+                                                } else {
+                                                    $f++;
+                                                }
+
+                                                // (roi,ros)
+                                                if ($cont_roi > $MED && $cont_ros < $MED) {
+                                                   echo("13.1");
+                                                   echo "<br>";
+                                                   $f = 0;
+                                                } else if ($cont_roi < $MIN && $cont_ros > $MAX) {
+                                                    echo("13.2");
+                                                    echo "<br>";
+                                                    $f = 0;
+                                                } else {
+                                                    $f++;
+                                                }
+
+                                                // (rod,roa)
+                                                if ($cont_rod > $MED && $cont_roa < $MED) {
+                                                    echo("14.1");
+                                                    echo "<br>";
+                                                    $f = 0;
+                                                } else if ($cont_rod < $MIN && $cont_roa > $MAX) {
+                                                    echo("14.2");
+                                                    echo "<br>";
+                                                    $f = 0;
+                                                } else {
+                                                    $f++;
+                                                }
+
+                                                // (roa,ros)
+                                                if ($cont_roa > $MED && $cont_ros < $MED) {
+                                                    echo("15.1");
+                                                    echo "<br>";
+                                                    $f = 0;
+                                                } else if ($cont_roa < $MIN && $cont_ros > $MAX) {
+                                                    echo("15.2");
+                                                    echo "<br>";
+                                                    $f = 0;
+                                                } else if ($f > 0) {
+                                                    echo "Non sono presenti delle variazioni sensibili che consentono di determinare l'andamento di un indice rispetto all'altro";
+                                                    echo "<br>";
+                                                }
+                                            @endphp
                                         </p>
                                     </div>
                                 </div>
