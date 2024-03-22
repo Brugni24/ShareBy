@@ -43,9 +43,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/analisiAziendale/{id}/company/logo/{companyName}', [CompaniesController::class, 'getCompanyLogo'])->middleware(['verified'])->name('company.logo');
     Route::get('/analisiAziendale/{id}/stockdata', [CompaniesController::class, 'getStockData'])->middleware(['verified'])->name('stock.data');
 
-    Route::get('/shareBYOU', function () {
-        return view('shareBYOU');
-    })->middleware(['verified'])->name('shareBYOU');
+    Route::get('/analisiConfronto', function () {
+        return view('analisiConfronto');
+    })->middleware(['verified'])->name('analisiConfronto');
+    Route::post('/analisiConfronto/confronta', [CompaniesController::class, 'confronto']);
     
     Route::get('/consulente', function () {
         $chatLog = session('chatLog', []);

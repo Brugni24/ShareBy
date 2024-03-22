@@ -298,67 +298,6 @@
                             </div>
                         </div>
 
-                        {{-- roi --}}
-                        <div class="pt-[20px]">
-                            <h3 class="font-bold leading-tight text-[24px]">Roi</h3>
-                            {{-- grafico roi --}}
-                            <div class="max-w-[800px] mx-auto">
-                                <canvas id="roi-chart" class="w-full"></canvas>
-                            </div>
-                            <script>
-                                var roi = {{$azienda->roi}};
-                            </script>
-    
-                            {{-- commento grafico roi --}}
-                            <div class="mt-[30px] mx-auto max-w-[800px]">
-                                <div class="border border-b-0 border-gray-300 rounded-t-[20px]">
-                                    <div class="px-[20px] py-[20px]">
-                                        <h3 class="font-semibold text-[22px] mb-[6px]">
-                                            Commento:
-                                        </h3>
-                                        <p class="text-gray-800 text-left">
-                                            Il ROI, o Ritorno sugli Investimenti, è un indicatore finanziario che valuta l'efficienza di un investimento 
-                                            confrontando il guadagno ottenuto con il costo dell'investimento stesso. Un ROI più elevato indica un investimento 
-                                            più redditizio, mentre un ROI negativo indica una perdita. È uno strumento cruciale per valutare la redditività e 
-                                            l'efficacia degli investimenti aziendali.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div id="faq" class="w-full border border-gray-300 rounded-b-[20px] cursor-pointer py-5 px-[20px]">
-                                    <div id="question" class="flex justify-between items-center">
-                                        <h3 class="font-medium">
-                                            Scopri di più
-                                        </h3>
-                                        <div id="plus-minus-svg" class="w-6 h-6 rounded-full border-2 border-primary flex justify-center items-center">
-                                            <div id="line_1" class="w-3 h-[2px] rounded-xl bg-primary transition-all duration-700 ease-in-out"></div>
-                                            <div id="line_2" class="w-[2px] h-3 bg-primary absolute transition-all duration-700 ease-in-out"></div>
-                                        </div>
-                                    </div>
-                                    <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
-                                        <p class="text-left py-5 text-gray-800">
-                                            @php
-                                                $MAX = 12.3;
-                                                $MIN = 3.7;
-                                                $MED = 8;
-
-                                                // ROI
-                                                if ($cont_roi > $MAX) {
-                                                    echo("8.1");
-                                                    echo "<br>";
-                                                } else if ($cont_roi > $MIN && $cont_roi < $MAX) {
-                                                    echo("8.2");
-                                                    echo "<br>";
-                                                } else if ($cont_roi < $MIN) {
-                                                    echo("8.3");
-                                                    echo "<br>";
-                                                }
-                                            @endphp
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         {{-- ros --}}
                         <div class="pt-[20px]">
                             <h3 class="font-bold leading-tight text-[24px]">Ros</h3>
@@ -477,66 +416,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        {{-- rod --}}
-                        <div class="pt-[20px]">
-                            <h3 class="font-bold leading-tight text-[24px]">Rod</h3>
-                            {{-- grafico rod --}}
-                            <div class="max-w-[800px] mx-auto">
-                                <canvas id="rod-chart" class="w-full"></canvas>
-                            </div>
-                            <script>
-                                var rod = {{$azienda->rod}};
-                            </script>
-    
-                            {{-- commento grafico rod --}}
-                            <div class="mt-[30px] mx-auto max-w-[800px]">
-                                <div class="border border-b-0 border-gray-300 rounded-t-[20px]">
-                                    <div class="px-[20px] py-[20px]">
-                                        <h3 class="font-semibold text-[22px] mb-[6px]">
-                                            Commento:
-                                        </h3>
-                                        <p class="text-gray-800 text-left">
-                                            Il ROD, o Ritorno sull'Investimento in Debito, è un indicatore finanziario che misura la redditività di un'azienda 
-                                            rispetto al debito utilizzato per finanziare le sue operazioni. Esso indica la capacità dell'azienda di generare 
-                                            profitti utilizzando il debito come fonte di finanziamento.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div id="faq" class="w-full border border-gray-300 rounded-b-[20px] cursor-pointer py-5 px-[20px]">
-                                    <div id="question" class="flex justify-between items-center">
-                                        <h3 class="font-medium">
-                                            Scopri di più
-                                        </h3>
-                                        <div id="plus-minus-svg" class="w-6 h-6 rounded-full border-2 border-primary flex justify-center items-center">
-                                            <div id="line_1" class="w-3 h-[2px] rounded-xl bg-primary transition-all duration-700 ease-in-out"></div>
-                                            <div id="line_2" class="w-[2px] h-3 bg-primary absolute transition-all duration-700 ease-in-out"></div>
-                                        </div>
-                                    </div>
-                                    <div id="answer" class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(.215, .61, .355, 1)]">
-                                        <p class="text-left py-5 text-gray-800">
-                                            @php
-                                                $MAX = 12.3;
-                                                $MIN = 3.7;
-                                                $MED = 8;
-
-                                                // ROD
-                                                if ($cont_rod > $MAX) {
-                                                    echo("11.1");
-                                                    echo "<br>";
-                                                } else if ($cont_rod > $MIN && $cont_rod < $MAX) {
-                                                    echo("11.2");
-                                                    echo "<br>";
-                                                } else if ($cont_rod < $MIN) {
-                                                    echo("11.3");
-                                                    echo "<br>";
-                                                }
-                                            @endphp
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     {{-- 3° analisi di redditività combinata --}}
@@ -558,10 +437,8 @@
                             </div>
                             <script>
                                 var roe = {{$azienda->roe}};
-                                var roi = {{$azienda->roi}};
                                 var ros = {{$azienda->ros}};
                                 var roa = {{$azienda->roa}};
-                                var rod = {{$azienda->rod}};
                             </script>
     
                             {{-- commento grafico indici --}}
@@ -675,6 +552,18 @@
                             })
                         });
                     </script>
+                </div>
+                    
+                {{-- script per commento a scomparsa --}}
+                <script>
+                    const faqs = document.querySelectorAll('#faq');
+        
+                    faqs.forEach(faq => {
+                        faq.addEventListener("click", () => {
+                            faq.classList.toggle('active');
+                        })
+                    });
+                </script>
                 </div>
                 
                 {{-- dati finanziari --}}

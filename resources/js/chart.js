@@ -79,31 +79,6 @@ const roe_chart = new Chart(
     }
 });
 
-const roi_chart = new Chart(
-    document.getElementById('roi-chart').getContext('2d'), {
-    type: 'line',
-    data: {
-        labels: [2018, 2019, 2020, 2021, 2022],
-        datasets: [{
-            label: 'Roi',
-            data: roi,
-        }]
-    },
-    options: {
-        plugins: {
-            legend: {
-                labels: {
-                    // This more specific font property overrides the global property
-                    font: {
-                        family: 'Poppins',
-                        size: 14,
-                    }
-                }
-            }
-        }
-    }
-});
-
 const ros_chart = new Chart(
     document.getElementById('ros-chart').getContext('2d'), {
     type: 'line',
@@ -154,31 +129,6 @@ const roa_chart = new Chart(
     }
 });
 
-const rod_chart = new Chart(
-    document.getElementById('rod-chart').getContext('2d'), {
-    type: 'line',
-    data: {
-        labels: [2018, 2019, 2020, 2021, 2022],
-        datasets: [{
-            label: 'Rod',
-            data: rod,
-        }]
-    },
-    options: {
-        plugins: {
-            legend: {
-                labels: {
-                    // This more specific font property overrides the global property
-                    font: {
-                        family: 'Poppins',
-                        size: 14,
-                    }
-                }
-            }
-        }
-    }
-});
-
 const indici_redditivita_chart = new Chart(
     document.getElementById('indici-redditivita-chart').getContext('2d'), {
     type: 'line',
@@ -189,20 +139,12 @@ const indici_redditivita_chart = new Chart(
             data: roe,
         },
         {
-            label: 'Roi',
-            data: roi,
-        },
-        {
             label: 'Ros',
             data: ros,
         },
         {
             label: 'Roa',
             data: roa,
-        },
-        {
-            label: 'Rod',
-            data: rod,
         }]
     },
     options: {

@@ -300,3 +300,21 @@ p {
     opacity: 1;
     color: rgb(31 41 55);
 } 
+
+/* Confronto aziende */
+.risposta-confronto-wrap {
+    max-width: 1000px;
+}
+.risposta-confronto-wrap h3 {
+    font-size: 28px;
+    font-weight: 800;
+}
+.risposta-confronto h4 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 15px;
+}
+.risposta-confronto p {
+    color: rgb(48, 48, 48);
+    text-align: left;
+}

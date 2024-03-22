@@ -21,6 +21,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('plan')->default('free');
+            $table->json('wishlist')->nullable();
             $table->date('plan_expires_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

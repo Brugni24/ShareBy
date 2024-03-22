@@ -15,16 +15,19 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('symbol');
-            $table->json('roi');
+            $table->json('totale_ricavi');
+            $table->json('ebitda');
+            $table->json('utile_netto');
+            $table->json('totale_attivita');
+            $table->json('patrimonio_netto');
+            $table->json('posizione_finanziaria');
+            $table->json('ebitda_vendite');
+            $table->json('ros');
             $table->json('roa');
             $table->json('roe');
-            $table->json('ros');
-            $table->json('rod');
-            $table->json('rotazione_impieghi');
-            $table->json('incidenza_gestione_nn_caratteristica');
-            $table->json('leverage');
-            $table->json('ebitda');
-            $table->timestamps();
+            $table->json('debt_equity');
+            $table->json('ebitda_debiti');
+            $table->json('rotazione_capitale_investito');
         });
 
         DB::statement(
