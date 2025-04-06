@@ -1,9 +1,9 @@
-# 📊 ShareBy — Financial Analysis for Italian Listed Companies
+# ShareBy — Financial Analysis for Italian Listed Companies
 
 **ShareBy** is a web application built with Laravel, developed by a team of five students, aimed at helping investors—especially beginners—make informed and conscious decisions in the Italian stock market.  
 It collects financial statements from companies listed on the Italian Stock Exchange and provides tools for analysis, comparison, and personalized advice.
 
-## 🚀 Features
+## Features
 
 - **Balance Sheet Analysis**  
   Detailed financial breakdown of listed companies, including profitability, liquidity, and solvency indicators.
@@ -17,7 +17,7 @@ It collects financial statements from companies listed on the Italian Stock Exch
 - **User-Friendly Dashboard**  
   Clean and intuitive interface tailored for users with little to no financial background.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend**: Laravel (PHP)
 - **Frontend**: Blade Templates, HTML, CSS, JavaScript
@@ -25,11 +25,11 @@ It collects financial statements from companies listed on the Italian Stock Exch
 - **APIs / Data Sources**: Camera di Commercio
 - **AI Chatbot**: OpenAI
 
-## 📌 Notes
+## Notes
 
 This project was developed as part of a personal project and is not intended for commercial use.
 
-## ⚠️ License
+## License
 
 This repository is intended only as a portfolio showcase.  
 All rights reserved — copying, redistributing, or using the code is not allowed without explicit permission.
