@@ -26,5 +26,10 @@ It collects financial statements from companies listed on the Italian Stock Exch
 - **AI Chatbot**: OpenAI
 
 ## 📌 Notes
+
 This project was developed as part of a personal project and is not intended for commercial use.
 
+## ⚠️ License
+
+This repository is intended only as a portfolio showcase.  
+All rights reserved — copying, redistributing, or using the code is not allowed without explicit permission.
